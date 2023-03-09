@@ -69,7 +69,7 @@
         }
         .logo {
             width: 250px;
-            height: 100px;
+            height: 90px;
             margin-bottom: 10px;
         }
         .idBox {

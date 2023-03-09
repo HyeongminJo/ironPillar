@@ -16,6 +16,19 @@
             }
         }
     </script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script>
+    window.onload = function(){
+        document.getElementById("address_kakao").addEventListener("click", function(){ 
+            new daum.Postcode({
+                oncomplete: function(data) { 
+                    document.getElementById("address_kakao").value = data.address; 
+                    document.querySelector("input[name=address_detail]").focus();
+                }
+            }).open();
+        });
+    }
+    </script>
     <title>가입하기 · ironPillar</title>
     <style>
         * {
@@ -84,10 +97,16 @@
         .loginBox3 {
             width: 70%;
         }
-        .logo {
-            width: 250px;
-            height: 100px;
-            margin-bottom: 10px;
+        .addMemberLogoBox {
+        	width: 250px;
+        	height: 80px;
+        	margin-bottom: 10px;
+        	display: flex;
+        	justify-content: center;
+        }
+        .addMemberLogo {
+            width: 90%;
+            height: 100%;
         }
         .idBox {
             width: 228px;
@@ -157,12 +176,6 @@
             font-weight: bold;
             color: black;
         }
-        footer {
-            border: 1px solid red;
-            height: 50px;
-            width: 20%;
-            margin: 0 auto;
-        }
     </style>
 </head>
 <body>
@@ -178,8 +191,8 @@
             <div class="loginBox">
                 <div class="loginBox2">
                     <div class="loginBox3">
-                        <div>
-                            <img src="/resources/img/logo.png" alt="logo" class="logo">
+                        <div class="addMemberLogoBox">
+                            <img src="/resources/img/logo.png" alt="logo" class="addMemberLogo">
                         </div>
                         <form name="newMember" action="/login" method="post" onsubmit="return checkForm()">
                             <input type="text" name="id" placeholder="아이디" minlength="1" maxlength="10" class="idBox" required><br>
@@ -200,7 +213,8 @@
                             </select>
                              - <input type="text" maxlength="4" size="3" placeholder="4자리" class="phoneBox pB" required>
                              - <input type="text" maxlength="4" size="3" placeholder="4자리" class="phoneBox pB" required><br>
-                            <input type="text" name="address" placeholder="주소" maxlength="30" class="pwBox" required>
+                            <input type="text" id="address_kakao" name="address" placeholder="주소" maxlength="30" class="idBox" required>
+                            <input type="text" name="address2" placeholder="상세주소" maxlength="30" class="pwBox" required>
                             <input type="submit" value="가입" class="submitButton">
                         </form>
                     </div> 

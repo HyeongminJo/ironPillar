@@ -279,15 +279,15 @@
             <input type="radio" name="group" id="5" class="input input5">
             <input type="radio" name="group" id="6" class="input input6">
             <div class="sessionBox1">
-                <label for="1" class="sessionItem inputItem1" onclick="location.href='#'">경기도</label>
-                <label for="2" class="sessionItem inputItem2" onclick="location.href='#'">충청도</label>
-                <label for="3" class="sessionItem inputItem3" onclick="location.href='#'">전라도</label>
-                <label for="4" class="sessionItem inputItem4" onclick="location.href='#'">경상도</label>
-                <label for="5" class="sessionItem inputItem5" onclick="location.href='#'">강원도</label>
-                <label for="6" class="sessionItem inputItem6" onclick="location.href='#'">제주도</label>
+                <label for="1" class="sessionItem inputItem1">경기도</label>
+                <label for="2" class="sessionItem inputItem2">충청도</label>
+                <label for="3" class="sessionItem inputItem3">전라도</label>
+                <label for="4" class="sessionItem inputItem4">경상도</label>
+                <label for="5" class="sessionItem inputItem5">강원도</label>
+                <label for="6" class="sessionItem inputItem6">제주도</label>
             </div>
             <div class="sessions SessionOne">
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -301,7 +301,7 @@
                         <p class="SitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -315,7 +315,7 @@
                         <p class="SitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -329,7 +329,7 @@
                         <p class="SitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -343,7 +343,7 @@
                         <p class="SitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -357,7 +357,7 @@
                         <p class="SitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -371,7 +371,7 @@
                         <p class="SitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -387,7 +387,7 @@
                 </div>
             </div>
             <div class="sessions SessionTwo">
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -401,7 +401,7 @@
                         <p class="SitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -415,7 +415,7 @@
                         <p class="SitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -429,7 +429,7 @@
                         <p class="SitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -443,7 +443,7 @@
                         <p class="SitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -457,7 +457,7 @@
                         <p class="SitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -471,7 +471,7 @@
                         <p class="SitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -487,7 +487,7 @@
                 </div>
             </div>
             <div class="sessions SessionThree">
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -501,7 +501,7 @@
                         <p class="SitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -515,7 +515,7 @@
                         <p class="SitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -529,7 +529,7 @@
                         <p class="SitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -543,7 +543,7 @@
                         <p class="SitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -557,7 +557,7 @@
                         <p class="SitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -571,7 +571,7 @@
                         <p class="SitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -587,7 +587,7 @@
                 </div>
             </div>
             <div class="sessions SessionFour">
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -601,7 +601,7 @@
                         <p class="SitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -615,7 +615,7 @@
                         <p class="SitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -629,7 +629,7 @@
                         <p class="SitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -643,7 +643,7 @@
                         <p class="SitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -657,7 +657,7 @@
                         <p class="SitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -671,7 +671,7 @@
                         <p class="SitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -687,7 +687,7 @@
                 </div>
             </div>
             <div class="sessions SessionFive">
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -701,7 +701,7 @@
                         <p class="SitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -715,7 +715,7 @@
                         <p class="SitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -729,7 +729,7 @@
                         <p class="SitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -743,7 +743,7 @@
                         <p class="SitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -757,7 +757,7 @@
                         <p class="SitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -771,7 +771,7 @@
                         <p class="SitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -787,7 +787,7 @@
                 </div>
             </div>
             <div class="sessions SessionSix">
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -801,7 +801,7 @@
                         <p class="SitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -815,7 +815,7 @@
                         <p class="SitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -829,7 +829,7 @@
                         <p class="SitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -843,7 +843,7 @@
                         <p class="SitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -857,7 +857,7 @@
                         <p class="SitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
@@ -871,7 +871,7 @@
                         <p class="SitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/item'">
+                <div class="SItem" onclick="location.href='/place/placeItem'">
                     <div class="SitemHeader">
                         <div class="SheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="SheaderImg">

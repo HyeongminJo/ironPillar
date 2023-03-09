@@ -176,20 +176,20 @@
 			<div class="writeButton" onclick="location.href='/item'">글쓰기</div>
 		</div>
 	    <div class="container2">
-	    	<div class="CItem" onclick="location.href='/item'">
+	    	<div class="CItem" onclick="location.href='/community/communityItem'">
                 <div class="CitemHeader">
                     <p class="CheaderNick ml20"> 닉네임</p>
                     <p class="CheaderLevel ml20"> Lv.20</p>
                 </div>
                 <div class="CitemImgBox">
-                    <img src="resources/img/캡처.PNG" alt="itemImg" class="CitemImg">
+                    <img src="/resources/img/캡처.PNG" alt="itemImg" class="CitemImg">
                 </div>
                 <div class="CitemMain">
                     <h3 class="CitemNameC">제목</h3>
                     <p class="CitemAddress">내용</p>
                 </div>
             </div>
-	    	<div class="CItem" onclick="location.href='/item'">
+	    	<div class="CItem" onclick="location.href='/community/communityItem'">
                  <div class="CitemHeader">
                      <p class="CheaderNick ml20"> 닉네임</p>
                      <p class="CheaderLevel ml20"> Lv.20</p>
@@ -201,65 +201,65 @@
                  <div class="CitemFooter">
                  </div>
              </div>
-	        <div class="CItem" onclick="location.href='/item'">
+	        <div class="CItem" onclick="location.href='/community/communityItem'">
                 <div class="CitemHeader">
                     <p class="CheaderNick ml20"> 닉네임</p>
                     <p class="CheaderLevel ml20"> Lv.20</p>
                 </div>
                 <div class="CitemImgBox">
-                    <img src="resources/img/캡처.PNG" alt="itemImg" class="CitemImg">
+                    <img src="/resources/img/캡처.PNG" alt="itemImg" class="CitemImg">
                 </div>
                 <div class="CitemMain">
                     <h3 class="CitemNameC">제목</h3>
                     <p class="CitemAddress">내용</p>
                 </div>
             </div>
-            <div class="CItem" onclick="location.href='/item'">
+            <div class="CItem" onclick="location.href='/community/communityItem'">
                 <div class="CitemHeader">
                     <p class="CheaderNick ml20"> 닉네임</p>
                     <p class="CheaderLevel ml20"> Lv.20</p>
                 </div>
                 <div class="CitemImgBox">
-                    <img src="resources/img/캡처.PNG" alt="itemImg" class="CitemImg">
+                    <img src="/resources/img/캡처.PNG" alt="itemImg" class="CitemImg">
                 </div>
                 <div class="CitemMain">
                     <h3 class="CitemNameC">제목</h3>
                     <p class="CitemAddress">내용</p>
                 </div>
             </div>
-            <div class="CItem" onclick="location.href='/item'">
+            <div class="CItem" onclick="location.href='/community/communityItem'">
                 <div class="CitemHeader">
                     <p class="CheaderNick ml20"> 닉네임</p>
                     <p class="CheaderLevel ml20"> Lv.20</p>
                 </div>
                 <div class="CitemImgBox">
-                    <img src="resources/img/캡처.PNG" alt="itemImg" class="CitemImg">
+                    <img src="/resources/img/캡처.PNG" alt="itemImg" class="CitemImg">
                 </div>
                 <div class="CitemMain">
                     <h3 class="CitemNameC">제목</h3>
                     <p class="CitemAddress">내용</p>
                 </div>
             </div>
-            <div class="CItem" onclick="location.href='/item'">
+            <div class="CItem" onclick="location.href='/community/communityItem'">
                 <div class="CitemHeader">
                     <p class="CheaderNick ml20"> 닉네임</p>
                     <p class="CheaderLevel ml20"> Lv.20</p>
                 </div>
                 <div class="CitemImgBox">
-                    <img src="resources/img/캡처.PNG" alt="itemImg" class="CitemImg">
+                    <img src="/esources/img/캡처.PNG" alt="itemImg" class="CitemImg">
                 </div>
                 <div class="CitemMain">
                     <h3 class="CitemNameC">제목</h3>
                     <p class="CitemAddress">내용</p>
                 </div>
             </div>
-            <div class="CItem" onclick="location.href='/item'">
+            <div class="CItem" onclick="location.href='/community/communityItem'">
                 <div class="CitemHeader">
                     <p class="CheaderNick ml20"> 닉네임</p>
                     <p class="CheaderLevel ml20"> Lv.20</p>
                 </div>
                 <div class="CitemImgBox">
-                    <img src="resources/img/캡처.PNG" alt="itemImg" class="CitemImg">
+                    <img src="/resources/img/캡처.PNG" alt="itemImg" class="CitemImg">
                 </div>
                 <div class="CitemMain">
                     <h3 class="CitemNameC">제목</h3>
