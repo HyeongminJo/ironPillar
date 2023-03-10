@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%
+	String memberNick = (String) session.getAttribute("memberNick");
+%>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -119,7 +122,7 @@
     <div class="menuBox">
         <div class="menuContainer">
             <div class="logoBox" onclick="location.href='/main'">
-                <img src="/resources/img/logo.png" alt="logoImg" class="logoImg">
+                <img src="/resources/img/logo.png" alt="로고" class="logoImg">
             </div>
             <div class="menuItemBox">
                 <div class="menuItem" onclick="location.href='/shop'">
@@ -146,9 +149,24 @@
                 </div>
             </div>
             <div class="menuRight">
+            	<%
+            		if(memberNick == null)
+            		{
+            	%>
                 <div class="menuItem" onclick="location.href='/login'">
                     <p>LOGIN</p>
                 </div>
+                <%
+            		}
+            		else
+            		{
+                %>
+                <div class="menuItem" onclick="location.href='/myPage'">
+                	<p><%=memberNick%>
+                </div>
+                <%
+            		}
+                %>
             </div>
         </div>
     </div>

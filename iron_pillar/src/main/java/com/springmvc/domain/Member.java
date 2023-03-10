@@ -4,6 +4,7 @@ public class Member
 {
 	private String memberId;
 	private String memberPw;
+	private String memberPwCheck;
 	private String memberNick;
 	private String memberPhone1;
 	private String memberPhone2;
@@ -22,6 +23,12 @@ public class Member
 	}
 	public void setMemberPw(String memberPw) {
 		this.memberPw = memberPw;
+	}
+	public String getMemberPwCheck() {
+		return memberPwCheck;
+	}
+	public void setMemberPwCheck(String memberPwCheck) {
+		this.memberPwCheck = memberPwCheck;
 	}
 	public String getMemberNick() {
 		return memberNick;

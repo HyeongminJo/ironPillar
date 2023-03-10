@@ -148,9 +148,9 @@
                     <div>
                         <img src="resources/img/logo.png" alt="logo" class="logo">
                     </div>
-                    <form action="/main">
-                        <input type="text" name="id" placeholder="아이디" minlength="1" maxlength="10" class="idBox" required><br>
-                        <input type="password" name="pw" placeholder="비밀번호" minlength="1" maxlength="15" class="pwBox" required><br>
+                    <form action="/login/processLogin" method="post">
+                        <input type="text" name="memberId" placeholder="아이디" minlength="1" maxlength="10" class="idBox" required><br>
+                        <input type="password" name="memberPw" placeholder="비밀번호" minlength="1" maxlength="15" class="pwBox" required><br>
                         <input type="submit" value="로그인" class="submitButton">
                     </form> 
                 </div>

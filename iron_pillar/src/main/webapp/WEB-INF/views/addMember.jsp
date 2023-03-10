@@ -29,6 +29,12 @@
         });
     }
     </script>
+    <script type="text/javascript">
+		function addMember()
+		{
+			alert("회원가입이 완료되었습니다.");
+		}
+	</script>
     <title>가입하기 · ironPillar</title>
     <style>
         * {
@@ -194,12 +200,12 @@
                         <div class="addMemberLogoBox">
                             <img src="/resources/img/logo.png" alt="logo" class="addMemberLogo">
                         </div>
-                        <form name="newMember" action="/login" method="post" onsubmit="return checkForm()">
-                            <input type="text" name="id" placeholder="아이디" minlength="1" maxlength="10" class="idBox" required><br>
-                            <input type="password" name="pw" placeholder="비밀번호" minlength="1" maxlength="15" class="idBox" required><br>
-                            <input type="password" name="pwCheck" placeholder="비밀번호확인" minlength="1" maxlength="15" class="idBox" required><br>
-                            <input type="text" name="nick" placeholder="닉네임" minlength="1" maxlength="8"class="idBox" required><br>
-                            <select name="phone1" class="phoneBox">
+                        <form name="newMember" action="/login/processAddMember" method="post" onsubmit="return checkForm()">
+                            <input type="text" name="memberId" placeholder="아이디" minlength="1" maxlength="10" class="idBox" required><br>
+                            <input type="password" name="memberPw" placeholder="비밀번호" minlength="1" maxlength="15" class="idBox" required><br>
+                            <input type="password" name="memberPwCheck" placeholder="비밀번호확인" minlength="1" maxlength="15" class="idBox" required><br>
+                            <input type="text" name="memberNick" placeholder="닉네임" minlength="1" maxlength="8"class="idBox" required><br>
+                            <select name="memberPhone1" class="phoneBox">
                                 <option value="010">010</option>
                                 <option value="011">011</option>
                                 <option value="012">012</option>
@@ -211,11 +217,11 @@
                                 <option value="018">018</option>
                                 <option value="019">019</option>
                             </select>
-                             - <input type="text" maxlength="4" size="3" placeholder="4자리" class="phoneBox pB" required>
-                             - <input type="text" maxlength="4" size="3" placeholder="4자리" class="phoneBox pB" required><br>
-                            <input type="text" id="address_kakao" name="address" placeholder="주소" maxlength="30" class="idBox" required>
-                            <input type="text" name="address2" placeholder="상세주소" maxlength="30" class="pwBox" required>
-                            <input type="submit" value="가입" class="submitButton">
+                             - <input type="text" name="memberPhone2" maxlength="4" size="3" placeholder="4자리" class="phoneBox pB" required>
+                             - <input type="text" name="memberPhone3" maxlength="4" size="3" placeholder="4자리" class="phoneBox pB" required><br>
+                            <input type="text" id="address_kakao" name="memberAddress" placeholder="주소" maxlength="30" class="idBox" required>
+                            <input type="text" name="memberAddress2" placeholder="상세주소" maxlength="30" class="pwBox" required>
+                            <input type="submit" value="가입" class="submitButton" onclick="addMember()">
                         </form>
                     </div> 
                 </div>

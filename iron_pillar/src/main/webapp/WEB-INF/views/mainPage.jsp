@@ -224,7 +224,7 @@
                 <div class="videoBox">
                     <video src="/resources/img/exam.mp4" muted autoplay loop class="homeVideo">왜 안됨</video>
                     <div class="beHappyBox">
-                        <img src="/resources/img/beHappy.png" alt="#" class="beHappy">
+                        <img src="/resources/img/beHappy.png" alt="메인영상" class="beHappy">
                     </div>
                 </div>
             </div>
@@ -243,7 +243,7 @@
                         </div>
                     </div>
                     <div class="CitemImgBox">
-                        <img src="/resources/img/의자.png" alt="itemImg" class="CitemImg">
+                        <img src="/resources/img/의자.png" alt="이미지" class="CitemImg">
                     </div>
                     <div class="CitemMain">
                         <h3 class="CitemName">상품명</h3>
@@ -261,7 +261,7 @@
                         </div>
                     </div>
                     <div class="CitemImgBox">
-                        <img src="/resources/img/랜턴.png" alt="itemImg" class="CitemImg">
+                        <img src="/resources/img/랜턴.png" alt="이미지" class="CitemImg">
                     </div>
                     <div class="CitemMain">
                         <h3 class="CitemName">상품명</h3>
@@ -269,7 +269,7 @@
                         <p class="CitemPrice">가격</p>
                     </div>
                     <div class="hotSticker">
-                        <img src="/resources/img/2.png" alt="1" class="hotStickerImg">
+                        <img src="/resources/img/2.png" alt="2" class="hotStickerImg">
                     </div>
                 </div>
                 <div class="CItem" onclick="location.href='/shop/shopItem'">
@@ -279,7 +279,7 @@
                         </div>
                     </div>
                     <div class="CitemImgBox">
-                        <img src="/resources/img/버너.png" alt="itemImg" class="CitemImg">
+                        <img src="/resources/img/버너.png" alt="이미지" class="CitemImg">
                     </div>
                     <div class="CitemMain">
                         <h3 class="CitemName">상품명</h3>
@@ -287,7 +287,7 @@
                         <p class="CitemPrice">가격</p>
                     </div>
                     <div class="hotSticker">
-                        <img src="/resources/img/3.png" alt="1" class="hotStickerImg">
+                        <img src="/resources/img/3.png" alt="3" class="hotStickerImg">
                     </div>
                 </div>
             </div>
@@ -306,7 +306,7 @@
                         </div>
                     </div>
                     <div class="CitemImgBox">
-                        <img src="/resources/img/캠핑1.png" alt="itemImg" class="CitemImg">
+                        <img src="/resources/img/캠핑1.png" alt="이미지" class="CitemImg">
                     </div>
                     <div class="CitemMain">
                         <h3 class="CitemName">캠핑장</h3>
@@ -323,14 +323,14 @@
                         </div>
                     </div>
                     <div class="CitemImgBox">
-                        <img src="/resources/img/캠핑2.jpg" alt="itemImg" class="CitemImg">
+                        <img src="/resources/img/캠핑2.jpg" alt="이미지" class="CitemImg">
                     </div>
                     <div class="CitemMain">
                         <h3 class="CitemName">캠핑장</h3>
                         <p class="CitemAddress">창원</p>
                     </div>
                     <div class="hotSticker">
-                        <img src="/resources/img/2.png" alt="1" class="hotStickerImg">
+                        <img src="/resources/img/2.png" alt="2" class="hotStickerImg">
                     </div>
                 </div>
                 <div class="CItem" onclick="location.href='/place/placeItem'">
@@ -340,14 +340,14 @@
                         </div>
                     </div>
                     <div class="CitemImgBox">
-                        <img src="/resources/img/캠핑3.jpg" alt="itemImg" class="CitemImg">
+                        <img src="/resources/img/캠핑3.jpg" alt="이미지" class="CitemImg">
                     </div>
                     <div class="CitemMain">
                         <h3 class="CitemName">캠핑장</h3>
                         <p class="CitemAddress">진해</p>
                     </div>
                     <div class="hotSticker">
-                        <img src="/resources/img/3.png" alt="1" class="hotStickerImg">
+                        <img src="/resources/img/3.png" alt="3" class="hotStickerImg">
                     </div>
                 </div>
             </div>
@@ -365,7 +365,7 @@
                         <p class="CheaderLevel ml20"> Lv.20</p>
                     </div>
                     <div class="CitemImgBox">
-                        <img src="/resources/img/캡처.PNG" alt="itemImg" class="CitemImg">
+                        <img src="/resources/img/캡처.PNG" alt="이미지" class="CitemImg">
                     </div>
                     <div class="CitemMain">
                         <h3 class="CitemNameC">제목</h3>
@@ -390,7 +390,7 @@
                         <p class="CheaderLevel ml20"> Lv.20</p>
                     </div>
                     <div class="CitemImgBox">
-                        <img src="/resources/img/캡처.PNG" alt="itemImg" class="CitemImg">
+                        <img src="/resources/img/캡처.PNG" alt="이미지" class="CitemImg">
                     </div>
                     <div class="CitemMain">
                         <h3 class="CitemNameC">제목</h3>

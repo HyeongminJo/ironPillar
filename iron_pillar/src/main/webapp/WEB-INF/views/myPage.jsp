@@ -1,6 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%
+	String memberNick = (String) session.getAttribute("memberNick");
+	String memberPhone = (String) session.getAttribute("memberPhone");
+	String memberAddress = (String) session.getAttribute("memberAddress");
+	String phone2 = memberPhone.substring(3, 7);
+	String phone3 = memberPhone.substring(7, 11);
+%>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -717,7 +724,7 @@
 			                        <form name="newMember" action="/login" method="post" onsubmit="return checkForm()">
 			                            <input type="password" name="pw" placeholder="새로운 비밀번호" minlength="1" maxlength="15" class="idBox" required><br>
 			                            <input type="password" name="pwCheck" placeholder="새로운 비밀번호확인" minlength="1" maxlength="15" class="idBox" required><br>
-			                            <input type="text" name="nick" placeholder="(회원 기존 닉네임)" minlength="1" maxlength="8"class="idBox" required><br>
+			                            <input type="text" name="nick" value="<%=memberNick%>" minlength="1" maxlength="8"class="idBox" required><br>
 			                            <select name="phone1" class="phoneBox">
 			                                <option value="010">010</option>
 			                                <option value="011">011</option>
@@ -730,9 +737,9 @@
 			                                <option value="018">018</option>
 			                                <option value="019">019</option>
 			                            </select>
-			                             - <input type="text" maxlength="4" size="3" placeholder="(기존번호)" class="phoneBox pB" required>
-			                             - <input type="text" maxlength="4" size="3" placeholder="(기존번호)" class="phoneBox pB" required><br>
-			                            <input type="text" name="address" placeholder="(기존주소)" maxlength="30" class="pwBox" required>
+			                             - <input type="text" minlength="4" maxlength="4" size="3" value="<%=phone2%>" class="phoneBox pB" required>
+			                             - <input type="text" minlength="4" maxlength="4" size="3" value="<%=phone3%>" class="phoneBox pB" required><br>
+			                            <input type="text" name="address" value="<%=memberAddress%>" maxlength="60" class="pwBox" required>
 			                            <input type="submit" value="저장" class="submitButton">
 			                        </form>
 			                    </div> 
