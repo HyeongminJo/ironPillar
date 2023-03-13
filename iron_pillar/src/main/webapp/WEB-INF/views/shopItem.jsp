@@ -17,13 +17,13 @@
     body {
            background-color: #F6F6F6;
     }
-    .Icontainer {
+    .shopItemContainer {
         display: flex;
         justify-content: center;
         margin: 0 auto;
         padding-top: 150px;
     }
-    .ImainItem {
+    .shopItemMainItem {
         background-color: white;
         border-radius: 30px;
         width: 1000px;
@@ -35,27 +35,24 @@
         align-items: center;
         margin-top: 100px;
     }
-    body {
-        background-color: #F6F6F6;
-    }
-    .ReviewImgBox {
+    .shopItemReviewImgBox {
         display: flex;
         align-items: center;
     }
-    .ReviewImgItem{
+    .shopItemReviewImgItem{
         width: 17px;
         height: 17px;
         margin-right: 5px;
     }
-    .productImgBox {
+    .shopItemProductImgBox {
         /* border: 1px solid red; */
         width: 35%;
         margin: 0 10px;
     }
-    .productImgItem {
+    .shopItemProductImgItem {
         width: 100%;
     }
-    .productItemBox {
+    .shopItemProductItemBox {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -64,10 +61,10 @@
         margin: 0 10px;
         height: 85%;
     }
-    .productItemBox1 {
+    .shopItemProductItemBox1 {
         width: 100%;
     }
-    .productInBox {
+    .shopItemProductInBox {
         /* border: 1px solid purple; */
         width: 100%;
         display: flex;
@@ -75,26 +72,26 @@
         align-items: center;
         border-bottom: 1px solid gray;
     }
-    .InBoxItem1 {
+    .shopItemInBoxItem1 {
         width: 80%;
         display: flex;
         justify-content: start;
         flex-direction: column;
         margin-left: 15px;
     }
-    .InBoxFont1 {
+    .shopItemInBoxFont1 {
         margin-top: 10px;
     }
-    .InBoxFont2 {
+    .shopItemInBoxFont2 {
         margin: 10px 0 10px 0;
     }
-    .InBoxItem2 {
+    .shopItemInBoxItem2 {
         width: 20%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .InBoxButton {
+    .shopItemInBoxButton {
         border-radius: 5px;
         cursor: pointer;
         height: 40px;
@@ -107,24 +104,24 @@
         margin-right: 15px;
         transition-duration: 300ms;
     }
-    .InBoxButton:hover {
+    .shopItemInBoxButton:hover {
         background-color: #2478FF;
         border-style: solid;
         border: 1px solid #2478FF;
         color: white;
     }
-    .productMainBox {
+    .shopItemProductMainBox {
         /* border: 5px solid yellow; */
         border-bottom: 1px solid gray;
         height: 55%;
         margin-top: 10px;
         padding: 15px;
     }
-    p {
+    .shopItemP {
         line-height: 30px;
         font-size: 15px;
     }
-    .productItem {
+    .shopItemProductItem {
         width: 100%;
         height: 15%;
         display: flex;
@@ -132,7 +129,7 @@
         align-items: center;
         /* border: 1px solid red; */
     } 
-    .productItemItem1 {
+    .shopItemProductItemItem1 {
         width: 20%;
         height: 40px;
         font-weight: bold;
@@ -142,10 +139,10 @@
         border-radius: 5px;
         box-sizing: border-box;
     }
-    .productItemItem1:active {
+    .shopItemProductItemItem1:active {
         border: 1px solid #2478FF;
     }
-    .productItemItem2 {
+    .shopItemProductItemItem2 {
         font-weight: bold;
         font-size: 20px;
         width: 25%;
@@ -157,11 +154,11 @@
         cursor: pointer;
         transition-duration: 300ms;
     }
-    .productItemItem2:hover {
+    .shopItemProductItemItem2:hover {
         background-color: #2478FF;
         color: white;
     }
-    .productItemItem3 {
+    .shopItemProductItemItem3 {
         font-weight: bold;
         font-size: 20px;
         width: 25%;
@@ -173,7 +170,7 @@
         cursor: pointer;
         transition-duration: 300ms;
     }
-    .productItemItem3:hover {
+    .shopItemProductItemItem3:hover {
         background-color: white;
         color: #2478FF;
     }
@@ -182,35 +179,35 @@
 <body>
 <jsp:include page="menu.jsp"/>
     <!-- body -->
-    <div class="Icontainer">
-        <div class="ImainItem">
-           <div class="productImgBox">
-                <img src="/resources/img/텐트.jpg" alt="error" class="productImgItem">
+    <div class="shopItemContainer">
+        <div class="shopItemMainItem">
+           <div class="shopItemProductImgBox">
+                <img src="/resources/img/텐트.jpg" alt="error" class="shopItemProductImgItem">
            </div>
-           <div class="productItemBox">
-                <div class="productItemBox1">
-                    <div class="productInBox">
-                        <div class="InBoxItem1">
-                            <h3 class="InBoxFont1">초 고강도 내구성 휴대용 캠핑 의자</h3>
-                            <div class="InBoxFont2">별점부여</div>
+           <div class="shopItemProductItemBox">
+                <div class="shopItemProductItemBox1">
+                    <div class="shopItemProductInBox">
+                        <div class="shopItemInBoxItem1">
+                            <h3 class="shopItemInBoxFont1">초 고강도 내구성 휴대용 캠핑 의자</h3>
+                            <div class="shopItemInBoxFont2">별점부여</div>
                             <h1 >50000원</h1>
                         </div>
-                        <div class="InBoxItem2">
-                            <input type="button" value="찜 하기" class="InBoxButton">
+                        <div class="shopItemInBoxItem2">
+                            <input type="button" value="찜 하기" class="shopItemInBoxButton">
                         </div>
                     </div>
                 </div>
-                <div class="productMainBox">
-                   <p>이 의자는 철기둥이 좋아하는 휴대용 캠핑 의자로써 굉장히 애정하는 의자이다.
+                <div class="shopItemProductMainBox">
+                   <p class="shopItemP">이 의자는 철기둥이 좋아하는 휴대용 캠핑 의자로써 굉장히 애정하는 의자이다.
                     이 의자는 철기둥이 좋아하는 휴대용 캠핑 의자로써 굉장히 애정하는 의자이다.
                     이 의자는 철기둥이 좋아하는 휴대용 캠핑 의자로써 굉장히 애정하는 의자이다.
                     이 의자는 철기둥이 좋아하는 휴대용 캠핑 의자로써 굉장히 애정하는 의자이다.
                    </p>
                 </div>
-                <div class="productItem">
-                    <h2>수량</h2><input type="number" name="" id="" value="1" min="1" max="100" class="productItemItem1">
-                    <input type="button" value="장바구니 담기" class="productItemItem2">
-                    <input type="button" value="바로구매" class="productItemItem3">
+                <div class="shopItemProductItem">
+                    <h2>수량</h2><input type="number" name="" id="" value="1" min="1" max="100" class="shopItemProductItemItem1">
+                    <input type="button" value="장바구니 담기" class="shopItemProductItemItem2">
+                    <input type="button" value="바로구매" class="shopItemProductItemItem3">
                 </div>
            </div>
         </div>

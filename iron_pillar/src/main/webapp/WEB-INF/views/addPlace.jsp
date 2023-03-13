@@ -14,7 +14,7 @@
     body {
         background-color: #F6F6F6;
     }
-    .container {
+    .addPlaceContainer {
         width: 40%;
         height: 100vh;
         margin: 0 auto;
@@ -24,7 +24,7 @@
         align-items: center;
         justify-content: center;
     }
-    .mainItem {
+    .addPlaceItem {
         background-color: white;
         border-radius: 30px;
         width: 550px;
@@ -37,43 +37,43 @@
         transition-duration: 400ms;
         box-shadow: 30px 30px 30px 30px #9E9E9E;
     }
-    .mainItem:hover {
+    .addPlaceItem:hover {
         box-shadow: 5px 5px 5px 5px #9E9E9E;
     }
-    .addItemInput:focus {
+    .addPlaceInput:focus {
         border: 1px dashed black;
         outline: none;
     }
-    textarea {
+    .addPlaceTextarea {
         /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         text-decoration: none;
     }
-    textarea:focus {
+    .addPlaceTextarea:focus {
         border: 1px dashed black;
         outline: none;
     }
-    .itemHeader {
+    .addPlaceHeader {
         height: 100px;
         width: 100%;
         display: flex;
         align-items: center;
         border-bottom: 1px dashed #9E9E9E;
     }
-    form {
+    .addPlaceForm {
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
-    .itemMain {
+    .addPlaceMain {
         height: 100%;
         padding: 80px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
-    .itemMaininput {
+    .addPlaceMainInput {
         height: 40px;
         background-color: #F6F6F6;
         border: 1px solid #D8D8D8;
@@ -83,10 +83,10 @@
         display: flex;
         align-items: center;
     }
-    .fileR {
+    .addPlaceFileR {
         position: relative;
     }
-    .itemMainFileLabel {
+    .addPlaceMainFileLabel {
         width: 80px;
         height: 30px;
         border: 1px solid gray;
@@ -100,17 +100,17 @@
         align-items: center;
         transition-duration: 400ms;
     }
-    .itemMainFileLabel:hover {
+    .addPlaceMainFileLabel:hover {
         border: 1px dashed white;
         font-size: 15px;
         font-weight: bold;
         border-radius: 17.5px;
     }
-    .itemMainFile {
+    .addPlaceMainFile {
         margin: 0 6px;
         cursor: pointer;
     }
-    .itemMainText {
+    .addPlaceMainText {
         height: 410px;
         background-color: #F6F6F6;
         border: 1px solid #D8D8D8;
@@ -119,21 +119,21 @@
         font-size: 15px;
         resize: none;
     }
-    .itemFooter {
+    .addPlaceFooter {
         border-top: 1px dashed #9E9E9E;
         height: 100px;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    .itemFooterContainer {
+    .addPlaceFooterContainer {
         width: 60%;
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .itemFooterButton {
+    .addPlaceFooterButton {
         background-color: black;
         color: white;
         width: 150px;
@@ -144,7 +144,7 @@
         border-radius: 5px;
         cursor: pointer;
     }
-    .itemFooterButton:hover {
+    .addPlaceFooterButton:hover {
         border: 2px dashed white;
         font-size: 15px;
         font-weight: bold;
@@ -154,22 +154,22 @@
 </head>
 <body>
 <jsp:include page="menu.jsp"/>
-    <div class="container">
-        <div class="mainItem">
-            <div class="itemHeader">
+    <div class="addPlaceContainer">
+        <div class="addPlaceItem">
+            <div class="addPlaceHeader">
             </div>
-            <form action="./additem?${_csrf.parameterName}=${_csrf.token}" enctype="multipart/form-data" method="post">
-                <div class="itemMain">
-                    <input placeholder="제목" class="itemMaininput addItemInput"/>
-                    <div class="itemMaininput fileR">
-                        <input type="file" class="itemMainFile" id="file"/>
-                        <label for="file" class="itemMainFileLabel">사진첨부</label>
+            <form class="addPlaceForm" action="./additem?${_csrf.parameterName}=${_csrf.token}" enctype="multipart/form-data" method="post">
+                <div class="addPlaceMain">
+                    <input placeholder="제목" class="addPlaceMainInput addPlaceInput"/>
+                    <div class="addPlaceMainInput addPlaceFileR">
+                        <input type="file" class="addPlaceMainFile" id="file"/>
+                        <label for="file" class="addPlaceMainFileLabel">사진첨부</label>
                     </div>
-                    <textarea class="itemMainText" placeholder="설명"></textarea>
+                    <textarea class="addPlaceMainText addPlaceTextarea" placeholder="설명"></textarea>
                 </div>
-                <div class="itemFooter">
-                    <div class="itemFooterContainer">
-                        <input type="submit" value="등 록" class="itemFooterButton">
+                <div class="addPlaceFooter">
+                    <div class="addPlaceFooterContainer">
+                        <input type="submit" value="등 록" class="addPlaceFooterButton">
                     </div>
                 </div>
             </form>

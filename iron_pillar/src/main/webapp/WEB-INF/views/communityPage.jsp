@@ -11,7 +11,7 @@
     	body {
             background-color: #F6F6F6;
         }
-    	.communityCon
+    	.communityPageContainer
     	{
     		border: 1px solid red;
     		width: 100%;
@@ -22,7 +22,7 @@
     		padding-top: 100px;
     		
     	}
-    	.title {
+    	.communityPageTitle {
     		height: 150px;
             width: 100%;
             display: flex;
@@ -31,13 +31,13 @@
             font-weight: bold;
             font-size: 35px;
     	}
-    	.writeButtonBox {
+    	.communityPageWriteButtonBox {
     		width: 70%;
     		height: 60px;
     		display: flex;
     		justify-content: end;
     	}
-    	.writeButton {
+    	.communityPageWriteButton {
     		width: 80px;
     		height: 25px;
     		display: flex;
@@ -49,20 +49,20 @@
     		font-weight: bold;
     		cursor: pointer;
     	}
-    	.writeButton:hover {
+    	.communityPageWriteButton:hover {
     		background-color: black;
     		color: white;
     		border: 1px dashed white;
     		border-radius: 15px;
     	}
-        .container2 {
+        .communityPageContainer2 {
         	width: 70%;
             margin: 0 auto;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
         }
-        .CItem {
+        .communityPageItem {
             background-color: white;
             border: 1px solid #F6F6F6;
             border-radius: 10px;
@@ -76,7 +76,7 @@
             box-shadow: 5px 5px 5px 5px #9E9E9E;
             position: relative;
         }
-        .CItem:hover {
+        .communityPageItem:hover {
             cursor: pointer;
             box-shadow: 15px 15px 15px 15px #9E9E9E;
             transform: rotate(1deg);
@@ -84,41 +84,29 @@
             transform-origin: 50% 50%;
             transform: perspective(2000px) rotateY(-5deg) rotateX(5deg); */
         }
-        .CitemHeader {
+        .communityPageItemHeader {
             height: 70px;
             width: 100%;
             display: flex;
             align-items: center;
         }
-        .CheaderNick
+        .communityPageHeaderNick
         {
             font-weight: bold;
-        }
-        .CheaderImgBox {
-            width: 100px;
-            height: 35px;
-            margin-left: 20px;
-            display: flex;
-            justify-content: center;
-            overflow: hidden;
-        }
-        .CheaderImg {
-            height: 100%;
-            width: 100%;
         }
         .ml20 {
             margin-left: 20px;
         }
-        .CitemImgBox {
+        .communityPageItemImgBox {
             height: 450px;
             display: flex;
             justify-content: center;
             overflow: hidden;
         }
-        .CitemImg {
+        .communityPageItemImg {
             height: 100%;
         }
-        .CitemMain {
+        .communityPageItemMain {
             height: 220px;
             display: flex;
             flex-direction: column;
@@ -126,14 +114,7 @@
             align-items: center;
             padding: 5px 15px;
         }
-        .CitemMainC {
-            height: 220px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 5px 15px;
-        }
-        .CitemMainT
+        .communityPageItemMainT
         {
             height: 600px;
             display: flex;
@@ -142,128 +123,120 @@
             align-items: center;
             padding: 15px;
         }
-        .CitemFooter 
+        .communityPageItemFooter 
         {
             height: 70px;
         }
-        .CitemName {
-            margin-top: 10px;
-        }
-        .CitemNameC {
+        .communityPageItemNameC {
             margin: 10px 0;
         }
-        .CitemAddress {
+        .communityPageText {
             height: 70px;
             padding-bottom: 40px;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
-        .CitemPrice {
-            box-sizing: border-box;
-            font-weight: bold;
-            margin-bottom: 15px;
+        .communityPageTextT {
         }
     </style>
 </head>
 <body>
 <jsp:include page="menu.jsp"/>
-	<div class="communityCon">
-		<div class="title">
+	<div class="communityPageContainer">
+		<div class="communityPageTitle">
 			COMMUNITY
 		</div>
-		<div class="writeButtonBox">
-			<div class="writeButton" onclick="location.href='/item'">글쓰기</div>
+		<div class="communityPageWriteButtonBox">
+			<div class="communityPageWriteButton" onclick="location.href='/item'">글쓰기</div>
 		</div>
-	    <div class="container2">
-	    	<div class="CItem" onclick="location.href='/community/communityItem'">
-                <div class="CitemHeader">
-                    <p class="CheaderNick ml20"> 닉네임</p>
-                    <p class="CheaderLevel ml20"> Lv.20</p>
+	    <div class="communityPageContainer2">
+	    	<div class="communityPageItem" onclick="location.href='/community/communityItem'">
+                <div class="communityPageItemHeader">
+                    <p class="communityPageHeaderNick ml20"> 닉네임</p>
+                    <p class="communityPageHeaderLevel ml20"> Lv.20</p>
                 </div>
-                <div class="CitemImgBox">
-                    <img src="/resources/img/캡처.PNG" alt="itemImg" class="CitemImg">
+                <div class="communityPageItemImgBox">
+                    <img src="/resources/img/캡처.PNG" alt="itemImg" class="communityPageItemImg">
                 </div>
-                <div class="CitemMain">
-                    <h3 class="CitemNameC">제목</h3>
-                    <p class="CitemAddress">내용</p>
-                </div>
-            </div>
-	    	<div class="CItem" onclick="location.href='/community/communityItem'">
-                 <div class="CitemHeader">
-                     <p class="CheaderNick ml20"> 닉네임</p>
-                     <p class="CheaderLevel ml20"> Lv.20</p>
-                 </div>
-                 <div class="CitemMainT">
-                     <h3 class="CitemNameC">제목</h3>
-                     <p class="CitemTextT">내용</p>
-                 </div>
-                 <div class="CitemFooter">
-                 </div>
-             </div>
-	        <div class="CItem" onclick="location.href='/community/communityItem'">
-                <div class="CitemHeader">
-                    <p class="CheaderNick ml20"> 닉네임</p>
-                    <p class="CheaderLevel ml20"> Lv.20</p>
-                </div>
-                <div class="CitemImgBox">
-                    <img src="/resources/img/캡처.PNG" alt="itemImg" class="CitemImg">
-                </div>
-                <div class="CitemMain">
-                    <h3 class="CitemNameC">제목</h3>
-                    <p class="CitemAddress">내용</p>
+                <div class="communityPageItemMain">
+                    <h3 class="communityPageItemNameC">제목</h3>
+                    <p class="communityPageText">내용</p>
                 </div>
             </div>
-            <div class="CItem" onclick="location.href='/community/communityItem'">
-                <div class="CitemHeader">
-                    <p class="CheaderNick ml20"> 닉네임</p>
-                    <p class="CheaderLevel ml20"> Lv.20</p>
+	    	<div class="communityPageItem" onclick="location.href='/community/communityItem'">
+                <div class="communityPageItemHeader">
+                    <p class="communityPageHeaderNick ml20"> 닉네임</p>
+                    <p class="communityPageHeaderLevel ml20"> Lv.20</p>
                 </div>
-                <div class="CitemImgBox">
-                    <img src="/resources/img/캡처.PNG" alt="itemImg" class="CitemImg">
+                <div class="communityPageItemMainT">
+                    <h3 class="communityPageItemNameC">제목</h3>
+                    <p class="communityPageTextT">내용</p>
                 </div>
-                <div class="CitemMain">
-                    <h3 class="CitemNameC">제목</h3>
-                    <p class="CitemAddress">내용</p>
-                </div>
-            </div>
-            <div class="CItem" onclick="location.href='/community/communityItem'">
-                <div class="CitemHeader">
-                    <p class="CheaderNick ml20"> 닉네임</p>
-                    <p class="CheaderLevel ml20"> Lv.20</p>
-                </div>
-                <div class="CitemImgBox">
-                    <img src="/resources/img/캡처.PNG" alt="itemImg" class="CitemImg">
-                </div>
-                <div class="CitemMain">
-                    <h3 class="CitemNameC">제목</h3>
-                    <p class="CitemAddress">내용</p>
+                <div class="communityPageItemFooter">
                 </div>
             </div>
-            <div class="CItem" onclick="location.href='/community/communityItem'">
-                <div class="CitemHeader">
-                    <p class="CheaderNick ml20"> 닉네임</p>
-                    <p class="CheaderLevel ml20"> Lv.20</p>
+            <div class="communityPageItem" onclick="location.href='/community/communityItem'">
+                <div class="communityPageItemHeader">
+                    <p class="communityPageHeaderNick ml20"> 닉네임</p>
+                    <p class="communityPageHeaderLevel ml20"> Lv.20</p>
                 </div>
-                <div class="CitemImgBox">
-                    <img src="/esources/img/캡처.PNG" alt="itemImg" class="CitemImg">
+                <div class="communityPageItemImgBox">
+                    <img src="/resources/img/캡처.PNG" alt="itemImg" class="communityPageItemImg">
                 </div>
-                <div class="CitemMain">
-                    <h3 class="CitemNameC">제목</h3>
-                    <p class="CitemAddress">내용</p>
+                <div class="communityPageItemMain">
+                    <h3 class="communityPageItemNameC">제목</h3>
+                    <p class="communityPageText">내용</p>
                 </div>
             </div>
-            <div class="CItem" onclick="location.href='/community/communityItem'">
-                <div class="CitemHeader">
-                    <p class="CheaderNick ml20"> 닉네임</p>
-                    <p class="CheaderLevel ml20"> Lv.20</p>
+	    	<div class="communityPageItem" onclick="location.href='/community/communityItem'">
+                <div class="communityPageItemHeader">
+                    <p class="communityPageHeaderNick ml20"> 닉네임</p>
+                    <p class="communityPageHeaderLevel ml20"> Lv.20</p>
                 </div>
-                <div class="CitemImgBox">
-                    <img src="/resources/img/캡처.PNG" alt="itemImg" class="CitemImg">
+                <div class="communityPageItemMainT">
+                    <h3 class="communityPageItemNameC">제목</h3>
+                    <p class="communityPageTextT">내용</p>
                 </div>
-                <div class="CitemMain">
-                    <h3 class="CitemNameC">제목</h3>
-                    <p class="CitemAddress">내용</p>
+                <div class="communityPageItemFooter">
+                </div>
+            </div>
+            <div class="communityPageItem" onclick="location.href='/community/communityItem'">
+                <div class="communityPageItemHeader">
+                    <p class="communityPageHeaderNick ml20"> 닉네임</p>
+                    <p class="communityPageHeaderLevel ml20"> Lv.20</p>
+                </div>
+                <div class="communityPageItemImgBox">
+                    <img src="/resources/img/캡처.PNG" alt="itemImg" class="communityPageItemImg">
+                </div>
+                <div class="communityPageItemMain">
+                    <h3 class="communityPageItemNameC">제목</h3>
+                    <p class="communityPageText">내용</p>
+                </div>
+            </div>
+	    	<div class="communityPageItem" onclick="location.href='/community/communityItem'">
+                <div class="communityPageItemHeader">
+                    <p class="communityPageHeaderNick ml20"> 닉네임</p>
+                    <p class="communityPageHeaderLevel ml20"> Lv.20</p>
+                </div>
+                <div class="communityPageItemMainT">
+                    <h3 class="communityPageItemNameC">제목</h3>
+                    <p class="communityPageTextT">내용</p>
+                </div>
+                <div class="communityPageItemFooter">
+                </div>
+            </div>
+            <div class="communityPageItem" onclick="location.href='/community/communityItem'">
+                <div class="communityPageItemHeader">
+                    <p class="communityPageHeaderNick ml20"> 닉네임</p>
+                    <p class="communityPageHeaderLevel ml20"> Lv.20</p>
+                </div>
+                <div class="communityPageItemImgBox">
+                    <img src="/resources/img/캡처.PNG" alt="itemImg" class="communityPageItemImg">
+                </div>
+                <div class="communityPageItemMain">
+                    <h3 class="communityPageItemNameC">제목</h3>
+                    <p class="communityPageText">내용</p>
                 </div>
             </div>
   	    </div>

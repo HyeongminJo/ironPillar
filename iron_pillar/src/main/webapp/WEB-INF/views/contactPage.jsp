@@ -18,14 +18,14 @@
     body {
         background-color: #F6F6F6;
     }
-    .Ccontainer {
+    .contactPageContainer {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         padding-top: 100px;
     }
-    .title {
+    .contactPageTitle {
    		height: 150px;
         width: 100%;
         display: flex;
@@ -34,7 +34,7 @@
         font-weight: bold;
         font-size: 35px;
    	}
-    .mainItem {
+    .contactPageItem {
         background-image: url(img/My\ project-1\ \(1\).png);
         background-position: center center;
         background-size: cover;
@@ -50,13 +50,13 @@
         box-shadow: 5px 5px 5px 5px #9E9E9E;
         padding-top: 20px;
     }
-    .CwriteButtonBox {
+    .contactPageWriteButtonBox {
    		width: 90%;
    		height: 40px;
    		display: flex;
    		justify-content: end;
    	}
-   	.CwriteButton {
+   	.contactPageWriteButton {
    		width: 80px;
    		height: 25px;
    		display: flex;
@@ -68,24 +68,12 @@
    		font-weight: bold;
    		cursor: pointer;
    	}
-   	.CwriteButton:hover {
+   	.contactPageWriteButton:hover {
    		background-color: black;
    		color: white;
    		border: 1px dashed white;
    		border-radius: 15px;
    	}
-    .imgBox {
-        width: 80%;
-        height: 200px;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .imgitem {
-        width: 450px;
-        height: 150px;
-    }
     table {
         width: 90%;
         text-align: center;
@@ -117,34 +105,34 @@
     table thead th ,table tbody td{
         padding: 12px 0;
     }
-    footer {
+    .contactPageFooter {
         margin-top: 35px;
         display: flex;
         justify-content: center;
     }
-    footer a {
+    .contactPageFooter a {
         margin: 0 10px;
         padding: 0 10px;
         font-size: 16px;
     }
-    .textitem {
+    .contactPageTextitem {
         text-align: left;
         padding-left: 15px;
     }
-    .AfontColor {
+    .contactPageFontColor {
     	color: black;
     }
 </style>
 </head>
 <body>
 <jsp:include page="menu.jsp"/>
-    <div class="Ccontainer">
-    	<div class="title">
+    <div class="contactPageContainer">
+    	<div class="contactPageTitle">
     		CONTACT US
     	</div>
-        <div class="mainItem">
-	       	<div class="CwriteButtonBox">
-				<div class="CwriteButton" onclick="location.href='/item'">글쓰기</div>
+        <div class="contactPageItem">
+	       	<div class="contactPageWriteButtonBox">
+				<div class="contactPageWriteButton" onclick="location.href='/item'">글쓰기</div>
 			</div>
             <table cellspacing="0" class="tableBox">
                 <thead>
@@ -158,72 +146,72 @@
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td class="textitem"><a href="#" class="AfontColor">개인 거래 문의</a></td>
+                        <td class="contactPageTextitem"><a href="#" class="contactPageFontColor">개인 거래 문의</a></td>
                         <td>조형민</td>
                         <td class="text-center">2022.03.14</td>
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td class="textitem"><a href="#" class="AfontColor">개인 거래 사기 문의</a></td>
+                        <td class="contactPageTextitem"><a href="#" class="contactPageFontColor">개인 거래 사기 문의</a></td>
                         <td>조형민</td>
                         <td class="text-center">2022.03.14</td>
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td class="textitem"><a href="#" class="AfontColor">김우빈 덕질 과다 고발 문의dddddddddd</a></td>
+                        <td class="contactPageTextitem"><a href="#" class="contactPageFontColor">김우빈 덕질 과다 고발 문의dddddddddd</a></td>
                         <td>김민재</td>
                         <td class="text-center">2022.03.14</td>
                     </tr>
                     <tr>
                         <td>4</td>
-                        <td class="textitem"><a href="#" class="AfontColor">편의점 2개월 먹방 문의</a></td>
+                        <td class="contactPageTextitem"><a href="#" class="contactPageFontColor">편의점 2개월 먹방 문의</a></td>
                         <td>김동건</td>
                         <td class="text-center">2022.03.14</td>
                     </tr>
                     <tr>
                         <td>5</td>
-                        <td class="textitem"><a href="#" class="AfontColor">노래방 2시간 aaaaaaaaaaaaaaaaaaa지옥 문의d</a></td>
+                        <td class="contactPageTextitem"><a href="#" class="contactPageFontColor">노래방 2시간 aaaaaaaaaaaaaaaaaaa지옥 문의d</a></td>
                         <td>박성일</td>
                         <td class="text-center">2022.03.14</td>
                     </tr>
                     <tr>
                         <td>6</td>
-                        <td class="textitem"><a href="#" class="AfontColor">개인 거래 문의</a></td>
+                        <td class="contactPageTextitem"><a href="#" class="contactPageFontColor">개인 거래 문의</a></td>
                         <td>조형민</td>
                         <td class="text-center">2022.03.14</td>
                     </tr>
                     <tr>
                         <td>7</td>
-                        <td class="textitem"><a href="#" class="AfontColor">개인 거래 문의dddddddddddddddddddddd</a></td>
+                        <td class="contactPageTextitem"><a href="#" class="contactPageFontColor">개인 거래 문의dddddddddddddddddddddd</a></td>
                         <td>조형민</td>
                         <td class="text-center">2022.03.14</td>
                     </tr>
                     <tr>
                         <td>8</td>
-                        <td class="textitem"><a href="#" class="AfontColor">개인 문의</a></td>
+                        <td class="contactPageTextitem"><a href="#" class="contactPageFontColor">개인 문의</a></td>
                         <td>조형민</td>
                         <td class="text-center">2022.03.14</td>
                     </tr>
                     <tr>
                         <td>9</td>
-                        <td class="textitem"><a href="#" class="AfontColor">개인</a></td>
+                        <td class="contactPageTextitem"><a href="#" class="contactPageFontColor">개인</a></td>
                         <td>조형민</td>
                         <td class="text-center">2022.03.14</td>
                     </tr>
                     <tr>
                         <td>10</td>
-                        <td class="textitem"><a href="#" class="AfontColor">개인 거래 문의asdfasfasfafasdfasf</a></td>
+                        <td class="contactPageTextitem"><a href="#" class="contactPageFontColor">개인 거래 문의asdfasfasfafasdfasf</a></td>
                         <td>조형민</td>
                         <td class="text-center">2022.03.14</td>
                     </tr>
                 </tbody>
             </table>
-            <footer>
-                <a href="#" class="AfontColor">1</a>
-                <a href="#" class="AfontColor">2</a>
-                <a href="#" class="AfontColor">3</a>
-                <a href="#" class="AfontColor">4</a>
-                <a href="#" class="AfontColor">5</a>
+            <footer class="contactPageFooter">
+                <a href="#" class="contactPageFontColor">1</a>
+                <a href="#" class="contactPageFontColor">2</a>
+                <a href="#" class="contactPageFontColor">3</a>
+                <a href="#" class="contactPageFontColor">4</a>
+                <a href="#" class="contactPageFontColor">5</a>
             </footer>
         </div>
     </div>

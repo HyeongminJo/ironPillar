@@ -16,7 +16,7 @@
     body {
         background-color: #F6F6F6;
     }
-    .Ccontainer {
+    .communityItemContainer {
         width: 70%;
         margin: 0 auto;
         padding-top: 150px;
@@ -63,8 +63,7 @@
     </style>
 </head>
 <body>
-    <!-- body -->
-    <div class="Ccontainer">
+    <div class="communityItemContainer">
         <div class="communityItem">
             <div class="communityItemImgBox">
                 <img src="/resources/img/텐트.jpg" alt="error" class="communityItemImg">

@@ -18,13 +18,13 @@
         background-color: #F6F6F6;
     }
     /* main css */
-    .PPcontainer {
+    .placeItemContainer {
         display: flex;
         justify-content: center;
         margin: 0 auto;
         padding-top: 150px;
     }
-    .PPmainItem {
+    .placeItemMainItem {
         background-color: white;
         box-shadow: 2px 2px 2px 2px #9E9E9E;
         border-radius: 30px;
@@ -35,7 +35,7 @@
         justify-content: space-between;
         align-items: center;
     }
-    .placeBox {
+    .placeItemBox {
         /* border: 1px solid red; */
         display: flex;
         flex-direction: column;
@@ -43,13 +43,13 @@
         width: 90%;
         margin: 20px 0 10px 0;
     }
-    .placeImgBox {
+    .placeItemImgBox {
         border: 1px solid red;
     }
-    .placeImgItem {
+    .placeItemImg {
         width: 100%;
     }
-    .placeItemBox {
+    .placeItemBox2 {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -57,27 +57,27 @@
         border: 1px solid black;
         margin-top: 10px;
     }
-    .placeItemBox1 {
+    .placeItemBox3 {
         width: 28%;
         padding: 0 10px;
         /* border: 1px solid green; */
     }
-    .Pbox {
+    .placeItemPbox {
         /* border: 1px solid red; */
         padding: 10px 0;
     }
-    .placeMainBox {
+    .placeItemMainBox {
         /* border: 2px solid yellow; */
         border-left: 1px dashed black;
         padding: 0 10px;
         width: 72%;
         height: 100%;
     }
-    .ppp {
+    .placeItemPpp {
         line-height: 30px;
         font-size: 15px;
     }
-    .b {
+    .placeItemB {
         border: 1px solid red;
         margin: 20px 0 10px 0;
     }
@@ -86,15 +86,15 @@
 <body>
 <jsp:include page="menu.jsp"/>
     <!-- body -->
-    <div class="PPcontainer">
-        <div class="PPmainItem">
-            <div class="placeBox">
-                <div class="placeImgBox">
-                    <img src="/resources/img/캠핑1.png" alt="error" class="placeImgItem">
+    <div class="placeItemContainer">
+        <div class="placeItemMainItem">
+            <div class="placeItemBox">
+                <div class="placeItemImgBox">
+                    <img src="/resources/img/캠핑1.png" alt="error" class="placeItemImg">
                 </div>
-                <div class="placeItemBox">
-                    <div class="placeItemBox1">
-                        <div class="Pbox">
+                <div class="placeItemBox2">
+                    <div class="placeItemBox3">
+                        <div class="placeItemPbox">
                             <h4>대장금 캠핑장</h4>
                             <div>별점부여</div>
                         </div>
@@ -103,13 +103,13 @@
                             <h4>가 격 : 100000 원</h4>
                         </div>
                     </div>
-                    <div class="placeMainBox">
-                        <p class="ppp">캠핑장 설명 캠핑장 설명 캠핑장 설명 캠핑장 설명 캠핑장 설명 캠핑장 설명 캠핑장 설명 캠핑장 설명 캠핑장 설명 
+                    <div class="placeItemMainBox">
+                        <p class="placeItemPpp">캠핑장 설명 캠핑장 설명 캠핑장 설명 캠핑장 설명 캠핑장 설명 캠핑장 설명 캠핑장 설명 캠핑장 설명 캠핑장 설명 
                     </div>
                 </div>
             </div>
             <!-- 지도 -->
-            <div class="b">
+            <div class="placeItemB">
                 지도api
             </div>
         </div>

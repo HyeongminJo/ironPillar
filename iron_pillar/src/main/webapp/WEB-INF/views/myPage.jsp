@@ -42,7 +42,7 @@
         body {
             background-color: #F6F6F6;
         }
-        .sessionContainer{
+        .myPageSessionContainer{
             /* border: 1px solid red; */
             width: 70%;
             margin: 0 auto;
@@ -52,7 +52,7 @@
             flex-direction: column;
             padding-top: 100px;
         }
-        .sessionHeader {
+        .myPageSessionHeader {
             height: 150px;
             width: 100%;
             display: flex;
@@ -61,10 +61,10 @@
             font-weight: bold;
             font-size: 35px;
         }
-        .sessionBox {
+        .myPageSessionBox {
             width: 100%;
         }
-        .sessionBox1 {
+        .myPageSessionBox1 {
             /* border: 1px solid blue; */
             width: 100%;
             height: 60px;
@@ -72,76 +72,76 @@
             justify-content: space-around;
             align-items: center;
         }
-        .buttonSize {
+        .myPageButtonSize {
         	width: 120px;
         	height: 25px;
         	display: flex;
         	justify-content: center;
         	align-items: center;
         }
-        .input
+        .myPageInput
         {
             display: none;
         }
-        .sessions
+        .myPageSessions
         {
             display: none;
         }
-        .input1:checked ~ .sessionBox1 .inputItem1
+        .myPageInput1:checked ~ .myPageSessionBox1 .myPageInputItem1
         {
             background-color: black;
             color: white;
             font-size: 20px;
         }
-        .input2:checked ~ .sessionBox1 .inputItem2
+        .myPageInput2:checked ~ .myPageSessionBox1 .myPageInputItem2
         {
             background-color: black;
             color: white;
             font-size: 20px;
         }
-        .input3:checked ~ .sessionBox1 .inputItem3
+        .myPageInput3:checked ~ .myPageSessionBox1 .myPageInputItem3
         {
             background-color: black;
             color: white;
             font-size: 20px;
         }
-        .input4:checked ~ .sessionBox1 .inputItem4
+        .myPageInput4:checked ~ .myPageSessionBox1 .myPageInputItem4
         {
             background-color: black;
             color: white;
             font-size: 20px;
         }
-        .input5:checked ~ .sessionBox1 .inputItem5
+        .myPageInput5:checked ~ .myPageSessionBox1 .myPageInputItem5
         {
             background-color: black;
             color: white;
             font-size: 20px;
         }
-        .input1:checked ~ .orderSession
+        .myPageInput1:checked ~ .myPageOrderSession
         {
             display: block;
         }
-        .input2:checked ~ .reviewSession
+        .myPageInput2:checked ~ .myPageReviewSession
         {
             display: block;
         }
-        .input3:checked ~ .wishSession
+        .myPageInput3:checked ~ .myPageWishSession
         {
             display: block;
         }
-        .input4:checked ~ .cartSession
+        .myPageInput4:checked ~ .myPageCartSession
         {
             display: block;
         }
-        .input5:checked ~ .privacySession
+        .myPageInput5:checked ~ .myPagePrivacySession
         {
             display: block;
         }
-        .sessionBox2 {
+        .myPageSessionBox2 {
             /* border: 1px solid green; */
             width: 100%;
         }
-        .sessionItem {
+        .myPageSessionItem {
             /* border: 1px solid black; */
             font-weight: bold;
             cursor: pointer;
@@ -153,13 +153,13 @@
             height: 100%;
             transition-duration: 300ms;
         }
-        .sessionItem:hover {
+        .myPageSessionItem:hover {
             background-color: black;
             color: white;
             font-size: 20px;
         }
         /* 주문목록 */
-        .orderItem {
+        .myPageOrderItem {
             background-color: white;
             border: 1px solid #F6F6F6;
             border-radius: 10px;
@@ -169,46 +169,46 @@
             padding: 22px;
             height: 200px;
         }
-        .orderItemImgbox {
+        .myPageOrderItemImgbox {
             /* border: 1px solid red; */
             width: 25%;
             height: 200px;
             overflow: hidden;
             cursor: pointer;
         }
-        .ImgItem {
+        .myPageImgItem {
             height: 100%;
         }
-        .orderItemBoxRight {
+        .myPageOrderItemBoxRight {
             display: flex;
             justify-content: space-between;
             align-items: center;
             width: 75%;
             padding-left: 22px;
         }
-        .orderItem3 {
+        .myPageOrderItem3 {
             height: 75%;
             /* border: 3px solid green; */
             display: flex;
             flex-direction: column;
             justify-content: space-around;
         }
-        .orderInItem1 {
+        .myPageOrderInItem1 {
             height: 100%;
             /* border: 1px solid red; */
         }
-        .orderItemFont1 {
+        .myPageOrderItemFont1 {
             cursor: pointer;
         }
-        .fontItem1 {
+        .myPageFontItem1 {
             font-weight: bold;
             font-size: 25px;
         }
-        .fontItem2 {
+        .myPageFontItem2 {
             font-weight: bold;
             font-size: 20px;
         }
-        .orderInItem2 {
+        .myPageOrderInItem2 {
             background-color: white;
             border-left: 1px dashed #9E9E9E;
             padding-left: 25px;
@@ -217,22 +217,22 @@
             flex-direction: column;
             justify-content: space-around;
         }
-        .orderItemFont2 {
+        .myPageOrderItemFont2 {
             border: 1px solid #9E9E9E;
             border-radius: 5px;
             padding: 15px 10px;
             cursor: pointer;
             transition-duration: 300ms;
         }
-        .orderItemFont2:hover {
+        .myPageOrderItemFont2:hover {
             border: 1px solid orange;
             color: orange;
         }
-        .sessionBox2 {
+        .myPageSessionBox2 {
             /* border: 1px solid green; */
             width: 100%;
         }
-        .ReviewItem {
+        .myPageReviewItem {
             background-color: white;
             border: 1px solid #F6F6F6;
             border-radius: 10px;
@@ -242,55 +242,55 @@
             padding: 22px;
             height: 200px;
         }
-        .ReviewImgBox {
+        .myPageReviewImgBox {
             display: flex;
             align-items: center;
         }
-        .ReviewItemImgbox {
+        .myPageReviewItemImgbox {
             /* border: 1px solid red; */
             width: 25%;
             height: 200px;
             overflow: hidden;
         }
-        .ReviewImgItem{
+        .myPageReviewImgItem{
             width: 17px;
             height: 17px;
             margin-right: 5px;
         }
-        .ReviewFontItem1 {
+        .myPageReviewFontItem1 {
             font-weight: bold;
         }
-        .ReviewItemFont1 {
+        .myPageReviewItemFont1 {
             cursor: pointer;
         }
-        .ReviewFontItem2 {
+        .myPageReviewFontItem2 {
             font-weight: bold;
         }
         /* 찜목록 */
-        .wishHeader {
+        .myPageWishHeader {
             display: flex;
             justify-content: start;
             align-items: center;
             height: 50px;
         }
-        .wishBox {
+        .myPageWishBox {
             display: flex;
             justify-content: space-between;
             align-items: center;
             
         }
-        .checkBoxItem {
+        .myPageCheckBoxItem {
             height: 200px;
             display: flex;
             justify-content: start;
         }
-        .checkBoxItem1 {
+        .myPageCheckBoxItem1 {
             cursor: pointer;
             width: 20px;
             height: 20px;
             margin-right: 22px;
         }
-        .buttonItem {
+        .myPageButtonItem {
             /* border: 1px solid red; */
             cursor: pointer;
             background-color: white;
@@ -302,17 +302,17 @@
             height: 22px;
             margin-left: 22px;
         }
-        .buttonItem:hover {
+        .myPageButtonItem:hover {
             background-color: black;
             color: white;
         }
-        .checkBoxItem2 {
+        .myPageCheckBoxItem2 {
             position: relative;
             cursor: pointer;
             width: 20px;
             height: 20px;
         }
-        .wishItem {
+        .myPageWishItem {
             background-color: white;
             border: 1px solid #F6F6F6;
             border-radius: 10px;
@@ -323,7 +323,7 @@
             height: 200px;
             width: 94%;
         }
-        .wishItemFont2 {
+        .myPageWishItemFont2 {
             border: 1px solid #9E9E9E;
             border-radius: 5px;
             padding: 15px 10px;
@@ -331,12 +331,12 @@
             transition-duration: 300ms;
             text-align: center;
         }
-        .wishItemFont2:hover {
+        .myPageWishItemFont2:hover {
             border: 1px solid orange;
             color: orange;
         }
         /* 내정보수정 */
-        .Pcontainer {
+        .myPagePcontainer {
             width: 800px;
             height: 600px;
             margin: 0 auto;
@@ -345,7 +345,7 @@
             justify-content: space-around;
             align-items: center;
         }
-        .loginLeft {
+        .myPageLoginLeft {
             width: 50%;
             height: 450px;
             display: flex;
@@ -353,17 +353,17 @@
             align-items: center;
             overflow: hidden;
         }
-        .loginRight {
+        .myPageLoginRight {
             width: 50%;
             height: 450px;
             /* border: 1px solid purple; */
             display: flex;
             justify-content: center;
         }
-        .loginVideo {
+        .myPageLoginVideo {
             height: 450px; 
         }
-        .loginBox {
+        .myPageLoginBox {
             /* background-color: white; */
             /* border: 1px solid blue; */
             width: 90%;
@@ -373,7 +373,7 @@
             flex-direction: column;
             justify-content: space-between;
         }
-        .loginBox2 {
+        .myPageLoginBox2 {
             height: 100%;
             background-color: white;
             border: 1px solid #D8D8D8;
@@ -382,15 +382,15 @@
             align-items: center;
             justify-content: center;
         }
-        .loginBox3 {
+        .myPageLoginBox3 {
             width: 70%;
         }
-        .logo {
+        .myPageLogo {
             width: 250px;
             height: 100px;
             margin-bottom: 10px;
         }
-        .idBox {
+        .myPageIdBox {
             width: 228px;
             height: 30px;
             margin-bottom: 10px;
@@ -399,11 +399,11 @@
             border-radius: 5px;
             padding: 0 10px;
         }
-        input:focus {
+        .myPageInput:focus {
             border: 1px dashed black;
             outline: none;
         }
-        .pwBox {
+        .myPagePwBox {
             width: 228px;
             height: 30px;
             margin-bottom: 20px;
@@ -412,13 +412,13 @@
             border-radius: 5px;
             padding: 0 10px;
         }
-        select {
+        .myPageSelect {
             outline: none;
         }
-        select:focus {
+        .myPageSelect:focus {
             border: 1px dashed black;
         }
-        .phoneBox {
+        .myPagePhoneBox {
             height: 30px;
             margin-bottom: 10px;
             background-color: #F6F6F6;
@@ -426,10 +426,10 @@
             border-radius: 5px;
             padding: 0 10px;
         }
-        .pB {
+        .myPagePB {
             width: 51.5px;
         }
-        .submitButton {
+        .myPageSubmitButton {
             width: 250px;
             height: 32px;
             border: 1px solid black;
@@ -441,11 +441,11 @@
             cursor: pointer;
             transition-duration: 400ms;
         }
-        .submitButton:hover {
+        .myPageSubmitButton:hover {
             background-color: white;
             color: black;
         }
-        .joinBox {
+        .myPageJoinBox {
             background-color: white;
             border: 1px solid #D8D8D8;
             height: 15%;
@@ -454,278 +454,278 @@
             align-items: center;
 
         }
-        .joinButton {
+        .myPageJoinButton {
             font-weight: bold;
         }
 </style>
 </head>
 <body>
 <jsp:include page="menu.jsp"/>
-    <div class="sessionContainer">
-        <div class="sessionHeader">
+    <div class="myPageSessionContainer">
+        <div class="myPageSessionHeader">
             MY PAGE
         </div>
-        <div class="sessionBox">
-            <input type="radio" name="group" id="1" class="input input1" checked>
-            <input type="radio" name="group" id="2" class="input input2">
-            <input type="radio" name="group" id="3" class="input input3">
-            <input type="radio" name="group" id="4" class="input input4">
-            <input type="radio" name="group" id="5" class="input input5">
-            <div class="sessionBox1">
-                <label for="1" class="sessionItem inputItem1" onclick="location.href='#'">ORDER LIST</label>
-                <label for="2" class="sessionItem inputItem2" onclick="location.href='#'">REVIEW</label>
-                <label for="3" class="sessionItem inputItem3" onclick="location.href='#'">WISH LIST</label>
-                <label for="4" class="sessionItem inputItem4" onclick="location.href='#'">CART</label>
-                <label for="5" class="sessionItem inputItem5" onclick="location.href='#'">PRIVACY</label>
+        <div class="myPageSessionBox">
+            <input type="radio" name="group" id="1" class="myPageInput myPageInput1" checked>
+            <input type="radio" name="group" id="2" class="myPageInput myPageInput2">
+            <input type="radio" name="group" id="3" class="myPageInput myPageInput3">
+            <input type="radio" name="group" id="4" class="myPageInput myPageInput4">
+            <input type="radio" name="group" id="5" class="myPageInput myPageInput5">
+            <div class="myPageSessionBox1">
+                <label for="1" class="myPageSessionItem myPageInputItem1" onclick="location.href='#'">ORDER LIST</label>
+                <label for="2" class="myPageSessionItem myPageInputItem2" onclick="location.href='#'">REVIEW</label>
+                <label for="3" class="myPageSessionItem myPageInputItem3" onclick="location.href='#'">WISH LIST</label>
+                <label for="4" class="myPageSessionItem myPageInputItem4" onclick="location.href='#'">CART</label>
+                <label for="5" class="myPageSessionItem myPageInputItem5" onclick="location.href='#'">PRIVACY</label>
             </div>
-            <div class="sessions orderSession">
-                <div class="sessionBox2">
-                    <div class="orderItem">
-                        <div class="orderItemImgbox">
-                            <img class="ImgItem" src="resources/img/텐트.jpg" alt="오류" onclick="location.href='#'">
+            <div class="myPageSessions myPageOrderSession">
+                <div class="myPageSessionBox2">
+                    <div class="myPageOrderItem">
+                        <div class="myPageOrderItemImgbox">
+                            <img class="myPageImgItem" src="resources/img/텐트.jpg" alt="오류" onclick="location.href='#'">
                         </div>
-                        <div class="orderItemBoxRight">
-                            <div class="orderInItem1">
+                        <div class="myPageOrderItemBoxRight">
+                            <div class="myPageOrderInItem1">
                                 <div>주문 날짜 : 2023-03-02</div>
-                                <div class="orderItem3">
-                                    <div class="orderItemFont1 fontItem1" onclick="location.href='#'">4인 가족 대형 텐트</div>
-                                    <div class="orderItemFont1 fontItem2" onclick="location.href='#'">1000000 원</div>
+                                <div class="myPageOrderItem3">
+                                    <div class="myPageOrderItemFont1 myPageFontItem1" onclick="location.href='#'">4인 가족 대형 텐트</div>
+                                    <div class="myPageOrderItemFont1 myPageFontItem2" onclick="location.href='#'">1000000 원</div>
                                 </div>
                             </div>
-                            <div class="orderInItem2">
-                                <div class="orderItemFont2 buttonSize" onclick="location.href='#'">리뷰 작성하기</div>
-                                <div class="orderItemFont2 buttonSize" onclick="location.href='#'">교환/반품/환불</div>
+                            <div class="myPageOrderInItem2">
+                                <div class="myPageOrderItemFont2 myPageButtonSize" onclick="location.href='#'">리뷰 작성하기</div>
+                                <div class="myPageOrderItemFont2 myPageButtonSize" onclick="location.href='#'">교환/반품/환불</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="sessionBox2">
-                    <div class="orderItem">
-                        <div class="orderItemImgbox">
-                            <img class="ImgItem" src="resources/img/텐트.jpg" alt="오류" onclick="location.href='#'">
+                <div class="myPageSessionBox2">
+                    <div class="myPageOrderItem">
+                        <div class="myPageOrderItemImgbox">
+                            <img class="myPageImgItem" src="resources/img/텐트.jpg" alt="오류" onclick="location.href='#'">
                         </div>
-                        <div class="orderItemBoxRight">
-                            <div class="orderInItem1" onclick="location.href='#'">
+                        <div class="myPageOrderItemBoxRight">
+                            <div class="myPageOrderInItem1" onclick="location.href='#'">
                                 <div class="">주문 날짜 : 2023-03-02</div>
-                                <div class="orderItem3">
-                                    <div class="orderItemFont1 fontItem1">4인 가족 대형 텐트</div>
-                                    <div class="orderItemFont1 fontItem2">1000000 원</div>
+                                <div class="myPageOrderItem3">
+                                    <div class="myPageOrderItemFont1 myPageFontItem1">4인 가족 대형 텐트</div>
+                                    <div class="myPageOrderItemFont1 myPageFontItem2">1000000 원</div>
                                 </div>
                             </div>
-                            <div class="orderInItem2">
-                                <div class="orderItemFont2 buttonSize" onclick="location.href='#'">리뷰 작성하기</div>
-                                <div class="orderItemFont2 buttonSize" onclick="location.href='#'">교환/반품/환불</div>
+                            <div class="myPageOrderInItem2">
+                                <div class="myPageOrderItemFont2 myPageButtonSize" onclick="location.href='#'">리뷰 작성하기</div>
+                                <div class="myPageOrderItemFont2 myPageButtonSize" onclick="location.href='#'">교환/반품/환불</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="sessionBox2">
-                    <div class="orderItem">
-                        <div class="orderItemImgbox">
-                            <img class="ImgItem" src="resources/img/텐트.jpg" alt="오류" onclick="location.href='#'">
+                <div class="myPageSessionBox2">
+                    <div class="myPageOrderItem">
+                        <div class="myPageOrderItemImgbox">
+                            <img class="myPageImgItem" src="resources/img/텐트.jpg" alt="오류" onclick="location.href='#'">
                         </div>
-                        <div class="orderItemBoxRight">
-                            <div class="orderInItem1" onclick="location.href='#'">
+                        <div class="myPageOrderItemBoxRight">
+                            <div class="myPageOrderInItem1" onclick="location.href='#'">
                                 <div class="">주문 날짜 : 2023-03-02</div>
-                                <div class="orderItem3">
-                                    <div class="orderItemFont1 fontItem1">4인 가족 대형 텐트</div>
-                                    <div class="orderItemFont1 fontItem2">1000000 원</div>
+                                <div class="myPageOrderItem3">
+                                    <div class="myPageOrderItemFont1 myPageFontItem1">4인 가족 대형 텐트</div>
+                                    <div class="myPageOrderItemFont1 myPageFontItem2">1000000 원</div>
                                 </div>
                             </div>
-                            <div class="orderInItem2">
-                                <div class="orderItemFont2 buttonSize" onclick="location.href='#'">리뷰 작성하기</div>
-                                <div class="orderItemFont2 buttonSize" onclick="location.href='#'">교환/반품/환불</div>
+                            <div class="myPageOrderInItem2">
+                                <div class="myPageOrderItemFont2 myPageButtonSize" onclick="location.href='#'">리뷰 작성하기</div>
+                                <div class="myPageOrderItemFont2 myPageButtonSize" onclick="location.href='#'">교환/반품/환불</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="sessions reviewSession">
-                <div class="sessionBox2">
-                    <div class="orderItem">
-                        <div class="ReviewItemImgbox">
-                            <img class="ImgItem" src="resources/img/텐트.jpg" alt="오류" onclick="location.href='#'">
+            <div class="myPageSessions myPageReviewSession">
+                <div class="myPageSessionBox2">
+                    <div class="myPageOrderItem">
+                        <div class="myPageReviewItemImgbox">
+                            <img class="myPageImgItem" src="resources/img/텐트.jpg" alt="오류" onclick="location.href='#'">
                         </div>
-                        <div class="orderItemBoxRight">
-                            <div class="orderInItem1">
+                        <div class="myPageOrderItemBoxRight">
+                            <div class="myPageOrderInItem1">
                                 <div>2023-03-02</div>
-                                <div class="ReviewImgBox">
-                                    <img src="resources/img/star.png" class="ReviewImgItem"><span>4.5</span>
+                                <div class="myPageReviewImgBox">
+                                    <img src="resources/img/star.png" class="myPageReviewImgItem"><span>4.5</span>
                                 </div>
-                                <div class="orderItem3">
-                                    <div class="ReviewItemFont1 ReviewFontItem1" onclick="location.href='#'">4인 가족 대형 텐트</div>
-                                    <div class="ReviewFontItem2">4인 가족용으로 사용하기에 너무 안성맞춤이여서 좋아요 공간도 넓고, <br>튼튼해서 안심하고 사용합니다 ^^</div>
+                                <div class="myPageOrderItem3">
+                                    <div class="myPageReviewItemFont1 myPageReviewFontItem1" onclick="location.href='#'">4인 가족 대형 텐트</div>
+                                    <div class="myPageReviewFontItem2">4인 가족용으로 사용하기에 너무 안성맞춤이여서 좋아요 공간도 넓고, <br>튼튼해서 안심하고 사용합니다 ^^</div>
                                 </div>
                             </div>
-                            <div class="orderInItem2">
-                                <div class="orderItemFont2 buttonSize" onclick="location.href='#'">수정하기</div>
-                                <div class="orderItemFont2 buttonSize" onclick="location.href='#'">삭제하기</div>
+                            <div class="myPageOrderInItem2">
+                                <div class="myPageOrderItemFont2 myPageButtonSize" onclick="location.href='#'">수정하기</div>
+                                <div class="myPageOrderItemFont2 myPageButtonSize" onclick="location.href='#'">삭제하기</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="sessions wishSession">
-                <div class="wishHeader">
-                    <input type="checkbox" name="Allcheck" class="checkBoxItem1" onclick="selectAll(this)"><b>전체선택</b>
-                    <input type="button" value="삭제" class="buttonItem">
+            <div class="myPageSessions myPageWishSession">
+                <div class="myPageWishHeader">
+                    <input type="checkbox" name="Allcheck" class="myPageCheckBoxItem1" onclick="selectAll(this)"><b>전체선택</b>
+                    <input type="button" value="삭제" class="myPageButtonItem">
                 </div>
-                <div class="sessionBox2 wishBox">
-                    <div class="checkBoxItem">
-                        <input type="checkbox" name="P1" class="checkBoxItem2">                    
+                <div class="myPageSessionBox2 myPageWishBox">
+                    <div class="myPageCheckBoxItem">
+                        <input type="checkbox" name="P1" class="myPageCheckBoxItem2">                    
                     </div>
-                    <div class="wishItem">
-                        <div class="orderItemImgbox">
-                            <img class="ImgItem" src="resources/img/버너.png" alt="오류" onclick="location.href='#'">
+                    <div class="myPageWishItem">
+                        <div class="myPageOrderItemImgbox">
+                            <img class="myPageImgItem" src="resources/img/버너.png" alt="오류" onclick="location.href='#'">
                         </div>
-                        <div class="orderItemBoxRight">
-                            <div class="orderInItem1">
-                                <div class="orderItem3">
-                                    <div class="orderItemFont1 fontItem1" >휴대용 요리킹 버너!</div>
-                                    <div class="fontItem2">19,900 원</div>
+                        <div class="myPageOrderItemBoxRight">
+                            <div class="myPageOrderInItem1">
+                                <div class="myPageOrderItem3">
+                                    <div class="myPageOrderItemFont1 myPageFontItem1" >휴대용 요리킹 버너!</div>
+                                    <div class="myPageFontItem2">19,900 원</div>
                                 </div>
                             </div>
-                            <div class="orderInItem2">
-                                <div class="wishItemFont2 buttonSize" onclick="location.href='#'">장바구니에 담기</div>
-                                <div class="wishItemFont2 buttonSize" onclick="location.href='#'">삭제하기</div>
+                            <div class="myPageOrderInItem2">
+                                <div class="myPageWishItemFont2 myPageButtonSize" onclick="location.href='#'">장바구니에 담기</div>
+                                <div class="myPageWishItemFont2 myPageButtonSize" onclick="location.href='#'">삭제하기</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="sessionBox2 wishBox">
-                    <div class="checkBoxItem">
-                        <input type="checkbox" name="P2" class="checkBoxItem2">                    
+                <div class="myPageSessionBox2 myPageWishBox">
+                    <div class="myPageCheckBoxItem">
+                        <input type="checkbox" name="P2" class="myPageCheckBoxItem2">                    
                     </div>                  
-                    <div class="wishItem">
-                        <div class="orderItemImgbox">
-                            <img class="ImgItem" src="resources/img/랜턴.png" alt="오류" onclick="location.href='#'">
+                    <div class="myPageWishItem">
+                        <div class="myPageOrderItemImgbox">
+                            <img class="myPageImgItem" src="resources/img/랜턴.png" alt="오류" onclick="location.href='#'">
                         </div>
-                        <div class="orderItemBoxRight">
-                            <div class="orderInItem1">
-                                <div class="orderItem3">
-                                    <div class="orderItemFont1 fontItem1" >감성 캠핑 랜턴</div>
-                                    <div class="fontItem2">29,900 원</div>
+                        <div class="myPageOrderItemBoxRight">
+                            <div class="myPageOrderInItem1">
+                                <div class="myPageOrderItem3">
+                                    <div class="myPageOrderItemFont1 myPageFontItem1" >감성 캠핑 랜턴</div>
+                                    <div class="myPageFontItem2">29,900 원</div>
                                 </div>
                             </div>
-                            <div class="orderInItem2">
-                                <div class="wishItemFont2 buttonSize" onclick="location.href='#'">장바구니에 담기</div>
-                                <div class="wishItemFont2 buttonSize" onclick="location.href='#'">삭제하기</div>
+                            <div class="myPageOrderInItem2">
+                                <div class="myPageWishItemFont2 myPageButtonSize" onclick="location.href='#'">장바구니에 담기</div>
+                                <div class="myPageWishItemFont2 myPageButtonSize" onclick="location.href='#'">삭제하기</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="sessionBox2 wishBox">
-                    <div class="checkBoxItem">
-                        <input type="checkbox" name="P3" class="checkBoxItem2">                    
+                <div class="myPageSessionBox2 myPageWishBox">
+                    <div class="myPageCheckBoxItem">
+                        <input type="checkbox" name="P3" class="myPageCheckBoxItem2">                    
                     </div>                  
-                    <div class="wishItem">
-                        <div class="orderItemImgbox">
-                            <img class="ImgItem" src="resources/img/의자.png" alt="오류" onclick="location.href='#'">
+                    <div class="myPageWishItem">
+                        <div class="myPageOrderItemImgbox">
+                            <img class="myPageImgItem" src="resources/img/의자.png" alt="오류" onclick="location.href='#'">
                         </div>
-                        <div class="orderItemBoxRight">
-                            <div class="orderInItem1">
-                                <div class="orderItem3">
-                                    <div class="orderItemFont1 fontItem1" >휴대용 캠핑 의자</div>
-                                    <div class="fontItem2">39,900 원</div>
+                        <div class="myPageOrderItemBoxRight">
+                            <div class="myPageOrderInItem1">
+                                <div class="myPageOrderItem3">
+                                    <div class="myPageOrderItemFont1 myPageFontItem1" >휴대용 캠핑 의자</div>
+                                    <div class="myPageFontItem2">39,900 원</div>
                                 </div>
                             </div>
-                            <div class="orderInItem2">
-                                <div class="wishItemFont2 buttonSize" onclick="location.href='#'">장바구니에 담기</div>
-                                <div class="wishItemFont2 buttonSize" onclick="location.href='#'">삭제하기</div>
+                            <div class="myPageOrderInItem2">
+                                <div class="myPageWishItemFont2 myPageButtonSize" onclick="location.href='#'">장바구니에 담기</div>
+                                <div class="myPageWishItemFont2 myPageButtonSize" onclick="location.href='#'">삭제하기</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="sessions cartSession">
-                <div class="wishHeader">
-                    <input type="checkbox" name="Allcheck" class="checkBoxItem1" onclick="selectAll(this)"><b>전체선택</b>
-                    <input type="button" value="삭제" class="buttonItem">
+            <div class="myPageSessions myPageCartSession">
+                <div class="myPageWishHeader">
+                    <input type="checkbox" name="Allcheck" class="myPageCheckBoxItem1" onclick="selectAll(this)"><b>전체선택</b>
+                    <input type="button" value="삭제" class="myPageButtonItem">
                 </div>
-                <div class="sessionBox2 wishBox">
-                    <div class="checkBoxItem">
-                        <input type="checkbox" name="P1" class="checkBoxItem2">                    
+                <div class="myPageSessionBox2 myPageWishBox">
+                    <div class="myPageCheckBoxItem">
+                        <input type="checkbox" name="P1" class="myPageCheckBoxItem2">                    
                     </div>
-                    <div class="wishItem">
-                        <div class="orderItemImgbox">
-                            <img class="ImgItem" src="resources/img/버너.png" alt="오류" onclick="location.href='#'">
+                    <div class="myPageWishItem">
+                        <div class="myPageOrderItemImgbox">
+                            <img class="myPageImgItem" src="resources/img/버너.png" alt="오류" onclick="location.href='#'">
                         </div>
-                        <div class="orderItemBoxRight">
-                            <div class="orderInItem1">
-                                <div class="orderItem3">
-                                    <div class="orderItemFont1 fontItem1" >휴대용 요리킹 버너!</div>
-                                    <div class="fontItem2">19,900 원</div>
+                        <div class="myPageOrderItemBoxRight">
+                            <div class="myPageOrderInItem1">
+                                <div class="myPageOrderItem3">
+                                    <div class="myPageOrderItemFont1 myPageFontItem1" >휴대용 요리킹 버너!</div>
+                                    <div class="myPageFontItem2">19,900 원</div>
                                 </div>
                             </div>
-                            <div class="orderInItem2">
-                                <div class="wishItemFont2 buttonSize" onclick="location.href='#'">주문하기</div>
-                                <div class="wishItemFont2 buttonSize" onclick="location.href='#'">삭제하기</div>
+                            <div class="myPageOrderInItem2">
+                                <div class="myPageWishItemFont2 myPageButtonSize" onclick="location.href='#'">주문하기</div>
+                                <div class="myPageWishItemFont2 myPageButtonSize" onclick="location.href='#'">삭제하기</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="sessionBox2 wishBox">
-                    <div class="checkBoxItem">
-                        <input type="checkbox" name="P2" class="checkBoxItem2">                    
+                <div class="myPageSessionBox2 myPageWishBox">
+                    <div class="myPageCheckBoxItem">
+                        <input type="checkbox" name="P2" class="myPageCheckBoxItem2">                    
                     </div>                  
-                    <div class="wishItem">
-                        <div class="orderItemImgbox">
-                            <img class="ImgItem" src="resources/img/랜턴.png" alt="오류" onclick="location.href='#'">
+                    <div class="myPageWishItem">
+                        <div class="myPageOrderItemImgbox">
+                            <img class="myPageImgItem" src="resources/img/랜턴.png" alt="오류" onclick="location.href='#'">
                         </div>
-                        <div class="orderItemBoxRight">
-                            <div class="orderInItem1">
-                                <div class="orderItem3">
-                                    <div class="orderItemFont1 fontItem1" >감성 캠핑 랜턴</div>
-                                    <div class="fontItem2">29,900 원</div>
+                        <div class="myPageOrderItemBoxRight">
+                            <div class="myPageOrderInItem1">
+                                <div class="myPageOrderItem3">
+                                    <div class="myPageOrderItemFont1 myPageFontItem1" >감성 캠핑 랜턴</div>
+                                    <div class="myPageFontItem2">29,900 원</div>
                                 </div>
                             </div>
-                            <div class="orderInItem2">
-                                <div class="wishItemFont2 buttonSize" onclick="location.href='#'">주문하기</div>
-                                <div class="wishItemFont2 buttonSize" onclick="location.href='#'">삭제하기</div>
+                            <div class="myPageOrderInItem2">
+                                <div class="myPageWishItemFont2 myPageButtonSize" onclick="location.href='#'">주문하기</div>
+                                <div class="myPageWishItemFont2 myPageButtonSize" onclick="location.href='#'">삭제하기</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="sessionBox2 wishBox">
-                    <div class="checkBoxItem">
-                        <input type="checkbox" name="P3" class="checkBoxItem2">                    
+                <div class="myPageSessionBox2 myPageWishBox">
+                    <div class="myPageCheckBoxItem">
+                        <input type="checkbox" name="P3" class="myPageCheckBoxItem2">                    
                     </div>                  
-                    <div class="wishItem">
-                        <div class="orderItemImgbox">
-                            <img class="ImgItem" src="resources/img/의자.png" alt="오류" onclick="location.href='#'">
+                    <div class="myPageWishItem">
+                        <div class="myPageOrderItemImgbox">
+                            <img class="myPageImgItem" src="resources/img/의자.png" alt="오류" onclick="location.href='#'">
                         </div>
-                        <div class="orderItemBoxRight">
-                            <div class="orderInItem1">
-                                <div class="orderItem3">
-                                    <div class="orderItemFont1 fontItem1" >휴대용 캠핑 의자</div>
-                                    <div class="fontItem2">39,900 원</div>
+                        <div class="myPageOrderItemBoxRight">
+                            <div class="myPageOrderInItem1">
+                                <div class="myPageOrderItem3">
+                                    <div class="myPageOrderItemFont1 myPageFontItem1" >휴대용 캠핑 의자</div>
+                                    <div class="myPageFontItem2">39,900 원</div>
                                 </div>
                             </div>
-                            <div class="orderInItem2">
-                                <div class="wishItemFont2 buttonSize" onclick="location.href='#'">주문하기</div>
-                                <div class="wishItemFont2 buttonSize" onclick="location.href='#'">삭제하기</div>
+                            <div class="myPageOrderInItem2">
+                                <div class="myPageWishItemFont2 myPageButtonSize" onclick="location.href='#'">주문하기</div>
+                                <div class="myPageWishItemFont2 myPageButtonSize" onclick="location.href='#'">삭제하기</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="sessions privacySession">
-                <div class="Pcontainer">
-			        <div class="loginLeft">
-			            <video src="resources/img/exam.mp4" autoplay muted loop class="loginVideo"></video>
+            <div class="myPageSessions myPagePrivacySession">
+                <div class="myPagePcontainer">
+			        <div class="myPageLoginLeft">
+			            <video src="resources/img/exam.mp4" autoplay muted loop class="myPageLoginVideo"></video>
 			        </div>
-			        <div class="loginRight">
-			            <div class="loginBox">
-			                <div class="loginBox2">
-			                    <div class="loginBox3">
+			        <div class="myPageLoginRight">
+			            <div class="myPageLoginBox">
+			                <div class="myPageLoginBox2">
+			                    <div class="myPageLoginBox3">
 			                        <div>
-			                            <img src="resources/img/logo.png" alt="logo" class="logo">
+			                            <img src="resources/img/logo.png" alt="logo" class="myPageLogo">
 			                        </div>
 			                        <form name="newMember" action="/login" method="post" onsubmit="return checkForm()">
-			                            <input type="password" name="pw" placeholder="새로운 비밀번호" minlength="1" maxlength="15" class="idBox" required><br>
-			                            <input type="password" name="pwCheck" placeholder="새로운 비밀번호확인" minlength="1" maxlength="15" class="idBox" required><br>
-			                            <input type="text" name="nick" value="<%=memberNick%>" minlength="1" maxlength="8"class="idBox" required><br>
-			                            <select name="phone1" class="phoneBox">
+			                            <input type="password" name="pw" placeholder="새로운 비밀번호" maxlength="15" class="myPageIdBox" required><br>
+			                            <input type="password" name="pwCheck" placeholder="새로운 비밀번호확인" maxlength="15" class="myPageIdBox" required><br>
+			                            <input type="text" name="nick" value="<%=memberNick%>" maxlength="8"class="myPageIdBox" required><br>
+			                            <select name="phone1" class="myPagePhoneBox myPageSelect">
 			                                <option value="010">010</option>
 			                                <option value="011">011</option>
 			                                <option value="012">012</option>
@@ -737,10 +737,10 @@
 			                                <option value="018">018</option>
 			                                <option value="019">019</option>
 			                            </select>
-			                             - <input type="text" minlength="4" maxlength="4" size="3" value="<%=phone2%>" class="phoneBox pB" required>
-			                             - <input type="text" minlength="4" maxlength="4" size="3" value="<%=phone3%>" class="phoneBox pB" required><br>
-			                            <input type="text" name="address" value="<%=memberAddress%>" maxlength="60" class="pwBox" required>
-			                            <input type="submit" value="저장" class="submitButton">
+			                             - <input type="text" maxlength="4" size="3" value="<%=phone2%>" class="myPagePhoneBox myPagePB" required>
+			                             - <input type="text" maxlength="4" size="3" value="<%=phone3%>" class="myPagePhoneBox myPagePB" required><br>
+			                            <input type="text" name="address" value="<%=memberAddress%>" maxlength="60" class="myPagePwBox" required>
+			                            <input type="submit" value="저장" class="myPageSubmitButton">
 			                        </form>
 			                    </div> 
 			                </div>

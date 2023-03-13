@@ -35,13 +35,13 @@
             justify-content: space-between;
             align-items: center;
         }
-        .logoBox
+        .menuLogoBox
         {
             width: 150px;
             height: 53px;
             cursor: pointer;
         }
-        .logoImg
+        .menuLogoImg
         {
             width: 100%;
             height: 100%;
@@ -121,8 +121,8 @@
 <body>
     <div class="menuBox">
         <div class="menuContainer">
-            <div class="logoBox" onclick="location.href='/main'">
-                <img src="/resources/img/logo.png" alt="로고" class="logoImg">
+            <div class="menuLogoBox" onclick="location.href='/main'">
+                <img src="/resources/img/logo.png" alt="로고" class="menuLogoImg">
             </div>
             <div class="menuItemBox">
                 <div class="menuItem" onclick="location.href='/shop'">

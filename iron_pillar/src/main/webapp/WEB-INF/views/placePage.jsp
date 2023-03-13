@@ -18,7 +18,7 @@
             background-color: #F6F6F6;
         }
         /* session */
-        .sessionContainer{
+        .placePageSessionContainer{
             /* border: 1px solid red; */
             width: 70%;
             margin: 0 auto;
@@ -28,7 +28,7 @@
             flex-direction: column;
             padding-top: 100px;
         }
-        .sessionHeader {
+        .placePageSessionHeader {
             height: 150px;
             width: 100%;
             display: flex;
@@ -37,10 +37,10 @@
             font-weight: bold;
             font-size: 35px;
         }
-        .sessionBox {
+        .placePageSessionBox {
             width: 100%;
         }
-        .sessionBox1 {
+        .placePageSessionBox1 {
             /* border: 1px solid blue; */
             width: 100%;
             height: 60px;
@@ -48,79 +48,79 @@
             justify-content: space-around;
             align-items: center;
         }
-        .input
+        .placePageInput
         {
             display: none;
         }
-        .sessions
+        .placePageSessions
         {
             display: none;
         }
-        .input1:checked ~ .sessionBox1 .inputItem1
+        .placePageInput1:checked ~ .placePageSessionBox1 .placePageInputItem1
         {
             background-color: black;
             color: white;
             font-size: 20px;
         }
-        .input2:checked ~ .sessionBox1 .inputItem2
+        .placePageInput2:checked ~ .placePageSessionBox1 .placePageInputItem2
         {
             background-color: black;
             color: white;
             font-size: 20px;
         }
-        .input3:checked ~ .sessionBox1 .inputItem3
+        .placePageInput3:checked ~ .placePageSessionBox1 .placePageInputItem3
         {
             background-color: black;
             color: white;
             font-size: 20px;
         }
-        .input4:checked ~ .sessionBox1 .inputItem4
+        .placePageInput4:checked ~ .placePageSessionBox1 .placePageInputItem4
         {
             background-color: black;
             color: white;
             font-size: 20px;
         }
-        .input5:checked ~ .sessionBox1 .inputItem5
+        .placePageInput5:checked ~ .placePageSessionBox1 .placePageInputItem5
         {
             background-color: black;
             color: white;
             font-size: 20px;
         }
-        .input6:checked ~ .sessionBox1 .inputItem6
+        .placePageInput6:checked ~ .placePageSessionBox1 .placePageInputItem6
         {
             background-color: black;
             color: white;
             font-size: 20px;
         }
-        .input1:checked ~ .SessionOne
+        .placePageInput1:checked ~ .placePageSessionOne
         {
             display: flex;
         }
-        .input2:checked ~ .SessionTwo
+        .placePageInput2:checked ~ .placePageSessionTwo
         {
             display: flex;
         }
-        .input3:checked ~ .SessionThree
+        .placePageInput3:checked ~ .placePageSessionThree
         {
             display: flex;
         }
-        .input4:checked ~ .SessionFour
+        .placePageInput4:checked ~ .placePageSessionFour
         {
             display: flex;
         }
-        .input5:checked ~ .SessionFive
+        .placePageInput5:checked ~ .placePageSessionFive
         {
             display: flex;
         }
-        .input6:checked ~ .SessionSix
+        .placePageInput6:checked ~ .placePageSessionSix
         {
             display: flex;
         }
-        .sessionBox2 {
+        .placePageSessionBox2 {
             /* border: 1px solid green; */
             width: 100%;
         }
-        .sessionItem {
+        .placePageSessionItem {
             /* border: 1px solid black; */
             font-weight: bold;
             cursor: pointer;
@@ -132,18 +132,18 @@
             height: 100%;
             transition-duration: 300ms;
         }
-        .sessionItem:hover {
+        .placePageSessionItem:hover {
             background-color: black;
             color: white;
             font-size: 20px;
         }
-        .sessions
+        .placePageSessions
         {
             width: 100%;
             flex-wrap: wrap;
             justify-content: space-between;
         }
-        .SItem {
+        .placePageSItem {
             background-color: white;
             border: 1px solid #F6F6F6;
             border-radius: 10px;
@@ -156,7 +156,7 @@
             transition-duration: 400ms;
             box-shadow: 5px 5px 5px 5px #9E9E9E;
         }
-        .SItem:hover {
+        .placePageSItem:hover {
             cursor: pointer;
             box-shadow: 15px 15px 15px 15px #9E9E9E;
             transform: rotate(1deg);
@@ -164,13 +164,13 @@
             transform-origin: 50% 50%;
             transform: perspective(2000px) rotateY(-5deg) rotateX(5deg); */
         }
-        .SitemHeader {
+        .placePageSitemHeader {
             height: 70px;
             width: 100%;
             display: flex;
             align-items: center;
         }
-        .SheaderImgBox {
+        .placePageSheaderImgBox {
             width: 100px;
             height: 35px;
             margin-left: 20px;
@@ -178,23 +178,23 @@
             justify-content: center;
             overflow: hidden;
         }
-        .SheaderImg {
+        .placePageSheaderImg {
             height: 100%;
             width: 100%;
         }
-        .ml20 {
+        .placePageMl20 {
             margin-left: 20px;
         }
-        .SitemImgBox {
+        .placePageSitemImgBox {
             height: 450px;
             display: flex;
             justify-content: center;
             overflow: hidden;
         }
-        .SitemImg {
+        .placePageSitemImg {
             height: 100%;
         }
-        .SitemMain {
+        .placePageSitemMain {
             height: 220px;
             display: flex;
             flex-direction: column;
@@ -202,30 +202,30 @@
             align-items: center;
             padding: 5px 15px;
         }
-        .SitemName {
+        .placePageSitemName {
             margin-top: 10px;
         }
-        .SitemText {
+        .placePageSitemText {
             height: 70px;
             padding-bottom: 40px;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
-        .search_box {
+        .placePageSearch_box {
 		    border-radius: 10px;
 		    border: 1px solid black;
 		    width: 25%;
 			overflow: hidden;
 			margin-bottom: 20px;
 		}
-		.search_box1 {
+		.placePageSearch_box1 {
 			display: flex;
 		}
-		.search_box2 {
+		.placePageSearch_box2 {
 			border: 0;
 		}
-		.search_box .btn_submit {
+		.placePageSearch_box .placePageBtn_submit {
 		    cursor: pointer;
 		    font-family: 'FontAwesome';
 		    font-size: 25px;
@@ -234,7 +234,7 @@
 		    border: 0;
 		    background: 0;
 		}
-		.search_box input[type="text"] {
+		.placePageSearch_box input[type="text"] {
 		    outline: none;
 		    padding: 8px;
 		    width: 100%;
@@ -260,629 +260,629 @@
 </head>
 <body>
 <jsp:include page="menu.jsp"/>
-    <div class="sessionContainer">
-        <div class="sessionHeader">
+    <div class="placePageSessionContainer">
+        <div class="placePageSessionHeader">
             PLACE
         </div>
-        <div class="search_box">
-            <form action="" method="get" class="search_box1">
+        <div class="placePageSearch_box">
+            <form action="" method="get" class="placePageSearch_box1">
                 <input type="text" name="search_keyword" onfocus="textBoxFocusColor('search_box')"
-                    onblur="textBoxBlurColor('search_box')" class="search_box2">
-                <input type="submit" value="&#xf002" class="btn_submit">
+                    onblur="textBoxBlurColor('search_box')" class="placePageSearch_box2">
+                <input type="submit" value="&#xf002" class="placePageBtn_submit">
             </form>
         </div>
-        <div class="sessionBox">
-            <input type="radio" name="group" id="1" class="input input1" checked>
-            <input type="radio" name="group" id="2" class="input input2">
-            <input type="radio" name="group" id="3" class="input input3">
-            <input type="radio" name="group" id="4" class="input input4">
-            <input type="radio" name="group" id="5" class="input input5">
-            <input type="radio" name="group" id="6" class="input input6">
-            <div class="sessionBox1">
-                <label for="1" class="sessionItem inputItem1">경기도</label>
-                <label for="2" class="sessionItem inputItem2">충청도</label>
-                <label for="3" class="sessionItem inputItem3">전라도</label>
-                <label for="4" class="sessionItem inputItem4">경상도</label>
-                <label for="5" class="sessionItem inputItem5">강원도</label>
-                <label for="6" class="sessionItem inputItem6">제주도</label>
+        <div class="placePageSessionBox">
+            <input type="radio" name="group" id="1" class="placePageInput placePageInput1" checked>
+            <input type="radio" name="group" id="2" class="placePageInput placePageInput2">
+            <input type="radio" name="group" id="3" class="placePageInput placePageInput3">
+            <input type="radio" name="group" id="4" class="placePageInput placePageInput4">
+            <input type="radio" name="group" id="5" class="placePageInput placePageInput5">
+            <input type="radio" name="group" id="6" class="placePageInput placePageInput6">
+            <div class="placePageSessionBox1">
+                <label for="1" class="placePageSessionItem placePageInputItem1">경기도</label>
+                <label for="2" class="placePageSessionItem placePageInputItem2">충청도</label>
+                <label for="3" class="placePageSessionItem placePageInputItem3">전라도</label>
+                <label for="4" class="placePageSessionItem placePageInputItem4">경상도</label>
+                <label for="5" class="placePageSessionItem placePageInputItem5">강원도</label>
+                <label for="6" class="placePageSessionItem placePageInputItem6">제주도</label>
             </div>
-            <div class="sessions SessionOne">
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
+            <div class="placePageSessions placePageSessionOne">
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox placePageMl20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
                         </div>
                     </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/경기도.jpg" alt="itemImg" class="SitemImg">
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/경기도.jpg" alt="itemImg" class="placePageSitemImg">
                     </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">경기도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">경기도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox placePageMl20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
                         </div>
                     </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/경기도.jpg" alt="itemImg" class="SitemImg">
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/경기도.jpg" alt="itemImg" class="placePageSitemImg">
                     </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">경기도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">경기도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox placePageMl20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
                         </div>
                     </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/경기도.jpg" alt="itemImg" class="SitemImg">
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/경기도.jpg" alt="itemImg" class="placePageSitemImg">
                     </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">경기도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">경기도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox placePageMl20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
                         </div>
                     </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/경기도.jpg" alt="itemImg" class="SitemImg">
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/경기도.jpg" alt="itemImg" class="placePageSitemImg">
                     </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">경기도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">경기도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox placePageMl20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
                         </div>
                     </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/경기도.jpg" alt="itemImg" class="SitemImg">
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/경기도.jpg" alt="itemImg" class="placePageSitemImg">
                     </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">경기도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">경기도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox placePageMl20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
                         </div>
                     </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/경기도.jpg" alt="itemImg" class="SitemImg">
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/경기도.jpg" alt="itemImg" class="placePageSitemImg">
                     </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">경기도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">경기도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox placePageMl20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
                         </div>
                     </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/경기도.jpg" alt="itemImg" class="SitemImg">
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/경기도.jpg" alt="itemImg" class="placePageSitemImg">
                     </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">경기도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
-                    </div>
-                </div>
-            </div>
-            <div class="sessions SessionTwo">
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
-                        </div>
-                    </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/충청도.jpg" alt="itemImg" class="SitemImg">
-                    </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">충청도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
-                    </div>
-                </div>
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
-                        </div>
-                    </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/충청도.jpg" alt="itemImg" class="SitemImg">
-                    </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">충청도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
-                    </div>
-                </div>
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
-                        </div>
-                    </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/충청도.jpg" alt="itemImg" class="SitemImg">
-                    </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">충청도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
-                    </div>
-                </div>
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
-                        </div>
-                    </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/충청도.jpg" alt="itemImg" class="SitemImg">
-                    </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">충청도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
-                    </div>
-                </div>
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
-                        </div>
-                    </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/충청도.jpg" alt="itemImg" class="SitemImg">
-                    </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">충청도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
-                    </div>
-                </div>
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
-                        </div>
-                    </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/충청도.jpg" alt="itemImg" class="SitemImg">
-                    </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">충청도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
-                    </div>
-                </div>
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
-                        </div>
-                    </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/충청도.jpg" alt="itemImg" class="SitemImg">
-                    </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">충청도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">경기도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
                     </div>
                 </div>
             </div>
-            <div class="sessions SessionThree">
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
+            <div class="placePageSessions placePageSessionTwo">
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox placePageMl20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
                         </div>
                     </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/전라도.png" alt="itemImg" class="SitemImg">
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/충청도.jpg" alt="itemImg" class="placePageSitemImg">
                     </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">전라도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">충청도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox placePageMl20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
                         </div>
                     </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/전라도.png" alt="itemImg" class="SitemImg">
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/충청도.jpg" alt="itemImg" class="placePageSitemImg">
                     </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">전라도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">충청도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox placePageMl20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
                         </div>
                     </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/전라도.png" alt="itemImg" class="SitemImg">
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/충청도.jpg" alt="itemImg" class="placePageSitemImg">
                     </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">전라도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">충청도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox placePageMl20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
                         </div>
                     </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/전라도.png" alt="itemImg" class="SitemImg">
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/충청도.jpg" alt="itemImg" class="placePageSitemImg">
                     </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">전라도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">충청도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox placePageMl20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
                         </div>
                     </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/전라도.png" alt="itemImg" class="SitemImg">
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/충청도.jpg" alt="itemImg" class="placePageSitemImg">
                     </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">전라도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">충청도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox placePageMl20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
                         </div>
                     </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/전라도.png" alt="itemImg" class="SitemImg">
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/충청도.jpg" alt="itemImg" class="placePageSitemImg">
                     </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">전라도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">충청도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox placePageMl20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
                         </div>
                     </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/전라도.png" alt="itemImg" class="SitemImg">
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/충청도.jpg" alt="itemImg" class="placePageSitemImg">
                     </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">전라도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
-                    </div>
-                </div>
-            </div>
-            <div class="sessions SessionFour">
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
-                        </div>
-                    </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/경상도.png" alt="itemImg" class="SitemImg">
-                    </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">경상도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
-                    </div>
-                </div>
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
-                        </div>
-                    </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/경상도.png" alt="itemImg" class="SitemImg">
-                    </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">경상도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
-                    </div>
-                </div>
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
-                        </div>
-                    </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/경상도.png" alt="itemImg" class="SitemImg">
-                    </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">경상도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
-                    </div>
-                </div>
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
-                        </div>
-                    </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/경상도.png" alt="itemImg" class="SitemImg">
-                    </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">경상도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
-                    </div>
-                </div>
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
-                        </div>
-                    </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/경상도.png" alt="itemImg" class="SitemImg">
-                    </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">경상도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
-                    </div>
-                </div>
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
-                        </div>
-                    </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/경상도.png" alt="itemImg" class="SitemImg">
-                    </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">경상도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
-                    </div>
-                </div>
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
-                        </div>
-                    </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/경상도.png" alt="itemImg" class="SitemImg">
-                    </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">경상도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">충청도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
                     </div>
                 </div>
             </div>
-            <div class="sessions SessionFive">
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
+            <div class="placePageSessions placePageSessionThree">
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox Ml20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
                         </div>
                     </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/강원도.png" alt="itemImg" class="SitemImg">
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/전라도.png" alt="itemImg" class="placePageSitemImg">
                     </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">강원도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">전라도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox Ml20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
                         </div>
                     </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/강원도.png" alt="itemImg" class="SitemImg">
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/전라도.png" alt="itemImg" class="placePageSitemImg">
                     </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">강원도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">전라도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox Ml20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
                         </div>
                     </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/강원도.png" alt="itemImg" class="SitemImg">
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/전라도.png" alt="itemImg" class="placePageSitemImg">
                     </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">강원도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">전라도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox Ml20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
                         </div>
                     </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/강원도.png" alt="itemImg" class="SitemImg">
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/전라도.png" alt="itemImg" class="placePageSitemImg">
                     </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">강원도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">전라도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox Ml20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
                         </div>
                     </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/강원도.png" alt="itemImg" class="SitemImg">
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/전라도.png" alt="itemImg" class="placePageSitemImg">
                     </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">강원도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">전라도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox Ml20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
                         </div>
                     </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/강원도.png" alt="itemImg" class="SitemImg">
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/전라도.png" alt="itemImg" class="placePageSitemImg">
                     </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">강원도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">전라도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox Ml20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
                         </div>
                     </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/강원도.png" alt="itemImg" class="SitemImg">
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/전라도.png" alt="itemImg" class="placePageSitemImg">
                     </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">강원도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">전라도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
                     </div>
                 </div>
             </div>
-            <div class="sessions SessionSix">
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
+            <div class="placePageSessions placePageSessionFour">
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox placePageMl20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
                         </div>
                     </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/제주도.jpg" alt="itemImg" class="SitemImg">
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/경상도.png" alt="itemImg" class="placePageSitemImg">
                     </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">제주도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">경상도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox placePageMl20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
                         </div>
                     </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/제주도.jpg" alt="itemImg" class="SitemImg">
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/경상도.png" alt="itemImg" class="placePageSitemImg">
                     </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">제주도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">경상도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox placePageMl20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
                         </div>
                     </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/제주도.jpg" alt="itemImg" class="SitemImg">
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/경상도.png" alt="itemImg" class="placePageSitemImg">
                     </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">제주도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">경상도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox placePageMl20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
                         </div>
                     </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/제주도.jpg" alt="itemImg" class="SitemImg">
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/경상도.png" alt="itemImg" class="placePageSitemImg">
                     </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">제주도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">경상도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox placePageMl20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
                         </div>
                     </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/제주도.jpg" alt="itemImg" class="SitemImg">
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/경상도.png" alt="itemImg" class="placePageSitemImg">
                     </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">제주도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">경상도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox placePageMl20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
                         </div>
                     </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/제주도.jpg" alt="itemImg" class="SitemImg">
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/경상도.png" alt="itemImg" class="placePageSitemImg">
                     </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">제주도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">경상도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
                     </div>
                 </div>
-                <div class="SItem" onclick="location.href='/place/placeItem'">
-                    <div class="SitemHeader">
-                        <div class="SheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="SheaderImg">
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox placePageMl20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
                         </div>
                     </div>
-                    <div class="SitemImgBox">
-                        <img src="resources/img/제주도.jpg" alt="itemImg" class="SitemImg">
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/경상도.png" alt="itemImg" class="placePageSitemImg">
                     </div>
-                    <div class="SitemMain">
-                        <h3 class="SitemName">제주도 캠핑장</h3>
-                        <p class="SitemText">내용</p>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">경상도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
+                    </div>
+                </div>
+            </div>
+            <div class="placePageSessions placePageSessionFive">
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox placePageMl20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
+                        </div>
+                    </div>
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/강원도.png" alt="itemImg" class="placePageSitemImg">
+                    </div>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">강원도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
+                    </div>
+                </div>
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox placePageMl20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
+                        </div>
+                    </div>
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/강원도.png" alt="itemImg" class="placePageSitemImg">
+                    </div>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">강원도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
+                    </div>
+                </div>
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox placePageMl20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
+                        </div>
+                    </div>
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/강원도.png" alt="itemImg" class="placePageSitemImg">
+                    </div>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">강원도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
+                    </div>
+                </div>
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox placePageMl20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
+                        </div>
+                    </div>
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/강원도.png" alt="itemImg" class="placePageSitemImg">
+                    </div>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">강원도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
+                    </div>
+                </div>
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox placePageMl20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
+                        </div>
+                    </div>
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/강원도.png" alt="itemImg" class="placePageSitemImg">
+                    </div>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">강원도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
+                    </div>
+                </div>
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox placePageMl20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
+                        </div>
+                    </div>
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/강원도.png" alt="itemImg" class="placePageSitemImg">
+                    </div>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">강원도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
+                    </div>
+                </div>
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox placePageMl20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
+                        </div>
+                    </div>
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/강원도.png" alt="itemImg" class="placePageSitemImg">
+                    </div>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">강원도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
+                    </div>
+                </div>
+            </div>
+            <div class="placePageSessions placePageSessionSix">
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox placePageMl20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
+                        </div>
+                    </div>
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/제주도.jpg" alt="itemImg" class="placePageSitemImg">
+                    </div>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">제주도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
+                    </div>
+                </div>
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox placePageMl20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
+                        </div>
+                    </div>
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/제주도.jpg" alt="itemImg" class="placePageSitemImg">
+                    </div>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">제주도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
+                    </div>
+                </div>
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox placePageMl20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
+                        </div>
+                    </div>
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/제주도.jpg" alt="itemImg" class="placePageSitemImg">
+                    </div>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">제주도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
+                    </div>
+                </div>
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox placePageMl20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
+                        </div>
+                    </div>
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/제주도.jpg" alt="itemImg" class="placePageSitemImg">
+                    </div>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">제주도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
+                    </div>
+                </div>
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox placePageMl20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
+                        </div>
+                    </div>
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/제주도.jpg" alt="itemImg" class="placePageSitemImg">
+                    </div>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">제주도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
+                    </div>
+                </div>
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox placePageMl20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
+                        </div>
+                    </div>
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/제주도.jpg" alt="itemImg" class="placePageSitemImg">
+                    </div>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">제주도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
+                    </div>
+                </div>
+                <div class="placePageSItem" onclick="location.href='/place/placeItem'">
+                    <div class="placePageSitemHeader">
+                        <div class="placePageSheaderImgBox placePageMl20">
+                            <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">
+                        </div>
+                    </div>
+                    <div class="placePageSitemImgBox">
+                        <img src="resources/img/제주도.jpg" alt="itemImg" class="placePageSitemImg">
+                    </div>
+                    <div class="placePageSitemMain">
+                        <h3 class="placePageSitemName">제주도 캠핑장</h3>
+                        <p class="placePageSitemText">내용</p>
                     </div>
                 </div>
             </div>

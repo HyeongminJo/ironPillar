@@ -14,14 +14,14 @@
     body {
         background-color: #F6F6F6;
     }
-    .Ccontainer {
+    .noticePageCcontainer {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         padding-top: 100px;
     }
-    .title {
+    .noticePageTitle {
    		height: 150px;
         width: 100%;
         display: flex;
@@ -30,7 +30,7 @@
         font-weight: bold;
         font-size: 35px;
    	}
-    .mainItem {
+    .noticePageMainItem {
         background-image: url(img/My\ project-1\ \(1\).png);
         background-position: center center;
         background-size: cover;
@@ -46,7 +46,7 @@
         box-shadow: 5px 5px 5px 5px #9E9E9E;
         padding-top: 20px;
     }
-    .imgBox {
+    .noticePageImgBox {
         width: 80%;
         height: 200px;
         overflow: hidden;
@@ -54,7 +54,7 @@
         justify-content: center;
         align-items: center;
     }
-    .imgitem {
+    .noticePageImgitem {
         width: 450px;
         height: 150px;
     }
@@ -62,7 +62,7 @@
         width: 90%;
         text-align: center;
     }
-    .tableBox {
+    tableBox {
         border-bottom: 1px solid black;
     }
     table th{
@@ -89,110 +89,110 @@
     table thead th ,table tbody td{
         padding: 12px 0;
     }
-    footer {
+    .noticePageFooter {
         margin-top: 35px;
         display: flex;
         justify-content: center;
     }
-    footer a {
+    .noticePageFooter a {
         margin: 0 10px;
         padding: 0 10px;
         font-size: 16px;
     }
-    .textitem {
+    .noticePageTextitem {
         text-align: left;
         padding-left: 15px;
     }
-    .AfontColor {
+    .noticePagefontColor {
     	color: black;
     }
 </style>
 </head>
 <body>
 <jsp:include page="menu.jsp"/>
-    <div class="Ccontainer">
-    	<div class="title">
+    <div class="noticePageCcontainer">
+    	<div class="noticePageTitle">
     		NOTICE
     	</div>
-        <div class="mainItem">
-            <table cellspacing="0" class="tableBox">
+        <div class="noticePageMainItem">
+            <table cellspacing="0" class="noticePageTable noticePageTableBox">
                 <thead>
                     <tr  class="table_top">
-                        <th class="th_num">번호</th>
-                        <th class="th_title">제목</th>
-                        <th class="th_writer">글쓴이</th>
-                        <th class="th_date">날짜</th>
+                        <th class="th_num noticePageTh">번호</th>
+                        <th class="th_title noticePageTh">제목</th>
+                        <th class="th_writer noticePageTh">글쓴이</th>
+                        <th class="th_date noticePageTh">날짜</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>1</td>
-                        <td class="textitem"><a href="#" class="AfontColor">공지</a></td>
-                        <td>관리자</td>
-                        <td class="text-center">2022.03.14</td>
+                        <td class="noticePageTd">1</td>
+                        <td class="noticePageTextitem noticePageTd"><a href="#" class="noticePagefontColor">공지</a></td>
+                        <td class="noticePageTd">관리자</td>
+                        <td class="text-center noticePageTd">2022.03.14</td>
                     </tr>
                     <tr>
-                        <td>2</td>
-                        <td class="textitem"><a href="#" class="AfontColor">공지</a></td>
-                        <td>관리자</td>
-                        <td class="text-center">2022.03.14</td>
+                        <td class="noticePageTd">2</td>
+                        <td class="noticePageTextitem noticePageTd"><a href="#" class="noticePagefontColor">공지</a></td>
+                        <td class="noticePageTd">관리자</td>
+                        <td class="text-center noticePageTd">2022.03.14</td>
                     </tr>
                     <tr>
-                        <td>3</td>
-                        <td class="textitem"><a href="#" class="AfontColor">공지</a></td>
-                        <td>관리자</td>
-                        <td class="text-center">2022.03.14</td>
+                        <td class="noticePageTd">3</td>
+                        <td class="noticePageTextitem noticePageTd"><a href="#" class="noticePagefontColor">공지</a></td>
+                        <td class="noticePageTd">관리자</td>
+                        <td class="text-center noticePageTd">2022.03.14</td>
                     </tr>
                     <tr>
-                        <td>4</td>
-                        <td class="textitem"><a href="#" class="AfontColor">공지</a></td>
-                        <td>관리자</td>
-                        <td class="text-center">2022.03.14</td>
+                        <td class="noticePageTd">4</td>
+                        <td class="noticePageTextitem noticePageTd"><a href="#" class="noticePagefontColor">공지</a></td>
+                        <td class="noticePageTd">관리자</td>
+                        <td class="text-center noticePageTd">2022.03.14</td>
                     </tr>
                     <tr>
-                        <td>5</td>
-                        <td class="textitem"><a href="#" class="AfontColor">공지</a></td>
-                        <td>관리자</td>
-                        <td class="text-center">2022.03.14</td>
+                        <td class="noticePageTd">5</td>
+                        <td class="noticePageTextitem noticePageTd"><a href="#" class="noticePagefontColor">공지</a></td>
+                        <td class="noticePageTd">관리자</td>
+                        <td class="text-center noticePageTd">2022.03.14</td>
                     </tr>
                     <tr>
-                        <td>6</td>
-                        <td class="textitem"><a href="#" class="AfontColor">공지</a></td>
-                        <td>관리자</td>
-                        <td class="text-center">2022.03.14</td>
+                        <td class="noticePageTd">6</td>
+                        <td class="noticePageTextitem noticePageTd"><a href="#" class="noticePagefontColor">공지</a></td>
+                        <td class="noticePageTd">관리자</td>
+                        <td class="text-center noticePageTd">2022.03.14</td>
                     </tr>
                     <tr>
-                        <td>7</td>
-                        <td class="textitem"><a href="#" class="AfontColor">공지</a></td>
-                        <td>관리자</td>
-                        <td class="text-center">2022.03.14</td>
+                        <td class="noticePageTd">7</td>
+                        <td class="noticePageTextitem noticePageTd"><a href="#" class="noticePagefontColor">공지</a></td>
+                        <td class="noticePageTd">관리자</td>
+                        <td class="text-center noticePageTd">2022.03.14</td>
                     </tr>
                     <tr>
-                        <td>8</td>
-                        <td class="textitem"><a href="#" class="AfontColor">공지</a></td>
-                        <td>관리자</td>
-                        <td class="text-center">2022.03.14</td>
+                        <td class="noticePageTd">8</td>
+                        <td class="noticePageTextitem noticePageTd"><a href="#" class="noticePagefontColor">공지</a></td>
+                        <td class="noticePageTd">관리자</td>
+                        <td class="text-center noticePageTd">2022.03.14</td>
                     </tr>
                     <tr>
-                        <td>9</td>
-                        <td class="textitem"><a href="#" class="AfontColor">공지</a></td>
-                        <td>관리자</td>
-                        <td class="text-center">2022.03.14</td>
+                        <td class="noticePageTd">9</td>
+                        <td class="noticePageTextitem noticePageTd"><a href="#" class="noticePagefontColor">공지</a></td>
+                        <td class="noticePageTd">관리자</td>
+                        <td class="text-center noticePageTd">2022.03.14</td>
                     </tr>
                     <tr>
-                        <td>10</td>
-                        <td class="textitem"><a href="#" class="AfontColor">공지</a></td>
-                        <td>관리자</td>
-                        <td class="text-center">2022.03.14</td>
+                        <td class="noticePageTd">10</td>
+                        <td class="noticePageTextitem noticePageTd"><a href="#" class="noticePagefontColor">공지</a></td>
+                        <td class="noticePageTd">관리자</td>
+                        <td class="text-center noticePageTd">2022.03.14</td>
                     </tr>
                 </tbody>
             </table>
-            <footer>
-                <a href="#" class="AfontColor">1</a>
-                <a href="#" class="AfontColor">2</a>
-                <a href="#" class="AfontColor">3</a>
-                <a href="#" class="AfontColor">4</a>
-                <a href="#" class="AfontColor">5</a>
+            <footer class="noticePageFooter">
+                <a href="#" class="noticePagefontColor">1</a>
+                <a href="#" class="noticePagefontColor">2</a>
+                <a href="#" class="noticePagefontColor">3</a>
+                <a href="#" class="noticePagefontColor">4</a>
+                <a href="#" class="noticePagefontColor">5</a>
             </footer>
         </div>
     </div>

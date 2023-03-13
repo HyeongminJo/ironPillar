@@ -16,7 +16,7 @@
         body {
             background-color: #F6F6F6;
         }
-        .container {
+        .addItemContainer {
             width: 40%;
             height: 100vh;
             margin: 0 auto;
@@ -26,7 +26,7 @@
             align-items: center;
             justify-content: center;
         }
-        .mainItem {
+        .addItem {
             background-color: white;
             border-radius: 30px;
             width: 550px;
@@ -39,43 +39,34 @@
             transition-duration: 400ms;
             box-shadow: 30px 30px 30px 30px #9E9E9E;
         }
-        .mainItem:hover {
+        .addItem:hover {
             box-shadow: 5px 5px 5px 5px #9E9E9E;
         }
         .addItemInput:focus {
             border: 1px dashed black;
             outline: none;
         }
-        textarea {
-            /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            text-decoration: none;
-        }
-        textarea:focus {
-            border: 1px dashed black;
-            outline: none;
-        }
-        .itemHeader {
+        .addItemHeader {
             height: 100px;
             width: 100%;
             display: flex;
             align-items: center;
             border-bottom: 1px dashed #9E9E9E;
         }
-        form {
+        .addItemForm {
             height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
-        .itemMain {
+        .additemMain {
             height: 100%;
             padding: 80px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
-        .itemMaininput {
+        .addItemMaininput {
             height: 40px;
             background-color: #F6F6F6;
             border: 1px solid #D8D8D8;
@@ -88,7 +79,7 @@
         .fileR {
             position: relative;
         }
-        .itemMainFileLabel {
+        .addItemMainFileLabel {
             width: 80px;
             height: 30px;
             border: 1px solid gray;
@@ -102,17 +93,17 @@
             align-items: center;
             transition-duration: 400ms;
         }
-        .itemMainFileLabel:hover {
+        .addItemMainFileLabel:hover {
             border: 1px dashed white;
             font-size: 15px;
             font-weight: bold;
             border-radius: 17.5px;
         }
-        .itemMainFile {
+        .addItemMainFile {
             margin: 0 6px;
             cursor: pointer;
         }
-        .itemMainText {
+        .addItemMainText {
             height: 350px;
             background-color: #F6F6F6;
             border: 1px solid #D8D8D8;
@@ -120,22 +111,28 @@
             padding: 20px;
             font-size: 15px;
             resize: none;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-decoration: none;
         }
-        .itemFooter {
+        .addItemMainText:focus {
+            border: 1px dashed black;
+            outline: none;
+        }
+        .addItemFooter {
             border-top: 1px dashed #9E9E9E;
             height: 100px;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        .itemFooterContainer {
+        .addItemFooterContainer {
             width: 60%;
             height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        .itemFooterButton {
+        .addItemFooterButton {
             background-color: black;
             color: white;
             width: 150px;
@@ -146,7 +143,7 @@
             border-radius: 5px;
             cursor: pointer;
         }
-        .itemFooterButton:hover {
+        .addItemFooterButton:hover {
             border: 2px dashed white;
             font-size: 15px;
             font-weight: bold;
@@ -156,23 +153,23 @@
 </head>
 <body>
 <jsp:include page="menu.jsp"/>
-    <div class="container">
-        <div class="mainItem">
-            <div class="itemHeader">
+    <div class="addItemContainer">
+        <div class="addItem">
+            <div class="addItemHeader">
             </div>
-            <form action="./additem?${_csrf.parameterName}=${_csrf.token}" enctype="multipart/form-data" method="post">
-                <div class="itemMain">
-                    <input placeholder="상품명" class="itemMaininput addItemInput"/>
-                    <input placeholder="가격" class="itemMaininput addItemInput"/>
+            <form class="addItemForm" action="./additem?${_csrf.parameterName}=${_csrf.token}" enctype="multipart/form-data" method="post">
+                <div class="addItemMain">
+                    <input placeholder="상품명" class="addItemMaininput addItemInput"/>
+                    <input placeholder="가격" class="addItemMaininput addItemInput"/>
                     <div class="itemMaininput fileR">
-                        <input type="file" class="itemMainFile" id="file"/>
-                        <label for="file" class="itemMainFileLabel">사진첨부</label>
+                        <input type="file" class="addItemMainFile" id="file"/>
+                        <label for="file" class="addItemMainFileLabel">사진첨부</label>
                     </div>
-                    <textarea class="itemMainText" placeholder="설명"></textarea>
+                    <textarea class="addItemMainText" placeholder="설명"></textarea>
                 </div>
-                <div class="itemFooter">
-                    <div class="itemFooterContainer">
-                        <input type="submit" value="등 록" class="itemFooterButton">
+                <div class="addItemFooter">
+                    <div class="addItemFooterContainer">
+                        <input type="submit" value="등 록" class="addItemFooterButton">
                     </div>
                 </div>
             </form>

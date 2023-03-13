@@ -18,7 +18,7 @@
             background-color: #F6F6F6;
         }
         /* session */
-        .sessionContainer{
+        .shopPageSessionContainer{
             /* border: 1px solid red; */
             width: 70%;
             margin: 0 auto;
@@ -28,7 +28,7 @@
             flex-direction: column;
             padding-top: 100px;
         }
-        .sessionHeader {
+        .shopPageSessionHeader {
             height: 150px;
             width: 100%;
             display: flex;
@@ -37,10 +37,10 @@
             font-weight: bold;
             font-size: 35px;
         }
-        .sessionBox {
+        .shopPageSessionBox {
             width: 100%;
         }
-        .sessionBox1 {
+        .shopPageSessionBox1 {
             /* border: 1px solid blue; */
             width: 100%;
             height: 60px;
@@ -48,21 +48,21 @@
             justify-content: space-around;
             align-items: center;
         }
-        .input
+        .shopPageInput
         {
             display: none;
         }
-        .sessions
+        .shopPageSessions
         {
             display: none;
         }
-        .input1:checked ~ .sessionBox1 .inputItem1
+        .shopPageInput1:checked ~ .shopPageSessionBox1 .shopPageInputItem1
         {
             background-color: black;
             color: white;
             font-size: 20px;
         }
-        .input2:checked ~ .sessionBox1 .inputItem2
+        .shopPageInput2:checked ~ .shopPageSessionBox1 .shopPageInputItem2
         {
             background-color: black;
             color: white;

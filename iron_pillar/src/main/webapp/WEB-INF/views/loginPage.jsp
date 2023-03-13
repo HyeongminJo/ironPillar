@@ -16,7 +16,7 @@
         body {
             background-color: #F6F6F6;
         }
-        .title {
+        .loginPageTitle {
 	   		height: 150px;
 	        width: 100%;
 	        display: flex;
@@ -26,7 +26,7 @@
 	        font-size: 35px;
 	        padding-top: 100px;
 	   	}
-        .Lcontainer {
+        .loginPageContainer {
             width: 800px;
             margin: 100px auto;
             display: flex;
@@ -34,7 +34,7 @@
             align-items: center;
             
         }
-        .loginLeft {
+        .loginPageLeft {
             width: 50%;
             height: 400px;
             display: flex;
@@ -42,23 +42,23 @@
             align-items: center;
             overflow: hidden;
         }
-        .loginRight {
+        .loginPageRight {
             width: 50%;
             height: 400px;
             display: flex;
             justify-content: center;
         }
-        .loginVideo {
+        .loginPageVideo {
             height: 400px; 
         }
-        .loginBox {
+        .loginPageBox {
             width: 90%;
             height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
-        .loginBox2 {
+        .loginPageBox2 {
             height: 80%;
             background-color: white;
             border: 1px solid #D8D8D8;
@@ -67,12 +67,12 @@
             align-items: center;
             justify-content: center;
         }
-        .logo {
+        .loginPagelogo {
             width: 250px;
             height: 90px;
             margin-bottom: 10px;
         }
-        .idBox {
+        .loginPageIdBox {
             width: 228px;
             height: 30px;
             margin-bottom: 10px;
@@ -81,12 +81,12 @@
             border-radius: 5px;
             padding: 0 10px;
         }
-        input:focus {
+        .loginPageInput:focus {
             border: 1px dashed black;
             outline: none;
 
         }
-        .pwBox {
+        .loginPagePwBox {
             width: 228px;
             height: 30px;
             margin-bottom: 20px;
@@ -96,7 +96,7 @@
             padding: 0 10px;
         }
 
-        .submitButton {
+        .loginPageSubmitButton {
             width: 250px;
             height: 32px;
             border: 1px solid black;
@@ -108,11 +108,11 @@
             cursor: pointer;
             transition-duration: 400ms;
         }
-        .submitButton:hover {
+        .loginPageSubmitButton:hover {
             background-color: white;
             color: black;
         }
-        .joinBox {
+        .loginPageJoinBox {
             background-color: white;
             border: 1px solid #D8D8D8;
             height: 15%;
@@ -121,41 +121,35 @@
             align-items: center;
 
         }
-        .joinButton {
+        .loginPageJoinButton {
             font-weight: bold;
             color: black;
-        }
-        footer {
-            border: 1px solid red;
-            height: 50px;
-            width: 20%;
-            margin: 0 auto;
         }
     </style>
 </head>
 <body>
 	<jsp:include page="menu.jsp"/>
-	<div class="title">
+	<div class="loginPageTitle">
 		LOGIN
 	</div>
-    <div class="Lcontainer">
-        <div class="loginLeft">
-            <video src="resources/img/exam.mp4" autoplay muted loop class="loginVideo"></video>
+    <div class="loginPageContainer">
+        <div class="loginPageLeft">
+            <video src="resources/img/exam.mp4" autoplay muted loop class="loginPageVideo"></video>
         </div>
-        <div class="loginRight">
-            <div class="loginBox">
-                <div class="loginBox2">
+        <div class="loginPageRight">
+            <div class="loginPageBox">
+                <div class="loginPageBox2">
                     <div>
-                        <img src="resources/img/logo.png" alt="logo" class="logo">
+                        <img src="resources/img/logo.png" alt="logo" class="loginPagelogo">
                     </div>
                     <form action="/login/processLogin" method="post">
-                        <input type="text" name="memberId" placeholder="아이디" minlength="1" maxlength="10" class="idBox" required><br>
-                        <input type="password" name="memberPw" placeholder="비밀번호" minlength="1" maxlength="15" class="pwBox" required><br>
-                        <input type="submit" value="로그인" class="submitButton">
+                        <input type="text" name="memberId" placeholder="아이디" minlength="1" maxlength="10" class="loginPageIdBox loginPageInput" required><br>
+                        <input type="password" name="memberPw" placeholder="비밀번호" minlength="1" maxlength="15" class="loginPagePwBox loginPageInput" required><br>
+                        <input type="submit" value="로그인" class="loginPageSubmitButton">
                     </form> 
                 </div>
-                <div class="joinBox">
-                    <p>계정이 없으신가요?? <a href="/login/addMember" class="joinButton">가입하기</a></p>
+                <div class="loginPageJoinBox">
+                    <p>계정이 없으신가요?? <a href="/login/addMember" class="loginPageJoinButton">가입하기</a></p>
                 </div>
             </div>
         </div>

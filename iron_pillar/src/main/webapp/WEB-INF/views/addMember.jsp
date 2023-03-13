@@ -45,7 +45,7 @@
         body {
             background-color: #F6F6F6;
         }
-        .title {
+        .addMemberTitle {
 	   		height: 150px;
 	        width: 100%;
 	        display: flex;
@@ -55,7 +55,7 @@
 	        font-size: 35px;
 	        padding-top: 100px;
 	   	}
-        .Acontainer {
+        .addMemberContainer {
             width: 800px;
             margin: 50px auto;
             /* border: 1px solid red; */
@@ -63,7 +63,7 @@
             justify-content: space-around;
             align-items: center;
         }
-        .loginLeft {
+        .addMemberLeft {
             width: 50%;
             height: 600px;
             display: flex;
@@ -71,17 +71,17 @@
             align-items: center;
             overflow: hidden;
         }
-        .loginRight {
+        .addMemberRight {
             width: 50%;
             height: 600px;
             /* border: 1px solid purple; */
             display: flex;
             justify-content: center;
         }
-        .loginVideo {
+        .addMemberVideo {
             height: 600px; 
         }
-        .loginBox {
+        .addMemberBox {
             /* background-color: white; */
             /* border: 1px solid blue; */
             width: 90%;
@@ -91,7 +91,7 @@
             flex-direction: column;
             justify-content: space-between;
         }
-        .loginBox2 {
+        .addMemberBox2 {
             height: 80%;
             background-color: white;
             border: 1px solid #D8D8D8;
@@ -100,7 +100,7 @@
             align-items: center;
             justify-content: center;
         }
-        .loginBox3 {
+        .addMemberBox3 {
             width: 70%;
         }
         .addMemberLogoBox {
@@ -114,7 +114,7 @@
             width: 90%;
             height: 100%;
         }
-        .idBox {
+        .addMemberIdBox {
             width: 228px;
             height: 30px;
             margin-bottom: 10px;
@@ -123,11 +123,11 @@
             border-radius: 5px;
             padding: 0 10px;
         }
-        input:focus {
-            border: 1px dashed black;
+        .addMemberInput:focus {
+        	border: 1px dashed black;
             outline: none;
         }
-        .pwBox {
+        .addMemberPwBox {
             width: 228px;
             height: 30px;
             margin-bottom: 20px;
@@ -136,13 +136,13 @@
             border-radius: 5px;
             padding: 0 10px;
         }
-        select {
+        .addMemberSelect {
             outline: none;
         }
-        select:focus {
+        .addMemberSelect:focus {
             border: 1px dashed black;
         }
-        .phoneBox {
+        .addMemberPhoneBox {
             height: 30px;
             margin-bottom: 10px;
             background-color: #F6F6F6;
@@ -153,7 +153,7 @@
         .pB {
             width: 51.5px;
         }
-        .submitButton {
+        .addMemberSubmitButton {
             width: 250px;
             height: 32px;
             border: 1px solid black;
@@ -165,11 +165,11 @@
             cursor: pointer;
             transition-duration: 400ms;
         }
-        .submitButton:hover {
+        .addMemberSubmitButton:hover {
             background-color: white;
             color: black;
         }
-        .joinBox {
+        .addMemberJoinBox {
             background-color: white;
             border: 1px solid #D8D8D8;
             height: 15%;
@@ -178,7 +178,7 @@
             align-items: center;
 
         }
-        .joinButton {
+        .addMemberJoinButton {
             font-weight: bold;
             color: black;
         }
@@ -186,26 +186,26 @@
 </head>
 <body>
 <jsp:include page="menu.jsp"/>
-	<div class="title">
+	<div class="addMemberTitle">
 		JOIN
 	</div>
-    <div class="Acontainer">
-        <div class="loginLeft">
-            <video src="/resources/img/exam.mp4" autoplay muted loop class="loginVideo"></video>
+    <div class="addMemberContainer">
+        <div class="addMemberLeft">
+            <video src="/resources/img/exam.mp4" autoplay muted loop class="addMemberVideo"></video>
         </div>
-        <div class="loginRight">
-            <div class="loginBox">
-                <div class="loginBox2">
-                    <div class="loginBox3">
+        <div class="addMemberRight">
+            <div class="addMemberBox">
+                <div class="addMemberBox2">
+                    <div class="addMemberBox3">
                         <div class="addMemberLogoBox">
                             <img src="/resources/img/logo.png" alt="logo" class="addMemberLogo">
                         </div>
                         <form name="newMember" action="/login/processAddMember" method="post" onsubmit="return checkForm()">
-                            <input type="text" name="memberId" placeholder="아이디" minlength="1" maxlength="10" class="idBox" required><br>
-                            <input type="password" name="memberPw" placeholder="비밀번호" minlength="1" maxlength="15" class="idBox" required><br>
-                            <input type="password" name="memberPwCheck" placeholder="비밀번호확인" minlength="1" maxlength="15" class="idBox" required><br>
-                            <input type="text" name="memberNick" placeholder="닉네임" minlength="1" maxlength="8"class="idBox" required><br>
-                            <select name="memberPhone1" class="phoneBox">
+                            <input type="text" name="memberId" placeholder="아이디" minlength="1" maxlength="10" class="addMemberIdBox addMemberInput" required><br>
+                            <input type="password" name="memberPw" placeholder="비밀번호" minlength="1" maxlength="15" class="addMemberIdBox addMemberInput" required><br>
+                            <input type="password" name="memberPwCheck" placeholder="비밀번호확인" minlength="1" maxlength="15" class="addMemberIdBox addMemberInput" required><br>
+                            <input type="text" name="memberNick" placeholder="닉네임" minlength="1" maxlength="8"class="addMemberIdBox addMemberInput" required><br>
+                            <select name="memberPhone1" class="addMemberPhoneBox addMemberSelect">
                                 <option value="010">010</option>
                                 <option value="011">011</option>
                                 <option value="012">012</option>
@@ -217,16 +217,16 @@
                                 <option value="018">018</option>
                                 <option value="019">019</option>
                             </select>
-                             - <input type="text" name="memberPhone2" maxlength="4" size="3" placeholder="4자리" class="phoneBox pB" required>
-                             - <input type="text" name="memberPhone3" maxlength="4" size="3" placeholder="4자리" class="phoneBox pB" required><br>
-                            <input type="text" id="address_kakao" name="memberAddress" placeholder="주소" maxlength="30" class="idBox" required>
-                            <input type="text" name="memberAddress2" placeholder="상세주소" maxlength="30" class="pwBox" required>
-                            <input type="submit" value="가입" class="submitButton" onclick="addMember()">
+                             - <input type="text" name="memberPhone2" maxlength="4" size="3" placeholder="4자리" class="addMemberPhoneBox pB addMemberInput" required>
+                             - <input type="text" name="memberPhone3" maxlength="4" size="3" placeholder="4자리" class="addMemberPhoneBox pB addMemberInput" required><br>
+                            <input type="text" id="address_kakao" name="memberAddress" placeholder="주소" maxlength="30" class="addMemberIdBox addMemberInput" required>
+                            <input type="text" name="memberAddress2" placeholder="상세주소" maxlength="30" class="addMemberPwBox addMemberInput" required>
+                            <input type="submit" value="가입" class="addMemberSubmitButton addMemberInput" onclick="addMember()">
                         </form>
                     </div> 
                 </div>
-                <div class="joinBox">
-                    <p>계정이 있으신가요? <a href="/login" class="joinButton">로그인</a></p>
+                <div class="addMemberJoinBox">
+                    <p>계정이 있으신가요? <a href="/login" class="addMemberJoinButton">로그인</a></p>
                 </div>
             </div>
         </div>
