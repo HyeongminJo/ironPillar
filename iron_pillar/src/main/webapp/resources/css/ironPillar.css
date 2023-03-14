@@ -1,0 +1,2397 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    background-color: #F6F6F6;
+}
+
+
+
+
+
+/* addItem */
+.addItemContainer {
+    width: 40%;
+    height: 100vh;
+    margin: 0 auto;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.addItem {
+    background-color: white;
+    border-radius: 30px;
+    width: 550px;
+    height: 900px;
+    margin-top: 70px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition-duration: 400ms;
+    box-shadow: 30px 30px 30px 30px #9E9E9E;
+}
+.addItem:hover {
+    box-shadow: 5px 5px 5px 5px #9E9E9E;
+}
+.addItemInput:focus {
+    border: 1px dashed black;
+    outline: none;
+}
+textarea {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+}
+textarea:focus {
+    border: 1px dashed black;
+    outline: none;
+}
+.addItemHeader {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px dashed #9E9E9E;
+}
+.addItemForm {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.addItemMain {
+    height: 100%;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.addItemMaininput {
+    height: 40px;
+    background-color: #F6F6F6;
+    border: 1px solid #D8D8D8;
+    border-radius: 6px;
+    padding: 0 20px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+.addItemFileR {
+    position: relative;
+}
+.addItemMainFileLabel {
+    width: 80px;
+    height: 30px;
+    border: 1px solid gray;
+    border-radius: 6px;
+    position: absolute;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 400ms;
+}
+.addItemMainFileLabel:hover {
+    border: 1px dashed white;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 17.5px;
+}
+.addItemMainFile {
+    margin: 0 6px;
+    cursor: pointer;
+}
+.addItemMainText {
+    height: 350px;
+    background-color: #F6F6F6;
+    border: 1px solid #D8D8D8;
+    border-radius: 6px;
+    padding: 20px;
+    font-size: 15px;
+    resize: none;
+}
+.addItemFooter {
+    border-top: 1px dashed #9E9E9E;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.addItemFooterContainer {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.addItemFooterButton {
+    background-color: black;
+    color: white;
+    width: 150px;
+    height: 35px;
+    font-size: 15px;
+    transition-duration: 300ms;
+    border: 1px solid gray;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.addItemFooterButton:hover {
+    border: 2px dashed white;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 17.5px;
+}
+
+
+
+
+
+/* addMember */
+.addMemberTitle {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 35px;
+    padding-top: 100px;
+}
+.addMemberContainer {
+    width: 800px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.addMemberLeft {
+    width: 50%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.addMemberRight {
+    width: 50%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+}
+.addMemberVideo {
+    height: 600px; 
+}
+.addMemberBox {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.addMemberBox2 {
+	width: 100%;
+    height: 80%;
+    background-color: white;
+    border: 1px solid #D8D8D8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.addMemberLogoBox {
+    width: 250px;
+    height: 80px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+.addMemberLogo {
+    width: 90%;
+    height: 100%;
+}
+.addMemberIdBox {
+    width: 228px;
+    height: 30px;
+    margin-bottom: 10px;
+    background-color: #F6F6F6;
+    border: 1px solid #D8D8D8;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+.addMemberInput:focus {
+    border: 1px dashed black;
+    outline: none;
+}
+.addMemberPwBox {
+    width: 228px;
+    height: 30px;
+    margin-bottom: 20px;
+    background-color: #F6F6F6;
+    border: 1px solid #D8D8D8;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+.addMemberSelect {
+    outline: none;
+}
+.addMemberSelect:focus {
+    border: 1px dashed black;
+}
+.addMemberPhoneBox {
+    height: 30px;
+    margin-bottom: 10px;
+    background-color: #F6F6F6;
+    border: 1px solid #D8D8D8;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+.pB {
+    width: 51.5px;
+}
+.addMemberSubmitButton {
+    width: 250px;
+    height: 32px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition-duration: 400ms;
+}
+.addMemberSubmitButton:hover {
+    background-color: white;
+    color: black;
+}
+.addMemberJoinBox {
+    background-color: white;
+    border: 1px solid #D8D8D8;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.addMemberJoinButton {
+    font-weight: bold;
+    color: black;
+}
+
+
+
+
+
+/* addPlace */
+.addPlaceContainer {
+    width: 40%;
+    height: 100vh;
+    margin: 0 auto;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.addPlaceItem {
+    background-color: white;
+    border-radius: 30px;
+    width: 550px;
+    height: 900px;
+    margin-top: 70px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition-duration: 400ms;
+    box-shadow: 30px 30px 30px 30px #9E9E9E;
+}
+.addPlaceItem:hover {
+    box-shadow: 5px 5px 5px 5px #9E9E9E;
+}
+.addPlaceInput:focus {
+    border: 1px dashed black;
+    outline: none;
+}
+.addPlaceTextarea {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+}
+.addPlaceTextarea:focus {
+    border: 1px dashed black;
+    outline: none;
+}
+.addPlaceHeader {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px dashed #9E9E9E;
+}
+.addPlaceForm {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.addPlaceMain {
+    height: 100%;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.addPlaceMainInput {
+    height: 40px;
+    background-color: #F6F6F6;
+    border: 1px solid #D8D8D8;
+    border-radius: 6px;
+    padding: 0 20px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+.addPlaceFileR {
+    position: relative;
+}
+.addPlaceMainFileLabel {
+    width: 80px;
+    height: 30px;
+    border: 1px solid gray;
+    border-radius: 6px;
+    position: absolute;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 400ms;
+}
+.addPlaceMainFileLabel:hover {
+    border: 1px dashed white;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 17.5px;
+}
+.addPlaceMainFile {
+    margin: 0 6px;
+    cursor: pointer;
+}
+.addPlaceMainText {
+    height: 410px;
+    background-color: #F6F6F6;
+    border: 1px solid #D8D8D8;
+    border-radius: 6px;
+    padding: 20px;
+    font-size: 15px;
+    resize: none;
+}
+.addPlaceFooter {
+    border-top: 1px dashed #9E9E9E;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.addPlaceFooterContainer {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.addPlaceFooterButton {
+    background-color: black;
+    color: white;
+    width: 150px;
+    height: 35px;
+    font-size: 15px;
+    transition-duration: 300ms;
+    border: 1px solid gray;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.addPlaceFooterButton:hover {
+    border: 2px dashed white;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 17.5px;
+}
+
+
+
+
+
+/* communityItem */
+.communityItemContainer {
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.communityItem {
+    background-color: white;
+    border-radius: 30px;
+    width: 800px;
+    min-height: 900px;
+    display: flex;
+    flex-direction: column;
+    transition-duration: 400ms;
+    box-shadow: 10px 10px 10px 10px #9E9E9E;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+    box-sizing: border-box;
+}
+.communityItemImgBox {
+    width: 700px;
+    height: 500px;
+}
+.communityItemImg {
+    width: 100%;
+    height: 100%;
+}
+.communityItemTitle {
+    width: 700px;
+    height: 70px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px dashed black;
+}
+.communityItemText {
+    width: 700px;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+/* communityPage */
+.communityPageContainer
+{
+    border: 1px solid red;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    
+}
+.communityPageTitle {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 35px;
+}
+.communityPageWriteButtonBox {
+    width: 70%;
+    height: 60px;
+    display: flex;
+    justify-content: end;
+}
+.communityPageWriteButton {
+    width: 80px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 7px;
+    transition-duration: 300ms;
+    font-weight: bold;
+    cursor: pointer;
+}
+.communityPageWriteButton:hover {
+    background-color: black;
+    color: white;
+    border: 1px dashed white;
+    border-radius: 15px;
+}
+.communityPageContainer2 {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.communityPageItem {
+    background-color: white;
+    border: 1px solid #F6F6F6;
+    border-radius: 10px;
+    width: 370px;
+    height: 570px;
+    margin-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition-duration: 400ms;
+    box-shadow: 5px 5px 5px 5px #9E9E9E;
+    position: relative;
+}
+.communityPageItem:hover {
+    cursor: pointer;
+    box-shadow: 15px 15px 15px 15px #9E9E9E;
+    transform: rotate(1deg);
+    /* backface-visibility: visible;
+    transform-origin: 50% 50%;
+    transform: perspective(2000px) rotateY(-5deg) rotateX(5deg); */
+}
+.communityPageItemHeader {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.communityPageHeaderNick
+{
+    font-weight: bold;
+}
+.ml20 {
+    margin-left: 20px;
+}
+.communityPageItemImgBox {
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.communityPageItemImg {
+    height: 100%;
+}
+.communityPageItemMain {
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px;
+}
+.communityPageItemMainT
+{
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+.communityPageItemFooter 
+{
+    height: 70px;
+}
+.communityPageItemNameC {
+    margin: 10px 0;
+}
+.communityPageText {
+    height: 70px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+
+
+/* contactPage */
+.contactPageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+}
+.contactPageTitle {
+       height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 35px;
+   }
+.contactPageItem {
+	background-color: white;
+    box-sizing: border-box;
+    border-radius: 30px;
+    width: 1200px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 400ms;
+    box-shadow: 5px 5px 5px 5px #9E9E9E;
+    padding-top: 40px;
+}
+.contactPageWriteButtonBox {
+    width: 90%;
+    height: 40px;
+    display: flex;
+    justify-content: end;
+}
+.contactPageWriteButton {
+    width: 80px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+	align-items: center;
+    border: 1px solid black;
+    border-radius: 7px;
+    transition-duration: 300ms;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+.contactPageWriteButton:hover {
+    background-color: black;
+    color: white;
+    border: 1px dashed white;
+    border-radius: 15px;
+}
+.contactPageFooter {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+}
+.contactPageFooter a {
+    margin: 0 10px;
+    padding: 0 10px;
+    font-size: 16px;
+}
+.contactPageTextitem {
+    text-align: left;
+    padding-left: 15px;
+}
+.contactPageFontColor {
+    color: black;
+}
+
+
+
+
+/* loginPage */
+.loginPageTitle {
+    height: 150px;
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-weight: bold;
+ font-size: 35px;
+ padding-top: 100px;
+}
+.loginPageContainer {
+ width: 800px;
+ margin: 100px auto;
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ 
+}
+.loginPageLeft {
+ width: 50%;
+ height: 400px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ overflow: hidden;
+}
+.loginPageRight {
+ width: 50%;
+ height: 400px;
+ display: flex;
+ justify-content: center;
+}
+.loginPageVideo {
+ height: 400px; 
+}
+.loginPageBox {
+ width: 90%;
+ height: 100%;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+}
+.loginPageBox2 {
+ height: 80%;
+ background-color: white;
+ border: 1px solid #D8D8D8;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+}
+.loginPagelogo {
+ width: 250px;
+ height: 90px;
+ margin-bottom: 10px;
+}
+.loginPageIdBox {
+ width: 228px;
+ height: 30px;
+ margin-bottom: 10px;
+ background-color: #F6F6F6;
+ border: 1px solid #D8D8D8;
+ border-radius: 5px;
+ padding: 0 10px;
+}
+.loginPageInput:focus {
+ border: 1px dashed black;
+ outline: none;
+
+}
+.loginPagePwBox {
+ width: 228px;
+ height: 30px;
+ margin-bottom: 20px;
+ background-color: #F6F6F6;
+ border: 1px solid #D8D8D8;
+ border-radius: 5px;
+ padding: 0 10px;
+}
+
+.loginPageSubmitButton {
+ width: 250px;
+ height: 32px;
+ border: 1px solid black;
+ border-radius: 10px;
+ background-color: black;
+ color: white;
+ font-weight: bold;
+ font-size: 15px;
+ cursor: pointer;
+ transition-duration: 400ms;
+}
+.loginPageSubmitButton:hover {
+ background-color: white;
+ color: black;
+}
+.loginPageJoinBox {
+ background-color: white;
+ border: 1px solid #D8D8D8;
+ height: 15%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+}
+.loginPageJoinButton {
+ font-weight: bold;
+ color: black;
+}
+
+
+
+
+/* mainPage */
+.paddingCon
+{
+    padding-top: 100px;
+}
+.container
+{
+    width: 75%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sessionNameOn
+{
+    cursor: pointer;
+}
+.sessionNameOn:hover .sessionName
+{
+    color: orange;
+}
+.sessionNameBox
+{
+    margin-top: 70px;
+    background-color: white;
+    height: 100px;
+}
+.sessionName
+{
+    font-size: 23px;
+    color: #353535;
+    transition-duration: 300ms;
+}
+/* 비디오 세션 */
+.videoSession
+{
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+}
+.videoBox
+{
+    width: 100%;
+    position: relative;
+    height: 800px;
+    overflow: hidden;
+}
+.homeVideo
+{
+    height: 800px;
+}
+.beHappyBox
+{
+    position: absolute;
+    top: 43%;
+    right: 35%;
+    width: 30%;
+    height: 13%;
+}
+.beHappy
+{
+    width: 100%;
+    height: 100%;
+}
+/* 커뮤니티 세션 */
+.Ccontainer {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* padding: 10px 0; */
+}
+.CItem {
+    background-color: white;
+    border: 1px solid #F6F6F6;
+    border-radius: 10px;
+    width: 370px;
+    height: 570px;
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition-duration: 400ms;
+    box-shadow: 5px 5px 5px 5px #9E9E9E;
+    position: relative;
+}
+.CItem:hover {
+    cursor: pointer;
+    box-shadow: 15px 15px 15px 15px #9E9E9E;
+    transform: rotate(1deg);
+    /* backface-visibility: visible;
+    transform-origin: 50% 50%;
+    transform: perspective(2000px) rotateY(-5deg) rotateX(5deg); */
+}
+.CitemHeader {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.CheaderNick
+{
+    font-weight: bold;
+}
+.CheaderImgBox {
+    width: 100px;
+    height: 35px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.CheaderImg {
+    height: 100%;
+    width: 100%;
+}
+.ml20 {
+    margin-left: 20px;
+}
+.CitemImgBox {
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.CitemImg {
+    height: 100%;
+}
+.CitemMain {
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px;
+}
+.CitemMainC {
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 15px;
+}
+.CitemMainT
+{
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+.CitemFooter 
+{
+    height: 70px;
+}
+.CitemName {
+    margin-top: 10px;
+}
+.CitemNameC {
+    margin: 10px 0;
+}
+.CitemAddress {
+    height: 70px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.CitemPrice {
+    box-sizing: border-box;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.hotSticker
+{
+    width: 100px;
+    position: absolute;
+    font-weight: bold;
+    color: orange;
+    top: -50px;
+    left: 135px;
+}
+.hotStickerImg
+{
+    width: 100%;
+    height: 100%;
+}
+/* 커뮤니티 세션 끝 */
+/* footer */
+footer
+{
+    /* border-top: 1px solid #353535; */
+    height: 200px;
+    margin-top: 70px;
+    background-color: white;
+}
+
+
+
+
+/* menu */
+.menuBox
+{
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menuContainer
+{
+    width: 70%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menuLogoBox
+{
+    width: 150px;
+    height: 53px;
+    cursor: pointer;
+}
+.menuLogoImg
+{
+    width: 100%;
+    height: 100%;
+}
+.menuItemBox
+{
+    width: 500px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menuItem
+{
+    padding: 0 10px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #353535;
+    transition-duration: 300ms;
+}
+.menuItem:hover
+{
+    color: orange;
+    cursor: pointer;
+}
+.menuItemR
+{
+    position: relative;
+}
+.menuItemR:hover .menuItemSub
+{
+    display: block;
+}
+.menuItemSub
+{
+    position: absolute;
+    width: 180px;
+    height: 40px;
+    top: 35px;
+    display: none;
+}
+.menuItemSubF
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menuItemSubItem
+{
+    padding: 0 7px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #353535;
+    transition-duration: 300ms;
+}
+.menuItemSubItem:hover
+{
+    color: orange;
+    cursor: pointer;
+}
+.menuRight
+{
+    display: flex;
+    height: 100%;
+    width: 150px;
+    justify-content: end;
+    align-items: center;
+}
+
+
+
+
+/* myPage */
+.myPageSessionContainer{
+    /* border: 1px solid red; */
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100px;
+}
+.myPageSessionHeader {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 35px;
+}
+.myPageSessionBox {
+    width: 100%;
+}
+.myPageSessionBox1 {
+    /* border: 1px solid blue; */
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.myPageButtonSize {
+    width: 120px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.myPageInput
+{
+    display: none;
+}
+.myPageSessions
+{
+    display: none;
+}
+.myPageInput1:checked ~ .myPageSessionBox1 .myPageInputItem1
+{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+.myPageInput2:checked ~ .myPageSessionBox1 .myPageInputItem2
+{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+.myPageInput3:checked ~ .myPageSessionBox1 .myPageInputItem3
+{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+.myPageInput4:checked ~ .myPageSessionBox1 .myPageInputItem4
+{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+.myPageInput5:checked ~ .myPageSessionBox1 .myPageInputItem5
+{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+.myPageInput1:checked ~ .myPageOrderSession
+{
+    display: block;
+}
+.myPageInput2:checked ~ .myPageReviewSession
+{
+    display: block;
+}
+.myPageInput3:checked ~ .myPageWishSession
+{
+    display: block;
+}
+.myPageInput4:checked ~ .myPageCartSession
+{
+    display: block;
+}
+.myPageInput5:checked ~ .myPagePrivacySession
+{
+    display: block;
+}
+.myPageSessionBox2 {
+    /* border: 1px solid green; */
+    width: 100%;
+}
+.myPageSessionItem {
+    /* border: 1px solid black; */
+    font-weight: bold;
+    cursor: pointer;
+    /* 호버 효과줄것 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+    transition-duration: 300ms;
+}
+.myPageSessionItem:hover {
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+/* 주문목록 */
+.myPageOrderItem {
+    background-color: white;
+    border: 1px solid #F6F6F6;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px #9E9E9E;
+    display: flex;
+    margin-top: 15px;
+    padding: 22px;
+    height: 200px;
+}
+.myPageOrderItemImgbox {
+    /* border: 1px solid red; */
+    width: 25%;
+    height: 200px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.myPageImgItem {
+    height: 100%;
+}
+.myPageOrderItemBoxRight {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    padding-left: 22px;
+}
+.myPageOrderItem3 {
+    height: 75%;
+    /* border: 3px solid green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.myPageOrderInItem1 {
+    height: 100%;
+    /* border: 1px solid red; */
+}
+.myPageOrderItemFont1 {
+    cursor: pointer;
+}
+.myPageFontItem1 {
+    font-weight: bold;
+    font-size: 25px;
+}
+.myPageFontItem2 {
+    font-weight: bold;
+    font-size: 20px;
+}
+.myPageOrderInItem2 {
+    background-color: white;
+    border-left: 1px dashed #9E9E9E;
+    padding-left: 25px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.myPageOrderItemFont2 {
+    border: 1px solid #9E9E9E;
+    border-radius: 5px;
+    padding: 15px 10px;
+    cursor: pointer;
+    transition-duration: 300ms;
+}
+.myPageOrderItemFont2:hover {
+    border: 1px solid orange;
+    color: orange;
+}
+.myPageSessionBox2 {
+    /* border: 1px solid green; */
+    width: 100%;
+}
+.myPageReviewItem {
+    background-color: white;
+    border: 1px solid #F6F6F6;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px #9E9E9E;
+    display: flex;
+    margin-top: 15px;
+    padding: 22px;
+    height: 200px;
+}
+.myPageReviewImgBox {
+    display: flex;
+    align-items: center;
+}
+.myPageReviewItemImgbox {
+    /* border: 1px solid red; */
+    width: 25%;
+    height: 200px;
+    overflow: hidden;
+}
+.myPageReviewImgItem{
+    width: 17px;
+    height: 17px;
+    margin-right: 5px;
+}
+.myPageReviewFontItem1 {
+    font-weight: bold;
+}
+.myPageReviewItemFont1 {
+    cursor: pointer;
+}
+.myPageReviewFontItem2 {
+    font-weight: bold;
+}
+/* 찜목록 */
+.myPageWishHeader {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 50px;
+}
+.myPageWishBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.myPageCheckBoxItem {
+    height: 200px;
+    display: flex;
+    justify-content: start;
+}
+.myPageCheckBoxItem1 {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    margin-right: 22px;
+}
+.myPageButtonItem {
+    /* border: 1px solid red; */
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 10px;
+    width: 80px;
+    height: 22px;
+    margin-left: 22px;
+}
+.myPageButtonItem:hover {
+    background-color: black;
+    color: white;
+}
+.myPageCheckBoxItem2 {
+    position: relative;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+.myPageWishItem {
+    background-color: white;
+    border: 1px solid #F6F6F6;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px #9E9E9E;
+    display: flex;
+    margin-top: 15px;
+    padding: 22px;
+    height: 200px;
+    width: 94%;
+}
+.myPageWishItemFont2 {
+    border: 1px solid #9E9E9E;
+    border-radius: 5px;
+    padding: 15px 10px;
+    cursor: pointer;
+    transition-duration: 300ms;
+    text-align: center;
+}
+.myPageWishItemFont2:hover {
+    border: 1px solid orange;
+    color: orange;
+}
+/* 내정보수정 */
+.myPagePcontainer {
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.myPageLoginLeft {
+    width: 50%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.myPageLoginRight {
+    width: 50%;
+    height: 450px;
+    /* border: 1px solid purple; */
+    display: flex;
+    justify-content: center;
+}
+.myPageLoginVideo {
+    height: 450px; 
+}
+.myPageLoginBox {
+    /* background-color: white; */
+    /* border: 1px solid blue; */
+    width: 90%;
+    height: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.myPageLoginBox2 {
+    height: 100%;
+    background-color: white;
+    border: 1px solid #D8D8D8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.myPageLoginBox3 {
+    width: 70%;
+}
+.myPageLogo {
+    width: 250px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+.myPageIdBox {
+    width: 228px;
+    height: 30px;
+    margin-bottom: 10px;
+    background-color: #F6F6F6;
+    border: 1px solid #D8D8D8;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+.myPageInput:focus {
+    border: 1px dashed black;
+    outline: none;
+}
+.myPagePwBox {
+    width: 228px;
+    height: 30px;
+    margin-bottom: 20px;
+    background-color: #F6F6F6;
+    border: 1px solid #D8D8D8;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+.myPageSelect {
+    outline: none;
+}
+.myPageSelect:focus {
+    border: 1px dashed black;
+}
+.myPagePhoneBox {
+    height: 30px;
+    margin-bottom: 10px;
+    background-color: #F6F6F6;
+    border: 1px solid #D8D8D8;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+.myPagePB {
+    width: 51.5px;
+}
+.myPageSubmitButton {
+    width: 250px;
+    height: 32px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition-duration: 400ms;
+}
+.myPageSubmitButton:hover {
+    background-color: white;
+    color: black;
+}
+.myPageJoinBox {
+    background-color: white;
+    border: 1px solid #D8D8D8;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.myPageJoinButton {
+    font-weight: bold;
+}
+
+
+
+
+/* noticePage */
+.noticePageCcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+}
+.noticePageTitle {
+       height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 35px;
+   }
+.noticePageMainItem {
+	background-color: white;
+    box-sizing: border-box;
+    border-radius: 30px;
+    width: 1200px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 400ms;
+    box-shadow: 5px 5px 5px 5px #9E9E9E;
+    padding-top: 80px;
+}
+.noticePageImgBox {
+    width: 80%;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.noticePageImgitem {
+    width: 450px;
+    height: 150px;
+}
+.noticePageFooter {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+}
+.noticePageFooter a {
+    margin: 0 10px;
+    padding: 0 10px;
+    font-size: 16px;
+}
+.noticePageTextitem {
+    text-align: left;
+    padding-left: 15px;
+}
+.noticePagefontColor {
+    color: black;
+}
+
+
+
+
+/* placeItem */
+.placeItemContainer {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding-top: 150px;
+}
+.placeItemMainItem {
+    background-color: white;
+    box-shadow: 2px 2px 2px 2px #9E9E9E;
+    border-radius: 30px;
+    width: 1000px;
+    /* height: 800px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.placeItemBox {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 20px 0 10px 0;
+}
+.placeItemImgBox {
+    border: 1px solid red;
+}
+.placeItemImg {
+    width: 100%;
+}
+.placeItemBox2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: 1px solid black;
+    margin-top: 10px;
+}
+.placeItemBox3 {
+    width: 28%;
+    padding: 0 10px;
+    /* border: 1px solid green; */
+}
+.placeItemPbox {
+    /* border: 1px solid red; */
+    padding: 10px 0;
+}
+.placeItemMainBox {
+    /* border: 2px solid yellow; */
+    border-left: 1px dashed black;
+    padding: 0 10px;
+    width: 72%;
+    height: 100%;
+}
+.placeItemPpp {
+    line-height: 30px;
+    font-size: 15px;
+}
+.placeItemB {
+    border: 1px solid red;
+    margin: 20px 0 10px 0;
+}
+
+
+
+
+/* placePage */
+.placePageSessionContainer{
+    /* border: 1px solid red; */
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100px;
+}
+.placePageSessionHeader {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 35px;
+}
+.placePageSessionBox {
+    width: 100%;
+}
+.placePageSessionBox1 {
+    /* border: 1px solid blue; */
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.placePageInput
+{
+    display: none;
+}
+.placePageSessions
+{
+    display: none;
+}
+.placePageInput1:checked ~ .placePageSessionBox1 .placePageInputItem1
+{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+.placePageInput2:checked ~ .placePageSessionBox1 .placePageInputItem2
+{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+.placePageInput3:checked ~ .placePageSessionBox1 .placePageInputItem3
+{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+.placePageInput4:checked ~ .placePageSessionBox1 .placePageInputItem4
+{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+.placePageInput5:checked ~ .placePageSessionBox1 .placePageInputItem5
+{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+.placePageInput6:checked ~ .placePageSessionBox1 .placePageInputItem6
+{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+.placePageInput1:checked ~ .placePageSessionOne
+{
+    display: flex;
+}
+.placePageInput2:checked ~ .placePageSessionTwo
+{
+    display: flex;
+}
+.placePageInput3:checked ~ .placePageSessionThree
+{
+    display: flex;
+}
+.placePageInput4:checked ~ .placePageSessionFour
+{
+    display: flex;
+}
+.placePageInput5:checked ~ .placePageSessionFive
+{
+    display: flex;
+}
+.placePageInput6:checked ~ .placePageSessionSix
+{
+    display: flex;
+}
+.placePageSessionBox2 {
+    /* border: 1px solid green; */
+    width: 100%;
+}
+.placePageSessionItem {
+    /* border: 1px solid black; */
+    font-weight: bold;
+    cursor: pointer;
+    /* 호버 효과줄것 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16.7%;
+    height: 100%;
+    transition-duration: 300ms;
+}
+.placePageSessionItem:hover {
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+.placePageSessions
+{
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.placePageSItem {
+    background-color: white;
+    border: 1px solid #F6F6F6;
+    border-radius: 10px;
+    width: 370px;
+    height: 570px;
+    margin: 35px 0 70px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition-duration: 400ms;
+    box-shadow: 5px 5px 5px 5px #9E9E9E;
+}
+.placePageSItem:hover {
+    cursor: pointer;
+    box-shadow: 15px 15px 15px 15px #9E9E9E;
+    transform: rotate(1deg);
+    /* backface-visibility: visible;
+    transform-origin: 50% 50%;
+    transform: perspective(2000px) rotateY(-5deg) rotateX(5deg); */
+}
+.placePageSitemHeader {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.placePageSheaderImgBox {
+    width: 100px;
+    height: 35px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.placePageSheaderImg {
+    height: 100%;
+    width: 100%;
+}
+.placePageMl20 {
+    margin-left: 20px;
+}
+.placePageSitemImgBox {
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.placePageSitemImg {
+    height: 100%;
+}
+.placePageSitemMain {
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px;
+}
+.placePageSitemName {
+    margin-top: 10px;
+}
+.placePageSitemText {
+    height: 70px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.placePageSearch_box {
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 25%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.placePageSearch_box1 {
+    display: flex;
+}
+.placePageSearch_box2 {
+    border: 0;
+}
+.placePageSearch_box .placePageBtn_submit {
+    cursor: pointer;
+    font-family: 'FontAwesome';
+    font-size: 25px;
+    padding: 4px;
+    margin: 0 7px;
+    border: 0;
+    background: 0;
+}
+.placePageSearch_box input[type="text"] {
+    outline: none;
+    padding: 8px;
+    width: 100%;
+    font-size: 16px;
+}
+
+
+
+
+/* shopItem */
+.shopItemContainer {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding-top: 150px;
+}
+.shopItemMainItem {
+    background-color: white;
+    border-radius: 30px;
+    width: 1000px;
+    height: 500px;
+    display: flex;
+    transition-duration: 400ms;
+    box-shadow: 2px 2px 2px 2px #9E9E9E;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
+}
+.shopItemReviewImgBox {
+    display: flex;
+    align-items: center;
+}
+.shopItemReviewImgItem{
+    width: 17px;
+    height: 17px;
+    margin-right: 5px;
+}
+.shopItemProductImgBox {
+    /* border: 1px solid red; */
+    width: 35%;
+    margin: 0 10px;
+}
+.shopItemProductImgItem {
+    width: 100%;
+}
+.shopItemProductItemBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* border: 1px solid blue; */
+    width: 65%;
+    margin: 0 10px;
+    height: 85%;
+}
+.shopItemProductItemBox1 {
+    width: 100%;
+}
+.shopItemProductInBox {
+    /* border: 1px solid purple; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid gray;
+}
+.shopItemInBoxItem1 {
+    width: 80%;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    margin-left: 15px;
+}
+.shopItemInBoxFont1 {
+    margin-top: 10px;
+}
+.shopItemInBoxFont2 {
+    margin: 10px 0 10px 0;
+}
+.shopItemInBoxItem2 {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.shopItemInBoxButton {
+    border-radius: 5px;
+    cursor: pointer;
+    height: 40px;
+    background-color: white;
+    border: 1px solid #2478FF;
+    color: #2478FF;
+    width: 100px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-right: 15px;
+    transition-duration: 300ms;
+}
+.shopItemInBoxButton:hover {
+    background-color: #2478FF;
+    border-style: solid;
+    border: 1px solid #2478FF;
+    color: white;
+}
+.shopItemProductMainBox {
+    /* border: 5px solid yellow; */
+    border-bottom: 1px solid gray;
+    height: 55%;
+    margin-top: 10px;
+    padding: 15px;
+}
+.shopItemP {
+    line-height: 30px;
+    font-size: 15px;
+}
+.shopItemProductItem {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 1px solid red; */
+} 
+.shopItemProductItemItem1 {
+    width: 20%;
+    height: 40px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    border: 1px solid #2478FF;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.shopItemProductItemItem1:active {
+    border: 1px solid #2478FF;
+}
+.shopItemProductItemItem2 {
+    font-weight: bold;
+    font-size: 20px;
+    width: 25%;
+    height: 40px;
+    background-color: white;
+    border: 1px solid #2478FF;
+    border-radius: 5px;
+    color: #2478FF;
+    cursor: pointer;
+    transition-duration: 300ms;
+}
+.shopItemProductItemItem2:hover {
+    background-color: #2478FF;
+    color: white;
+}
+.shopItemProductItemItem3 {
+    font-weight: bold;
+    font-size: 20px;
+    width: 25%;
+    height: 40px;
+    background-color: #2478FF;
+    border: 1px solid #2478FF;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition-duration: 300ms;
+}
+.shopItemProductItemItem3:hover {
+    background-color: white;
+    color: #2478FF;
+}
+
+
+
+
+/* shopPage */
+.shopPageSessionContainer{
+    /* border: 1px solid red; */
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100px;
+}
+.shopPageSessionHeader {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 35px;
+}
+.shopPageSessionBox {
+    width: 100%;
+}
+.shopPageSessionBox1 {
+    /* border: 1px solid blue; */
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.shopPageInput
+{
+    display: none;
+}
+.shopPageSessions
+{
+    display: none;
+}
+.shopPageInput1:checked ~ .shopPageSessionBox1 .shopPageInputItem1
+{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+.shopPageInput2:checked ~ .shopPageSessionBox1 .shopPageInputItem2
+{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+.shopPageInput3:checked ~ .shopPageSessionBox1 .shopPageInputItem3
+{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+.shopPageInput4:checked ~ .shopPageSessionBox1 .shopPageInputItem4
+{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+.shopPageInput1:checked ~ .shopPageSessionOne
+{
+    display: flex;
+}
+.shopPageInput2:checked ~ .shopPageSessionTwo
+{
+    display: flex;
+}
+.shopPageInput3:checked ~ .shopPageSessionThree
+{
+    display: flex;
+}
+.shopPageInput4:checked ~ .shopPageSessionFour
+{
+    display: flex;
+}
+.shopPageSessionBox2 {
+    /* border: 1px solid green; */
+    width: 100%;
+}
+.shopPageSessionItem {
+    /* border: 1px solid black; */
+    font-weight: bold;
+    cursor: pointer;
+    /* 호버 효과줄것 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 100%;
+    transition-duration: 300ms;
+}
+.shopPageSessionItem:hover {
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+.shopPageSessions
+{
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.shopPageSItem {
+    background-color: white;
+    border: 1px solid #F6F6F6;
+    border-radius: 10px;
+    width: 370px;
+    height: 570px;
+    margin: 35px 0 70px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition-duration: 400ms;
+    box-shadow: 5px 5px 5px 5px #9E9E9E;
+}
+.shopPageSItem:hover {
+    cursor: pointer;
+    box-shadow: 15px 15px 15px 15px #9E9E9E;
+    transform: rotate(1deg);
+    /* backface-visibility: visible;
+    transform-origin: 50% 50%;
+    transform: perspective(2000px) rotateY(-5deg) rotateX(5deg); */
+}
+.shopPageSitemHeader {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.shopPageSheaderImgBox {
+    width: 100px;
+    height: 35px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.shopPageSheaderImg {
+    height: 100%;
+    width: 100%;
+}
+.shopPageMl20 {
+    margin-left: 20px;
+}
+.shopPageSitemImgBox {
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.shopPageSitemImg {
+    height: 100%;
+}
+.shopPageSitemMain {
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px;
+}
+.shopPageSitemName {
+    margin-top: 10px;
+}
+.shopPageSitemPrice {
+    box-sizing: border-box;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.shopPageSearch_box {
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 25%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.shopPageSearch_box1 {
+    display: flex;
+}
+.shopPageSearch_box2 {
+    border: 0;
+}
+.shopPageSearch_box .shopPageBtn_submit {
+    cursor: pointer;
+    font-family: 'FontAwesome';
+    font-size: 25px;
+    padding: 4px;
+    margin: 0 7px;
+    border: 0;
+    background: 0;
+}
+.shopPageSearch_box input[type="text"] {
+    outline: none;
+    padding: 8px;
+    width: 100%;
+    font-size: 16px;
+}
+
+
+
+
+/* writePage */
+.writePageContainer {
+    width: 40%;
+    height: 100vh;
+    margin: 0 auto;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.writePageItem {
+    background-color: white;
+    border-radius: 30px;
+    width: 550px;
+    height: 900px;
+    margin-top: 70px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition-duration: 400ms;
+    box-shadow: 30px 30px 30px 30px #9E9E9E;
+}
+.writePageItem:hover {
+    box-shadow: 5px 5px 5px 5px #9E9E9E;
+}
+.writePageAddItemInput:focus {
+    border: 1px dashed black;
+    outline: none;
+}
+.writePageTextarea {
+    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+}
+.writePageTextarea:focus {
+    border: 1px dashed black;
+    outline: none;
+}
+.writePageItemHeader {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px dashed #9E9E9E;
+}
+.writePageForm {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.writePageItemMain {
+    height: 100%;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.writePageItemMaininput {
+    height: 40px;
+    background-color: #F6F6F6;
+    border: 1px solid #D8D8D8;
+    border-radius: 6px;
+    padding: 0 20px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+.writePageFileR {
+    position: relative;
+}
+.writePageItemMainFileLabel {
+    width: 80px;
+    height: 30px;
+    border: 1px solid gray;
+    border-radius: 6px;
+    position: absolute;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 400ms;
+}
+.writePageItemMainFileLabel:hover {
+    border: 1px dashed white;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 17.5px;
+}
+.writePageItemMainFile {
+    margin: 0 6px;
+    cursor: pointer;
+}
+.writePageItemMainText {
+    height: 410px;
+    background-color: #F6F6F6;
+    border: 1px solid #D8D8D8;
+    border-radius: 6px;
+    padding: 20px;
+    font-size: 15px;
+    resize: none;
+}
+.writePageItemFooter {
+    border-top: 1px dashed #9E9E9E;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.writePageItemFooterContainer {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.writePageItemFooterButton {
+    background-color: black;
+    color: white;
+    width: 150px;
+    height: 35px;
+    font-size: 15px;
+    transition-duration: 300ms;
+    border: 1px solid gray;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.writePageItemFooterButton:hover {
+    border: 2px dashed white;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 17.5px;
+}
+
+

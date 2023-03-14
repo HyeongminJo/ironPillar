@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <%
 	String memberNick = (String) session.getAttribute("memberNick");
+	String memberId = (String) session.getAttribute("memberId");
 %>
 <html lang="en">
 <head>
@@ -10,113 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MENU · ironPillar</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            text-decoration: none;
-        }
-        .menuBox
-        {
-            width: 100%;
-            margin: 0 auto;
-            background-color: white;
-            position: fixed;
-            z-index: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .menuContainer
-        {
-            width: 70%;
-            height: 100px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .menuLogoBox
-        {
-            width: 150px;
-            height: 53px;
-            cursor: pointer;
-        }
-        .menuLogoImg
-        {
-            width: 100%;
-            height: 100%;
-        }
-        .menuItemBox
-        {
-            width: 500px;
-            height: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .menuItem
-        {
-            padding: 0 10px;
-            height: 35px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: bold;
-            color: #353535;
-            transition-duration: 300ms;
-        }
-        .menuItem:hover
-        {
-            color: orange;
-            cursor: pointer;
-        }
-        .menuItemR
-        {
-            position: relative;
-        }
-        .menuItemR:hover .menuItemSub
-        {
-            display: block;
-        }
-        .menuItemSub
-        {
-            position: absolute;
-            width: 180px;
-            height: 40px;
-            top: 35px;
-            display: none;
-        }
-        .menuItemSubF
-        {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .menuItemSubItem
-        {
-            padding: 0 7px;
-            height: 35px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: bold;
-            color: #353535;
-            transition-duration: 300ms;
-        }
-        .menuItemSubItem:hover
-        {
-            color: orange;
-            cursor: pointer;
-        }
-        .menuRight
-        {
-            display: flex;
-            height: 100%;
-            width: 150px;
-            justify-content: end;
-            align-items: center;
-        }
-    </style>
+    <link href="/resources/css/ironPillar.css" rel="stylesheet">
 </head>
 <body>
     <div class="menuBox">
@@ -150,11 +45,25 @@
             </div>
             <div class="menuRight">
             	<%
+            		System.out.println(memberId);
             		if(memberNick == null)
             		{
             	%>
                 <div class="menuItem" onclick="location.href='/login'">
                     <p>LOGIN</p>
+                </div>
+                <%
+            		}
+            		else if(memberId.equals("admin"))
+                	{
+                %>
+                <div class="menuItem" onclick="location.href='/admin/addItem'">
+                	<p>상품
+                	<br>등록
+                </div>
+                <div class="menuItem" onclick="location.href='/admin/addPlace'">
+                	<p>캠핑장<br>
+                	등록
                 </div>
                 <%
             		}

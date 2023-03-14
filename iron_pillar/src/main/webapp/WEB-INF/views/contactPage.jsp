@@ -8,72 +8,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>문의하기 · ironPillar</title>
+<link href="/resources/css/ironPillar.css" rel="stylesheet">
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        text-decoration: none;
-    }
-    
-    body {
-        background-color: #F6F6F6;
-    }
-    .contactPageContainer {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-top: 100px;
-    }
-    .contactPageTitle {
-   		height: 150px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-weight: bold;
-        font-size: 35px;
-   	}
-    .contactPageItem {
-        background-image: url(img/My\ project-1\ \(1\).png);
-        background-position: center center;
-        background-size: cover;
-        box-sizing: border-box;
-        border-radius: 30px;
-        width: 1200px;
-        height: 700px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transition-duration: 400ms;
-        box-shadow: 5px 5px 5px 5px #9E9E9E;
-        padding-top: 20px;
-    }
-    .contactPageWriteButtonBox {
-   		width: 90%;
-   		height: 40px;
-   		display: flex;
-   		justify-content: end;
-   	}
-   	.contactPageWriteButton {
-   		width: 80px;
-   		height: 25px;
-   		display: flex;
-   		justify-content: center;
-        align-items: center;
-   		border: 1px solid black;
-   		border-radius: 7px;
-   		transition-duration: 300ms;
-   		font-weight: bold;
-   		cursor: pointer;
-   	}
-   	.contactPageWriteButton:hover {
-   		background-color: black;
-   		color: white;
-   		border: 1px dashed white;
-   		border-radius: 15px;
-   	}
     table {
         width: 90%;
         text-align: center;
@@ -104,23 +40,6 @@
     }
     table thead th ,table tbody td{
         padding: 12px 0;
-    }
-    .contactPageFooter {
-        margin-top: 35px;
-        display: flex;
-        justify-content: center;
-    }
-    .contactPageFooter a {
-        margin: 0 10px;
-        padding: 0 10px;
-        font-size: 16px;
-    }
-    .contactPageTextitem {
-        text-align: left;
-        padding-left: 15px;
-    }
-    .contactPageFontColor {
-    	color: black;
     }
 </style>
 </head>

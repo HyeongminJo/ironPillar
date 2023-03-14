@@ -5,64 +5,13 @@
 <head>
 <meta charset="UTF-8">
 <title>공지사항 · ironPillar</title>
+<link href="/resources/css/ironPillar.css" rel="stylesheet">
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        text-decoration: none;
-    }
-    body {
-        background-color: #F6F6F6;
-    }
-    .noticePageCcontainer {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-top: 100px;
-    }
-    .noticePageTitle {
-   		height: 150px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-weight: bold;
-        font-size: 35px;
-   	}
-    .noticePageMainItem {
-        background-image: url(img/My\ project-1\ \(1\).png);
-        background-position: center center;
-        background-size: cover;
-        box-sizing: border-box;
-        border-radius: 30px;
-        width: 1200px;
-        height: 700px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transition-duration: 400ms;
-        box-shadow: 5px 5px 5px 5px #9E9E9E;
-        padding-top: 20px;
-    }
-    .noticePageImgBox {
-        width: 80%;
-        height: 200px;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .noticePageImgitem {
-        width: 450px;
-        height: 150px;
-    }
     table {
         width: 90%;
         text-align: center;
     }
-    tableBox {
+    .noticePageTableBox {
         border-bottom: 1px solid black;
     }
     table th{
@@ -88,23 +37,6 @@
     }
     table thead th ,table tbody td{
         padding: 12px 0;
-    }
-    .noticePageFooter {
-        margin-top: 35px;
-        display: flex;
-        justify-content: center;
-    }
-    .noticePageFooter a {
-        margin: 0 10px;
-        padding: 0 10px;
-        font-size: 16px;
-    }
-    .noticePageTextitem {
-        text-align: left;
-        padding-left: 15px;
-    }
-    .noticePagefontColor {
-    	color: black;
     }
 </style>
 </head>
