@@ -2053,7 +2053,6 @@ footer
 
 /* shopPage */
 .shopPageSessionContainer{
-    /* border: 1px solid red; */
     width: 70%;
     margin: 0 auto;
     display: flex;
@@ -2075,7 +2074,6 @@ footer
     width: 100%;
 }
 .shopPageSessionBox1 {
-    /* border: 1px solid blue; */
     width: 100%;
     height: 60px;
     display: flex;
@@ -2083,10 +2081,6 @@ footer
     align-items: center;
 }
 .shopPageInput
-{
-    display: none;
-}
-.shopPageSessions
 {
     display: none;
 }
@@ -2114,31 +2108,29 @@ footer
     color: white;
     font-size: 20px;
 }
-.shopPageInput1:checked ~ .shopPageSessionOne
+#one,#two,#three,#four
+{
+	display: none;
+}
+.shopPageInput1:checked ~ .shopPageSessionOne #one
 {
     display: flex;
 }
-.shopPageInput2:checked ~ .shopPageSessionTwo
+.shopPageInput2:checked ~ .shopPageSessionOne #two
 {
     display: flex;
 }
-.shopPageInput3:checked ~ .shopPageSessionThree
+.shopPageInput3:checked ~ .shopPageSessionOne #three
 {
     display: flex;
 }
-.shopPageInput4:checked ~ .shopPageSessionFour
+.shopPageInput4:checked ~ .shopPageSessionOne #four
 {
     display: flex;
-}
-.shopPageSessionBox2 {
-    /* border: 1px solid green; */
-    width: 100%;
 }
 .shopPageSessionItem {
-    /* border: 1px solid black; */
     font-weight: bold;
     cursor: pointer;
-    /* 호버 효과줄것 */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2153,6 +2145,7 @@ footer
 }
 .shopPageSessions
 {
+	display: flex;
     width: 100%;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -2174,9 +2167,6 @@ footer
     cursor: pointer;
     box-shadow: 15px 15px 15px 15px #9E9E9E;
     transform: rotate(1deg);
-    /* backface-visibility: visible;
-    transform-origin: 50% 50%;
-    transform: perspective(2000px) rotateY(-5deg) rotateX(5deg); */
 }
 .shopPageSitemHeader {
     height: 70px;

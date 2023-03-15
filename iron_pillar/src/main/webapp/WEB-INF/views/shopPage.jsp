@@ -25,6 +25,16 @@
 	}
 	// 인풋 텍스트 박스 빠져나갈때 색상
 </script>
+<script>
+	for(var i = 1; i < itemList.size(); i++)
+	{
+		var item = itemList[i];
+		if(item.itemCategory == '1')
+		{
+			document.getElementById("")
+		}
+	}
+</script>
 </head>
 <body>
 <jsp:include page="menu.jsp"/>
@@ -53,345 +63,22 @@
             </div>
             <div class="shopPageSessions shopPageSessionOne">
             	<c:forEach items="${itemList}" var="item">
-            	<c:if test="${item.itemCategory == 1}">
-                <div class="shopPageSItem" onclick="location.href='/shop/shopItem'">
+                <div class="shopPageSItem" onclick="location.href='/shop/shopItem'" id="${item.itemCategory}">
                     <div class="shopPageSitemHeader">
                         <div class="shopPageSheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="shopPageSheaderImg">
                         </div>
                     </div>
                     <div class="shopPageSitemImgBox">
-                        <img src="resources/img/텐트.jpg" alt="itemImg" class="shopPageSitemImg">
+                        <img src="resources/img/${item.itemImage}.jpg" alt="itemImg" class="shopPageSitemImg">
                     </div>
                     <div class="shopPageSitemMain">
-                        <h3 class="shopPageSitemName">${item.itemTitle}"</h3>
+                        <h3 class="shopPageSitemName">${item.itemTitle}</h3>
                         <p class="shopPageSitemText">${item.itemText}</p>
                         <p class="shopPageSitemPrice">${item.itemPrice}원</p>
                     </div>
                 </div>
-                </c:if>
                 </c:forEach>
-            </div>
-            <div class="shopPageSessions shopPageSessionTwo">
-                <div class="shopPageSItem" onclick="location.href='/shop/shopItem'">
-                    <div class="shopPageSitemHeader">
-                        <div class="shopPageSheaderImgBox shopPageMl20">
-                            <img src="resources/img/logo.png" alt="로고" class="shopPageSheaderImg">
-                        </div>
-                    </div>
-                    <div class="shopPageSitemImgBox">
-                        <img src="resources/img/버너.png" alt="itemImg" class="shopPageSitemImg">
-                    </div>
-                    <div class="shopPageSitemMain">
-                        <h3 class="shopPageSitemName">상품명</h3>
-                        <p class="shopPageSitemText">내용</p>
-                        <p class="shopPageSitemPrice">가격</p>
-                    </div>
-                </div>
-                <div class="shopPageSItem" onclick="location.href='/shop/shopItem'">
-                    <div class="shopPageSitemHeader">
-                        <div class="shopPageSheaderImgBox shopPageMl20">
-                            <img src="resources/img/logo.png" alt="로고" class="shopPageSheaderImg">
-                        </div>
-                    </div>
-                    <div class="shopPageSitemImgBox">
-                        <img src="resources/img/버너.png" alt="itemImg" class="shopPageSitemImg">
-                    </div>
-                    <div class="shopPageSitemMain">
-                        <h3 class="shopPageSitemName">상품명</h3>
-                        <p class="shopPageSitemText">내용</p>
-                        <p class="shopPageSitemPrice">가격</p>
-                    </div>
-                </div>
-                <div class="shopPageSItem" onclick="location.href='/shop/shopItem'">
-                    <div class="shopPageSitemHeader">
-                        <div class="shopPageSheaderImgBox shopPageMl20">
-                            <img src="resources/img/logo.png" alt="로고" class="shopPageSheaderImg">
-                        </div>
-                    </div>
-                    <div class="shopPageSitemImgBox">
-                        <img src="resources/img/버너.png" alt="itemImg" class="shopPageSitemImg">
-                    </div>
-                    <div class="shopPageSitemMain">
-                        <h3 class="shopPageSitemName">상품명</h3>
-                        <p class="shopPageSitemText">내용</p>
-                        <p class="shopPageSitemPrice">가격</p>
-                    </div>
-                </div>
-                <div class="shopPageSItem" onclick="location.href='/shop/shopItem'">
-                    <div class="shopPageSitemHeader">
-                        <div class="shopPageSheaderImgBox shopPageMl20">
-                            <img src="resources/img/logo.png" alt="로고" class="shopPageSheaderImg">
-                        </div>
-                    </div>
-                    <div class="shopPageSitemImgBox">
-                        <img src="resources/img/버너.png" alt="itemImg" class="shopPageSitemImg">
-                    </div>
-                    <div class="shopPageSitemMain">
-                        <h3 class="shopPageSitemName">상품명</h3>
-                        <p class="shopPageSitemText">내용</p>
-                        <p class="shopPageSitemPrice">가격</p>
-                    </div>
-                </div>
-                <div class="shopPageSItem" onclick="location.href='/shop/shopItem'">
-                    <div class="shopPageSitemHeader">
-                        <div class="shopPageSheaderImgBox shopPageMl20">
-                            <img src="resources/img/logo.png" alt="로고" class="shopPageSheaderImg">
-                        </div>
-                    </div>
-                    <div class="shopPageSitemImgBox">
-                        <img src="resources/img/버너.png" alt="itemImg" class="shopPageSitemImg">
-                    </div>
-                    <div class="shopPageSitemMain">
-                        <h3 class="shopPageSitemName">상품명</h3>
-                        <p class="shopPageSitemText">내용</p>
-                        <p class="shopPageSitemPrice">가격</p>
-                    </div>
-                </div>
-                <div class="shopPageSItem" onclick="location.href='/shop/shopItem'">
-                    <div class="shopPageSitemHeader">
-                        <div class="shopPageSheaderImgBox shopPageMl20">
-                            <img src="resources/img/logo.png" alt="로고" class="shopPageSheaderImg">
-                        </div>
-                    </div>
-                    <div class="shopPageSitemImgBox">
-                        <img src="resources/img/버너.png" alt="itemImg" class="shopPageSitemImg">
-                    </div>
-                    <div class="shopPageSitemMain">
-                        <h3 class="shopPageSitemName">상품명</h3>
-                        <p class="shopPageSitemText">내용</p>
-                        <p class="shopPageSitemPrice">가격</p>
-                    </div>
-                </div>
-                <div class="shopPageSItem" onclick="location.href='/shop/shopItem'">
-                    <div class="shopPageSitemHeader">
-                        <div class="shopPageSheaderImgBox shopPageMl20">
-                            <img src="resources/img/logo.png" alt="로고" class="shopPageSheaderImg">
-                        </div>
-                    </div>
-                    <div class="shopPageSitemImgBox">
-                        <img src="resources/img/버너.png" alt="itemImg" class="shopPageSitemImg">
-                    </div>
-                    <div class="shopPageSitemMain">
-                        <h3 class="shopPageSitemName">상품명</h3>
-                        <p class="shopPageSitemText">내용</p>
-                        <p class="shopPageSitemPrice">가격</p>
-                    </div>
-                </div>
-            </div>
-            <div class="shopPageSessions shopPageSessionThree">
-                <div class="shopPageSItem" onclick="location.href='/shop/shopItem'">
-                    <div class="shopPageSitemHeader">
-                        <div class="shopPageSheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="shopPageSheaderImg">
-                        </div>
-                    </div>
-                    <div class="shopPageSitemImgBox">
-                        <img src="resources/img/랜턴.png" alt="itemImg" class="shopPageSitemImg">
-                    </div>
-                    <div class="shopPageSitemMain">
-                        <h3 class="shopPageSitemName">상품명</h3>
-                        <p class="shopPageSitemText">내용</p>
-                        <p class="shopPageSitemPrice">가격</p>
-                    </div>
-                </div>
-                <div class="shopPageSItem" onclick="location.href='/shop/shopItem'">
-                    <div class="shopPageSitemHeader">
-                        <div class="shopPageSheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="shopPageSheaderImg">
-                        </div>
-                    </div>
-                    <div class="shopPageSitemImgBox">
-                        <img src="resources/img/랜턴.png" alt="itemImg" class="shopPageSitemImg">
-                    </div>
-                    <div class="shopPageSitemMain">
-                        <h3 class="shopPageSitemName">상품명</h3>
-                        <p class="shopPageSitemText">내용</p>
-                        <p class="shopPageSitemPrice">가격</p>
-                    </div>
-                </div>
-                <div class="shopPageSItem" onclick="location.href='/shop/shopItem'">
-                    <div class="shopPageSitemHeader">
-                        <div class="shopPageSheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="shopPageSheaderImg">
-                        </div>
-                    </div>
-                    <div class="shopPageSitemImgBox">
-                        <img src="resources/img/랜턴.png" alt="itemImg" class="shopPageSitemImg">
-                    </div>
-                    <div class="shopPageSitemMain">
-                        <h3 class="shopPageSitemName">상품명</h3>
-                        <p class="shopPageSitemText">내용</p>
-                        <p class="shopPageSitemPrice">가격</p>
-                    </div>
-                </div>
-                <div class="shopPageSItem" onclick="location.href='/shop/shopItem'">
-                    <div class="shopPageSitemHeader">
-                        <div class="shopPageSheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="shopPageSheaderImg">
-                        </div>
-                    </div>
-                    <div class="shopPageSitemImgBox">
-                        <img src="resources/img/랜턴.png" alt="itemImg" class="shopPageSitemImg">
-                    </div>
-                    <div class="shopPageSitemMain">
-                        <h3 class="shopPageSitemName">상품명</h3>
-                        <p class="shopPageSitemText">내용</p>
-                        <p class="shopPageSitemPrice">가격</p>
-                    </div>
-                </div>
-                <div class="shopPageSItem" onclick="location.href='/shop/shopItem'">
-                    <div class="shopPageSitemHeader">
-                        <div class="shopPageSheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="shopPageSheaderImg">
-                        </div>
-                    </div>
-                    <div class="shopPageSitemImgBox">
-                        <img src="resources/img/랜턴.png" alt="itemImg" class="shopPageSitemImg">
-                    </div>
-                    <div class="shopPageSitemMain">
-                        <h3 class="shopPageSitemName">상품명</h3>
-                        <p class="shopPageSitemText">내용</p>
-                        <p class="shopPageSitemPrice">가격</p>
-                    </div>
-                </div>
-                <div class="shopPageSItem" onclick="location.href='/shop/shopItem'">
-                    <div class="shopPageSitemHeader">
-                        <div class="shopPageSheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="shopPageSheaderImg">
-                        </div>
-                    </div>
-                    <div class="shopPageSitemImgBox">
-                        <img src="resources/img/랜턴.png" alt="itemImg" class="shopPageSitemImg">
-                    </div>
-                    <div class="shopPageSitemMain">
-                        <h3 class="shopPageSitemName">상품명</h3>
-                        <p class="shopPageSitemText">내용</p>
-                        <p class="shopPageSitemPrice">가격</p>
-                    </div>
-                </div>
-                <div class="shopPageSItem" onclick="location.href='/shop/shopItem'">
-                    <div class="shopPageSitemHeader">
-                        <div class="shopPageSheaderImgBox ml20">
-                            <img src="resources/img/logo.png" alt="로고" class="shopPageSheaderImg">
-                        </div>
-                    </div>
-                    <div class="shopPageSitemImgBox">
-                        <img src="resources/img/랜턴.png" alt="itemImg" class="shopPageSitemImg">
-                    </div>
-                    <div class="shopPageSitemMain">
-                        <h3 class="shopPageSitemName">상품명</h3>
-                        <p class="shopPageSitemText">내용</p>
-                        <p class="shopPageSitemPrice">가격</p>
-                    </div>
-                </div>
-            </div>
-            <div class="shopPageSessions shopPageSessionFour">
-                <div class="shopPageSItem" onclick="location.href='/shop/shopItem'">
-                    <div class="shopPageSitemHeader">
-                        <div class="shopPageSheaderImgBox shopPageMl20">
-                            <img src="resources/img/logo.png" alt="로고" class="shopPageSheaderImg">
-                        </div>
-                    </div>
-                    <div class="shopPageSitemImgBox">
-                        <img src="resources/img/의자.png" alt="itemImg" class="shopPageSitemImg">
-                    </div>
-                    <div class="shopPageSitemMain">
-                        <h3 class="shopPageSitemName">상품명</h3>
-                        <p class="shopPageSitemText">내용</p>
-                        <p class="shopPageSitemPrice">가격</p>
-                    </div>
-                </div>
-                <div class="shopPageSItem" onclick="location.href='/shop/shopItem'">
-                    <div class="shopPageSitemHeader">
-                        <div class="shopPageSheaderImgBox shopPageMl20">
-                            <img src="resources/img/logo.png" alt="로고" class="shopPageSheaderImg">
-                        </div>
-                    </div>
-                    <div class="shopPageSitemImgBox">
-                        <img src="resources/img/의자.png" alt="itemImg" class="shopPageSitemImg">
-                    </div>
-                    <div class="shopPageSitemMain">
-                        <h3 class="shopPageSitemName">상품명</h3>
-                        <p class="shopPageSitemText">내용</p>
-                        <p class="shopPageSitemPrice">가격</p>
-                    </div>
-                </div>
-                <div class="shopPageSItem" onclick="location.href='/shop/shopItem'">
-                    <div class="shopPageSitemHeader">
-                        <div class="shopPageSheaderImgBox shopPageMl20">
-                            <img src="resources/img/logo.png" alt="로고" class="shopPageSheaderImg">
-                        </div>
-                    </div>
-                    <div class="shopPageSitemImgBox">
-                        <img src="resources/img/의자.png" alt="itemImg" class="shopPageSitemImg">
-                    </div>
-                    <div class="shopPageSitemMain">
-                        <h3 class="shopPageSitemName">상품명</h3>
-                        <p class="shopPageSitemText">내용</p>
-                        <p class="shopPageSitemPrice">가격</p>
-                    </div>
-                </div>
-                <div class="shopPageSItem" onclick="location.href='/shop/shopItem'">
-                    <div class="shopPageSitemHeader">
-                        <div class="shopPageSheaderImgBox shopPageMl20">
-                            <img src="resources/img/logo.png" alt="로고" class="shopPageSheaderImg">
-                        </div>
-                    </div>
-                    <div class="shopPageSitemImgBox">
-                        <img src="resources/img/의자.png" alt="itemImg" class="shopPageSitemImg">
-                    </div>
-                    <div class="shopPageSitemMain">
-                        <h3 class="shopPageSitemName">상품명</h3>
-                        <p class="shopPageSitemText">내용</p>
-                        <p class="shopPageSitemPrice">가격</p>
-                    </div>
-                </div>
-                <div class="shopPageSItem" onclick="location.href='/shop/shopItem'">
-                    <div class="shopPageSitemHeader">
-                        <div class="shopPageSheaderImgBox shopPageMl20">
-                            <img src="resources/img/logo.png" alt="로고" class="shopPageSheaderImg">
-                        </div>
-                    </div>
-                    <div class="shopPageSitemImgBox">
-                        <img src="resources/img/의자.png" alt="itemImg" class="shopPageSitemImg">
-                    </div>
-                    <div class="shopPageSitemMain">
-                        <h3 class="shopPageSitemName">상품명</h3>
-                        <p class="shopPageSitemText">내용</p>
-                        <p class="shopPageSitemPrice">가격</p>
-                    </div>
-                </div>
-                <div class="shopPageSItem" onclick="location.href='/shop/shopItem'">
-                    <div class="shopPageSitemHeader">
-                        <div class="shopPageSheaderImgBox shopPageMl20">
-                            <img src="resources/img/logo.png" alt="로고" class="shopPageSheaderImg">
-                        </div>
-                    </div>
-                    <div class="shopPageSitemImgBox">
-                        <img src="resources/img/의자.png" alt="itemImg" class="shopPageSitemImg">
-                    </div>
-                    <div class="shopPageSitemMain">
-                        <h3 class="shopPageSitemName">상품명</h3>
-                        <p class="shopPageSitemText">내용</p>
-                        <p class="shopPageSitemPrice">가격</p>
-                    </div>
-                </div>
-                <div class="shopPageSItem" onclick="location.href='/shop/shopItem'">
-                    <div class="shopPageSitemHeader">
-                        <div class="shopPageSheaderImgBox shopPageMl20">
-                            <img src="resources/img/logo.png" alt="로고" class="shopPageSheaderImg">
-                        </div>
-                    </div>
-                    <div class="shopPageSitemImgBox">
-                        <img src="resources/img/의자.png" alt="itemImg" class="shopPageSitemImg">
-                    </div>
-                    <div class="shopPageSitemMain">
-                        <h3 class="shopPageSitemName">상품명</h3>
-                        <p class="shopPageSitemText">내용</p>
-                        <p class="shopPageSitemPrice">가격</p>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

@@ -17,13 +17,13 @@ import com.springmvc.service.ItemService;
 public class shopController 
 {	
 	@Autowired
-	ItemService is;
+	ItemService itemService;
 	
 	@GetMapping
 	public ModelAndView shopPage(Model model)
 	{
 		ModelAndView modelandview = new ModelAndView();
-		List<Item> list = is.getAllItemList();
+		List<Item> list = itemService.getAllItemList();
 		modelandview.addObject("itemList", list);
 		modelandview.setViewName("shopPage");
 		return modelandview;

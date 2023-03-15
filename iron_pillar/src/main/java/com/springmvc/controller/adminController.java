@@ -24,7 +24,7 @@ public class adminController
 	}
 	
 	@PostMapping("/addItem")
-	public String addNewItem(@ModelAttribute("NewItem") Item item)
+	public String addNewItem(@ModelAttribute("Item") Item item)
 	{
 		return "redirect:/shop";
 	}

@@ -16,7 +16,7 @@
         <div class="addItem">
             <div class="addItemHeader">
             </div>
-            <form:form modelAttribute="NewItem" class="addItemForm" action="/admin/addItem?${_csrf.parameterName}=${_csrf.token}" enctype="multipart/form-data" method="post">
+            <form:form modelAttribute="Item" class="addItemForm" action="/admin/addItem?${_csrf.parameterName}=${_csrf.token}" enctype="multipart/form-data" method="post">
                 <div class="addItemMain">
                     <form:input path="itemTitle" placeholder="상품명" class="addItemMaininput addItemInput"/>
                     <form:input path="itemPrice" placeholder="가격" class="addItemMaininput addItemInput"/>

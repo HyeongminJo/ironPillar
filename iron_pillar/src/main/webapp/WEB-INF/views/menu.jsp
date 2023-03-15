@@ -45,7 +45,6 @@
             </div>
             <div class="menuRight">
             	<%
-            		System.out.println(memberId);
             		if(memberNick == null)
             		{
             	%>
