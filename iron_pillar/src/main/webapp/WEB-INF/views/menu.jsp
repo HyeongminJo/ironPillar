@@ -11,7 +11,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MENU · ironPillar</title>
-    <link href="/resources/css/ironPillar.css" rel="stylesheet">
 </head>
 <body>
     <div class="menuBox">
@@ -64,6 +63,9 @@
                 	<p>캠핑장<br>
                 	등록
                 </div>
+                <div class="menuItem" onclick="location.href='/login/logout'">
+                	<p>LOGOUT
+                </div>
                 <%
             		}
             		else
@@ -71,6 +73,9 @@
                 %>
                 <div class="menuItem" onclick="location.href='/myPage'">
                 	<p><%=memberNick%>
+                </div>
+                <div class="menuItem" onclick="location.href='/login/logout'">
+                	<p>LOGOUT
                 </div>
                 <%
             		}

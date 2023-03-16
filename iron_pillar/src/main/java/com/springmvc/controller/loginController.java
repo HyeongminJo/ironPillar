@@ -27,6 +27,14 @@ public class loginController
 		return "loginPage";
 	}
 	
+	@GetMapping("/logout")
+	public String logout(HttpServletRequest request) throws Exception
+	{
+		HttpSession session = request.getSession();
+		session.invalidate();
+		return "redirect:/login";
+	}
+	
 	@GetMapping("/addMember")
 	public String addMember()
 	{
