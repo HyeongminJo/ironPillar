@@ -1027,7 +1027,7 @@ footer
 }
 .menuLogoBox
 {
-    width: 300px;
+    width: 150px;
     height: 53px;
     cursor: pointer;
 }
@@ -1046,11 +1046,23 @@ footer
 }
 .menuItem
 {
-	border: 1px solid red;
     padding: 0 10px;
     height: 35px;
     width: 50px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #353535;
+    transition-duration: 300ms;
+}
+.menuItem2
+{
+	padding: 0 10px;
+    height: 35px;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-weight: bold;

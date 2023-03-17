@@ -55,13 +55,13 @@
             		else if(memberId.equals("admin"))
                 	{
                 %>
-                <div class="menuItem" onclick="location.href='/admin/addItem'">
-                	<p>상품
-                	<br>등록
+                <div class="menuItem2" onclick="location.href='/admin/addItem'">
+                	<p>상품</p>
+                	<p>등록</p>
                 </div>
-                <div class="menuItem" onclick="location.href='/admin/addPlace'">
-                	<p>캠핑장<br>
-                	등록
+                <div class="menuItem2" onclick="location.href='/admin/addPlace'">
+                	<p>캠핑장</p>
+                	<p>등록</p>
                 </div>
                 <div class="menuItem" onclick="location.href='/login/logout'">
                 	<p>LOGOUT
