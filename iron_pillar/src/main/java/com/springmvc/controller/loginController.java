@@ -52,7 +52,7 @@ public class loginController
 	//로그인 프로세스
 	@PostMapping("/processLogin") //로그인 기능
 	public String submitlogin(HttpServletRequest request, Model model, HttpSession session){
-		System.out.println("로그인기능을 실행합니다");
+		System.out.println("로그인기능 시작");
 		String[] result = memberSerivce.login(request.getParameter("memberId"),request.getParameter("memberPw"));      
 		memberSerivce.loginCheck(result, session);
 		return "mainPage";

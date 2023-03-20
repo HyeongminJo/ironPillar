@@ -52,7 +52,7 @@ public class MemberRepositoryImpl implements MemberRepository
 			{
 				if(rs.getString("memberPw").equals(memberPw))
 				{
-					System.out.println("로그인 성공");
+					System.out.println("로그인 완료");
 					result[0] = "1";
 					result[1] = rs.getString("memberId");
 					result[2] = rs.getString("memberPw");

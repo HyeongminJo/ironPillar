@@ -36,7 +36,7 @@
                         </div>
                     </div>
                     <div class="CitemImgBox">
-                        <img src="/resources/img/의자.png" alt="이미지" class="CitemImg">
+                        <img src="/resources/img/의자.jpg" alt="이미지" class="CitemImg">
                     </div>
                     <div class="CitemMain">
                         <h3 class="CitemName">상품명</h3>
@@ -54,7 +54,7 @@
                         </div>
                     </div>
                     <div class="CitemImgBox">
-                        <img src="/resources/img/랜턴.png" alt="이미지" class="CitemImg">
+                        <img src="/resources/img/랜턴.jpg" alt="이미지" class="CitemImg">
                     </div>
                     <div class="CitemMain">
                         <h3 class="CitemName">상품명</h3>
@@ -72,7 +72,7 @@
                         </div>
                     </div>
                     <div class="CitemImgBox">
-                        <img src="/resources/img/버너.png" alt="이미지" class="CitemImg">
+                        <img src="/resources/img/버너.jpg" alt="이미지" class="CitemImg">
                     </div>
                     <div class="CitemMain">
                         <h3 class="CitemName">상품명</h3>
