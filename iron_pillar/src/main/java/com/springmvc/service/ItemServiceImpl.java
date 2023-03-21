@@ -18,4 +18,9 @@ public class ItemServiceImpl implements ItemService
 	{
 		return itemRepository.getAllItemList();
 	}
+	
+	public void setNewItem(Item item)
+	{
+		itemRepository.setNewItem(item);
+	}
 }

@@ -6,9 +6,10 @@ public class Item
 {
 	private String itemTitle;
 	private int itemPrice;
-	private String itemImage;
+	private MultipartFile itemImage;
 	private String itemText;
 	private String itemCategory;
+	private String itemImageName;
 	
 	public Item()
 	{
@@ -31,11 +32,11 @@ public class Item
 		this.itemPrice = itemPrice;
 	}
 
-	public String getItemImage() {
+	public MultipartFile getItemImage() {
 		return itemImage;
 	}
 
-	public void setItemImage(String itemImage) {
+	public void setItemImage(MultipartFile itemImage) {
 		this.itemImage = itemImage;
 	}
 
@@ -54,5 +55,14 @@ public class Item
 	public void setItemCategory(String itemCategory) {
 		this.itemCategory = itemCategory;
 	}
+
+	public String getItemImageName() {
+		return itemImageName;
+	}
+
+	public void setItemImageName(String itemImageName) {
+		this.itemImageName = itemImageName;
+	}
+	
 	
 }

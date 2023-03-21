@@ -14,10 +14,16 @@
 <jsp:include page="menu.jsp"/>
     <div class="addItemContainer">
         <div class="addItem">
+        	<form:form modelAttribute="item" class="addItemForm" action="/admin/addItem?${_csrf.parameterName}=${_csrf.token}" enctype="multipart/form-data" method="POST">
             <div class="addItemHeader">
             </div>
-            <form:form modelAttribute="Item" class="addItemForm" action="/admin/addItem?${_csrf.parameterName}=${_csrf.token}" enctype="multipart/form-data" method="post">
                 <div class="addItemMain">
+                <div class="addItemCategoryBox">
+                	<form:radiobutton class="addItemCategory" path="itemCategory" value="one" label="텐트/침구류"/>
+	            	<form:radiobutton class="addItemCategory" path="itemCategory" value="two" label="취사도구"/>
+	            	<form:radiobutton class="addItemCategory" path="itemCategory" value="three" label="랜턴/조명"/>
+	            	<form:radiobutton class="addItemCategory" path="itemCategory" value="four" label="기타"/>
+	            </div>
                     <form:input path="itemTitle" placeholder="상품명" class="addItemMaininput addItemInput"/>
                     <form:input path="itemPrice" placeholder="가격" class="addItemMaininput addItemInput"/>
                     <div class="addItemMaininput addItemFileR">

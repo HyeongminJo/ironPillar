@@ -54,7 +54,7 @@
                         <div class="addMemberLogoBox">
                             <img src="/resources/img/logo.png" alt="logo" class="addMemberLogo">
                         </div>
-                        <form name="newMember" action="/login/processAddMember" method="post" onsubmit="return checkForm()">
+                        <form class="addMemberForm"name="newMember" action="/login/processAddMember" method="post" onsubmit="return checkForm()">
                             <input type="text" name="memberId" placeholder="아이디" minlength="1" maxlength="10" class="addMemberIdBox addMemberInput" required><br>
                             <input type="password" name="memberPw" placeholder="비밀번호" minlength="1" maxlength="15" class="addMemberIdBox addMemberInput" required><br>
                             <input type="password" name="memberPwCheck" placeholder="비밀번호확인" minlength="1" maxlength="15" class="addMemberIdBox addMemberInput" required><br>

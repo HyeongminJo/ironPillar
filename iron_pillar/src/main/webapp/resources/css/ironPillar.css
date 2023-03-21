@@ -71,6 +71,14 @@ textarea:focus {
     flex-direction: column;
     justify-content: space-between;
 }
+.addItemCategoryBox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.addItemCategory {
+	margin: 0 10px;
+}
 .addItemMaininput {
     height: 40px;
     background-color: #F6F6F6;
@@ -204,6 +212,14 @@ textarea:focus {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+.addMemberBox3 {
+	width: 70%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 .addMemberLogoBox {
     width: 250px;
@@ -1025,6 +1041,14 @@ footer
     justify-content: space-between;
     align-items: center;
 }
+.menuLeft
+{
+	display: flex;
+    height: 100%;
+    width: 300px;
+    justify-content: start;
+    align-items: center;
+}
 .menuLogoBox
 {
     width: 150px;
@@ -1048,7 +1072,6 @@ footer
 {
     padding: 0 10px;
     height: 35px;
-    width: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1056,11 +1079,15 @@ footer
     color: #353535;
     transition-duration: 300ms;
 }
+.menuItem:hover
+{
+    color: orange;
+    cursor: pointer;
+}
 .menuItem2
 {
-	padding: 0 10px;
+	padding-right: 15px;
     height: 35px;
-    width: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1069,7 +1096,7 @@ footer
     color: #353535;
     transition-duration: 300ms;
 }
-.menuItem:hover
+.menuItem2:hover
 {
     color: orange;
     cursor: pointer;

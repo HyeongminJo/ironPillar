@@ -31,4 +31,10 @@ public class ItemRepositoryImpl implements ItemRepository
 		this.itemList = listOfItems;
 		return listOfItems;
 	}
+	
+	public void setNewItem(Item item)
+	{
+		String sql = "insert into item values(?, ?, ?, ?, ?)";
+		template.update(sql, item.getItemTitle(), item.getItemPrice(), item.getItemImageName(), item.getItemText(), item.getItemCategory());
+	}
 }

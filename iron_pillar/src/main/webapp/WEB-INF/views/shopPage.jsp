@@ -45,8 +45,8 @@
         </div>
         <div class="shopPageSearch_box">
             <form action="" method="get" class="shopPageSearch_box1">
-                <input type="text" name="search_keyword" onfocus="textBoxFocusColor('search_box')"
-                    onblur="textBoxBlurColor('search_box')" class="shopPageSearch_box2">
+                <input type="text" name="search_keyword" onfocus="textBoxFocusColor('shopPageSearch_box')"
+                    onblur="textBoxBlurColor('shopPageSearch_box')" class="shopPageSearch_box1">
                 <input type="submit" value="&#xf002" class="shopPageBtn_submit">
             </form>
         </div>
@@ -70,7 +70,7 @@
                         </div>
                     </div>
                     <div class="shopPageSitemImgBox">
-                        <img src="resources/img/${item.itemImage}.jpg" alt="itemImg" class="shopPageSitemImg">
+                        <img src="resources/img/${item.itemImageName}" alt="itemImg" class="shopPageSitemImg">
                     </div>
                     <div class="shopPageSitemMain">
                         <h3 class="shopPageSitemName">${item.itemTitle}</h3>

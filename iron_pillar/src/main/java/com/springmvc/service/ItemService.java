@@ -7,4 +7,5 @@ import com.springmvc.domain.Item;
 public interface ItemService 
 {
 	List<Item> getAllItemList();
+	void setNewItem(Item item);
 }

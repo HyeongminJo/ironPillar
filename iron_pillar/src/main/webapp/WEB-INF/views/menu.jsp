@@ -15,8 +15,10 @@
 <body>
     <div class="menuBox">
         <div class="menuContainer">
-            <div class="menuLogoBox" onclick="location.href='/main'">
-                <img src="/resources/img/logo.png" alt="로고" class="menuLogoImg">
+        	<div class="menuLeft">
+	            <div class="menuLogoBox" onclick="location.href='/main'">
+	                <img src="/resources/img/logo.png" alt="로고" class="menuLogoImg">
+	            </div>
             </div>
             <div class="menuItemBox">
                 <div class="menuItem" onclick="location.href='/shop'">
@@ -56,12 +58,10 @@
                 	{
                 %>
                 <div class="menuItem2" onclick="location.href='/admin/addItem'">
-                	<p>상품</p>
-                	<p>등록</p>
+                	<p>상품등록
                 </div>
                 <div class="menuItem2" onclick="location.href='/admin/addPlace'">
-                	<p>캠핑장</p>
-                	<p>등록</p>
+                	<p>캠핑장등록
                 </div>
                 <div class="menuItem" onclick="location.href='/login/logout'">
                 	<p>LOGOUT
@@ -71,7 +71,7 @@
             		else
             		{
                 %>
-                <div class="menuItem" onclick="location.href='/myPage'">
+                <div class="menuItem2" onclick="location.href='/myPage'">
                 	<p><%=memberNick%>
                 </div>
                 <div class="menuItem" onclick="location.href='/login/logout'">
