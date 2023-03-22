@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,21 +14,21 @@
         <div class="writePageItem">
             <div class="writePageItemHeader">
             </div>
-            <form action="./additem?${_csrf.parameterName}=${_csrf.token}" class="writePageForm" enctype="multipart/form-data" method="post">
+            <form:form modelAttribute="write" action="/community/addWrite?${_csrf.parameterName}=${_csrf.token}" class="writePageForm" enctype="multipart/form-data" method="post">
                 <div class="writePageItemMain">
-                    <input placeholder="제목" class="writePageItemMaininput writePageAddItemInput"/>
+                    <form:input path="writeTitle" placeholder="제목" class="writePageItemMaininput writePageAddItemInput"/>
                     <div class="writePageItemMaininput writePageFileR">
-                        <input type="file" class="writePageItemMainFile" id="file"/>
+                        <form:input path="writeImage" type="file" class="writePageItemMainFile" id="file"/>
                         <label for="file" class="writePageItemMainFileLabel">사진첨부</label>
                     </div>
-                    <textarea class="writePageItemMainText" placeholder="내용"></textarea>
+                    <form:textarea path="writeText" class="writePageItemMainText" placeholder="내용"/>
                 </div>
                 <div class="writePageItemFooter">
                     <div class="writePageItemFooterContainer">
                         <input type="submit" value="등 록" class="writePageItemFooterButton">
                     </div>
                 </div>
-            </form>
+            </form:form>
         </div>
     </div>
 </body>

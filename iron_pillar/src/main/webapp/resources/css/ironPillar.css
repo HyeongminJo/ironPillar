@@ -498,7 +498,6 @@ textarea:focus {
 /* communityPage */
 .communityPageContainer
 {
-    border: 1px solid red;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -1778,27 +1777,27 @@ footer
     color: white;
     font-size: 20px;
 }
-.placePageInput1:checked ~ .placePageSessionOne
+.placePageInput1:checked ~ .placePageSessionOne #one
 {
     display: flex;
 }
-.placePageInput2:checked ~ .placePageSessionTwo
+.placePageInput2:checked ~ .placePageSessionOne #two
 {
     display: flex;
 }
-.placePageInput3:checked ~ .placePageSessionThree
+.placePageInput3:checked ~ .placePageSessionOne #three
 {
     display: flex;
 }
-.placePageInput4:checked ~ .placePageSessionFour
+.placePageInput4:checked ~ .placePageSessionOne #four
 {
     display: flex;
 }
-.placePageInput5:checked ~ .placePageSessionFive
+.placePageInput5:checked ~ .placePageSessionOne #five
 {
     display: flex;
 }
-.placePageInput6:checked ~ .placePageSessionSix
+.placePageInput6:checked ~ .placePageSessionOne #six
 {
     display: flex;
 }
@@ -1825,6 +1824,7 @@ footer
 }
 .placePageSessions
 {
+	display: flex;
     width: 100%;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -1836,7 +1836,6 @@ footer
     width: 370px;
     height: 570px;
     margin: 35px 0 70px 0;
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
     transition-duration: 400ms;
@@ -2149,7 +2148,7 @@ footer
     color: white;
     font-size: 20px;
 }
-#one,#two,#three,#four
+#one,#two,#three,#four,#five,#six
 {
 	display: none;
 }

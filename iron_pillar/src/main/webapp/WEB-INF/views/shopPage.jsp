@@ -25,16 +25,6 @@
 	}
 	// 인풋 텍스트 박스 빠져나갈때 색상
 </script>
-<script>
-	for(var i = 1; i < itemList.size(); i++)
-	{
-		var item = itemList[i];
-		if(item.itemCategory == '1')
-		{
-			document.getElementById("")
-		}
-	}
-</script>
 </head>
 <body>
 <jsp:include page="menu.jsp"/>
@@ -45,8 +35,8 @@
         </div>
         <div class="shopPageSearch_box">
             <form action="" method="get" class="shopPageSearch_box1">
-                <input type="text" name="search_keyword" onfocus="textBoxFocusColor('shopPageSearch_box')"
-                    onblur="textBoxBlurColor('shopPageSearch_box')" class="shopPageSearch_box1">
+                <input type="text" name="search_keyword" onfocus="textBoxFocusColor('search_box')"
+                    onblur="textBoxBlurColor('search_box')" class="shopPageSearch_box2">
                 <input type="submit" value="&#xf002" class="shopPageBtn_submit">
             </form>
         </div>

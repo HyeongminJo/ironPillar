@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.springmvc.domain.Item;
+import com.springmvc.domain.Place;
 import com.springmvc.service.ItemService;
+import com.springmvc.service.PlaceService;
 
 @Controller
 @RequestMapping("/admin")
@@ -21,6 +23,8 @@ public class adminController
 {
 	@Autowired
 	private ItemService itemService;
+	@Autowired
+	private PlaceService placeService;
 	
 	@GetMapping("/addItem")
 	public String addItem(@ModelAttribute("item") Item item)
@@ -33,7 +37,7 @@ public class adminController
 	{
 		MultipartFile itemImage = item.getItemImage();
 		String saveName = itemImage.getOriginalFilename();
-		File saveFile = new File("D:/JHM/jsp/iron_pillar/src/main/webapp/resources/img", saveName);
+		File saveFile = new File("D:/JHM/jsp/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/iron_pillar/resources/img", saveName);
 		item.setItemImageName(saveName);
 		if(itemImage != null && !itemImage.isEmpty())
 		{
@@ -51,8 +55,31 @@ public class adminController
 	}
 	
 	@GetMapping("/addPlace")
-	public String addPlace()
+	public String addPlace(@ModelAttribute("place") Place place)
 	{
 		return "addPlace";
+	}
+	
+	@PostMapping("/addPlace")
+	public String addNewPlace(@ModelAttribute("place") Place place)
+	{
+		System.out.println(place.getPlaceTitle());
+		MultipartFile placeImage = place.getPlaceImage();
+		String saveName = placeImage.getOriginalFilename();
+		File saveFile = new File("D:/JHM/jsp/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/iron_pillar/resources/img", saveName);
+		place.setPlaceImageName(saveName);
+		if(placeImage != null && !placeImage.isEmpty())
+		{
+			try
+			{
+				placeImage.transferTo(saveFile);
+			}
+			catch(Exception e)
+			{
+				throw new RuntimeException("캠핑장 이미지 업로드가 실패했습니다.", e);
+			}
+		}
+		placeService.setNewPlace(place);
+		return "redirect:/place";
 	}
 }
