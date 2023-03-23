@@ -11,6 +11,7 @@ public class Member
 	private String memberPhone3;
 	private String memberAddress;
 	private String memberAddress2;
+	private int memberLevel;
 	
 	public String getMemberId() {
 		return memberId;
@@ -65,5 +66,12 @@ public class Member
 	}
 	public void setMemberAddress2(String memberAddress2) {
 		this.memberAddress2 = memberAddress2;
+	}
+	public int getMemberLevel() {
+		return memberLevel;
+	}
+	public void setMemberLevel(int memberLevel) {
+		this.memberLevel = memberLevel;
 	} 
+	
 }

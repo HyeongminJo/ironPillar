@@ -15,6 +15,8 @@ public class WriteRowMapper implements RowMapper<Write>
 		write.setWriteTitle(rs.getString(2));
 		write.setWriteImageName(rs.getString(3));
 		write.setWriteText(rs.getString(4));
+		write.setMemberId(rs.getString(5));
+		write.setMemberLevel(rs.getInt(6));
 		return write;
 	}
 }

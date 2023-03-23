@@ -17,12 +17,18 @@
             <form:form modelAttribute="place" class="addPlaceForm" action="/admin/addPlace?${_csrf.parameterName}=${_csrf.token}" enctype="multipart/form-data" method="post">
                 <div class="addPlaceMain">
                 	<div class="addPlaceCategoryBox">
-                		<form:radiobutton class="addPlaceCategory" path="placeCategory" value="one" label="경기도"/>
-                		<form:radiobutton class="addPlaceCategory" path="placeCategory" value="two" label="충청도"/>
-                		<form:radiobutton class="addPlaceCategory" path="placeCategory" value="three" label="전라도"/><br>
-                		<form:radiobutton class="addPlaceCategory" path="placeCategory" value="four" label="경상도"/>
-                		<form:radiobutton class="addPlaceCategory" path="placeCategory" value="five" label="강원도"/>
-                		<form:radiobutton class="addPlaceCategory" path="placeCategory" value="six" label="제주도"/>
+                		<form:radiobutton class="addPlaceCategory" id="1" path="placeCategory" value="one"/>
+                		<label for="1" class="addPlaceCategory">경기도</label>
+                		<form:radiobutton class="addPlaceCategory" id="2" path="placeCategory" value="two"/>
+                		<label for="2" class="addPlaceCategory">충청도</label>
+                		<form:radiobutton class="addPlaceCategory" id="3" path="placeCategory" value="three"/>
+                		<label for="3" class="addPlaceCategory">전라도</label>
+                		<form:radiobutton class="addPlaceCategory" id="4" path="placeCategory" value="four"/>
+                		<label for="4" class="addPlaceCategory">경상도</label>
+                		<form:radiobutton class="addPlaceCategory" id="5" path="placeCategory" value="five"/>
+                		<label for="5" class="addPlaceCategory">강원도</label>
+                		<form:radiobutton class="addPlaceCategory" id="6" path="placeCategory" value="six"/>
+                		<label for="6" class="addPlaceCategory">제주도</label>
                 	</div>
                     <form:input path="placeTitle" placeholder="제목" class="addPlaceMainInput addPlaceInput"/>
                     <div class="addPlaceMainInput addPlaceFileR">

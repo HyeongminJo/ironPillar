@@ -3,6 +3,8 @@ package com.springmvc.controller;
 import java.io.File;
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -46,9 +48,14 @@ public class communityController
 	}
 	
 	@PostMapping("/addWrite")
-	public String addNewWrite(@ModelAttribute("write") Write write)
+	public String addNewWrite(@ModelAttribute("write") Write write, HttpSession session)
 	{
-		System.out.println("확인");
+		String writer = (String) session.getAttribute("memberNick");
+		Integer writerLevel = (Integer) session.getAttribute("memberLevel");
+		writerLevel = writerLevel + 1;
+		session.setAttribute("memberLevel", writerLevel);
+		write.setMemberId(writer);
+		write.setMemberLevel(writerLevel);
 		MultipartFile writeImage = write.getWriteImage();
 		String saveName = writeImage.getOriginalFilename();
 		File saveFile = new File("D:/JHM/jsp/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/iron_pillar/resources/img", saveName);

@@ -19,7 +19,7 @@ import com.springmvc.service.MemberService;
 public class loginController 
 {
 	@Autowired
-	private MemberService memberSerivce;
+	private MemberService memberService;
 	
 	@RequestMapping
 	public String loginPage()
@@ -45,16 +45,19 @@ public class loginController
 	@PostMapping("/processAddMember")
 	public String processAddMember(@ModelAttribute("NewMember") Member member)
 	{
-		memberSerivce.addMember(member);
+		memberService.addMember(member);
 		return "redirect:/login";
 	}
 	
 	//로그인 프로세스
 	@PostMapping("/processLogin") //로그인 기능
-	public String submitlogin(HttpServletRequest request, Model model, HttpSession session){
-		System.out.println("로그인기능 시작");
-		String[] result = memberSerivce.login(request.getParameter("memberId"),request.getParameter("memberPw"));      
-		memberSerivce.loginCheck(result, session);
-		return "mainPage";
+	public String submitlogin(HttpServletRequest request, Model model, HttpSession session)
+	{
+		Boolean result = memberService.login(request, model, session);
+		if(result)
+		{
+			return "mainPage";
+		}
+		return "loginPage";
 	}
 }

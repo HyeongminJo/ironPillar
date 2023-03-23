@@ -1,9 +1,11 @@
 package com.springmvc.service;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
 
 import com.springmvc.domain.Member;
 import com.springmvc.repository.MemberRepository;
@@ -21,14 +23,9 @@ public class MemberServiceImpl implements MemberService
 	}
 	
 	@Override //로그인
-	public String[] login(String memberId, String memberPw)
+	public Boolean login(HttpServletRequest request, Model model, HttpSession session)
 	{
-		String[] result = memberRepository.login(memberId, memberPw);
+		Boolean result = memberRepository.login(request, model, session);
 		return result;
-	}
-	@Override
-	public void loginCheck(String[] result, HttpSession session)
-	{
-		memberRepository.loginCheck(result, session);
 	}
 }

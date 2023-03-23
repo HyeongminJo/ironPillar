@@ -25,8 +25,8 @@
 	    	<c:when test="${write.writeImageName eq ''}">
 	    	<div class="communityPageItem" onclick="location.href='/community/communityItem'">
                 <div class="communityPageItemHeader">
-                    <p class="communityPageHeaderNick ml20"> 닉네임</p>
-                    <p class="communityPageHeaderLevel ml20"> Lv.20</p>
+                    <p class="communityPageHeaderNick ml20">${write.memberId}</p>
+                    <p class="communityPageHeaderLevel ml20"> Lv.${write.memberLevel}</p>
                 </div>
                 <div class="communityPageItemMainT">
                     <h3 class="communityPageItemNameC">${write.writeTitle}</h3>
@@ -39,8 +39,8 @@
             <c:otherwise>
             <div class="communityPageItem" onclick="location.href='/community/communityItem'">
                 <div class="communityPageItemHeader">
-                    <p class="communityPageHeaderNick ml20"> 닉네임</p>
-                    <p class="communityPageHeaderLevel ml20"> Lv.20</p>
+                    <p class="communityPageHeaderNick ml20">${write.memberId}</p>
+                    <p class="communityPageHeaderLevel ml20"> Lv.${write.memberLevel}</p>
                 </div>
                 <div class="communityPageItemImgBox">
                     <img src="/resources/img/${write.writeImageName}" alt="itemImg" class="communityPageItemImg">

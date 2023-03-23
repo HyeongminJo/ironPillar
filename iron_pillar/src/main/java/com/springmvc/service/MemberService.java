@@ -1,6 +1,9 @@
 package com.springmvc.service;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+
+import org.springframework.ui.Model;
 
 import com.springmvc.domain.Member;
 
@@ -10,6 +13,5 @@ public interface MemberService
 	public void addMember(Member member);
 	
 	//로그인
-	public String[] login(String memberId, String memberPw);
-	public void loginCheck(String[] result, HttpSession session);
+	public Boolean login(HttpServletRequest request, Model model, HttpSession session);
 }

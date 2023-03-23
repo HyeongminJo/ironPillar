@@ -8,6 +8,8 @@ public class Write
 	private MultipartFile writeImage;
 	private String writeText;
 	private String writeImageName;
+	private String memberId;
+	private int memberLevel;
 	
 	public Write()
 	{
@@ -44,6 +46,22 @@ public class Write
 
 	public void setWriteImageName(String writeImageName) {
 		this.writeImageName = writeImageName;
+	}
+
+	public String getMemberId() {
+		return memberId;
+	}
+
+	public void setMemberId(String memberId) {
+		this.memberId = memberId;
+	}
+
+	public int getMemberLevel() {
+		return memberLevel;
+	}
+
+	public void setMemberLevel(int memberLevel) {
+		this.memberLevel = memberLevel;
 	}
 	
 }

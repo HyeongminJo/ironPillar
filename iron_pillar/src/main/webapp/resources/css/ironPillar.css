@@ -363,6 +363,13 @@ textarea:focus {
     flex-direction: column;
     justify-content: space-between;
 }
+.addPlaceCategoryBox {
+	display: flex;
+	justify-content: space-between;
+}
+.addPlaceCategory {
+	font-size: 13px;
+}
 .addPlaceMainInput {
     height: 40px;
     background-color: #F6F6F6;
@@ -777,13 +784,18 @@ textarea:focus {
 .loginPagePwBox {
  width: 228px;
  height: 30px;
- margin-bottom: 20px;
+ margin-bottom: 10px;
  background-color: #F6F6F6;
  border: 1px solid #D8D8D8;
  border-radius: 5px;
  padding: 0 10px;
 }
-
+.loginPageError {
+	color: red;
+	font-size: 11px;
+	width: 228px;
+	margin-bottom: 10px;
+}
 .loginPageSubmitButton {
  width: 250px;
  height: 32px;

@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import com.springmvc.domain.Member;
 import com.springmvc.domain.Write;
 
 @Repository
@@ -36,8 +37,14 @@ public class WriteRepositoryImpl implements WriteRepository
 	@Override
 	public void setNewWrite(Write write) 
 	{
-		String sql = "insert into writetable (writeTitle, writeImage, writeText) values(?, ?, ?)";
-		template.update(sql, write.getWriteTitle(), write.getWriteImageName(), write.getWriteText());
+		String memberSql = "update member set memberLevel=? where memberNick=?";
+		template.update(memberSql, write.getMemberLevel(), write.getMemberId());
+		String writeSql = "insert into writetable (writeTitle, writeImage, writeText, writeWriter, writeWriterLevel) values(?, ?, ?, ?, ?)";
+		template.update(writeSql, write.getWriteTitle(), write.getWriteImageName(), write.getWriteText(), write.getMemberId(), write.getMemberLevel());
+		String sql = "select * from member where memberNick=?";
+		Member member = template.queryForObject(sql, new MemberRowMapper(), write.getMemberId());
+		System.out.println(member.getMemberId() + member.getMemberPw() + member.getMemberNick());
+		
 	}
 
 }
