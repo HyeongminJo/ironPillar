@@ -15,22 +15,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.springmvc.domain.Write;
-import com.springmvc.service.WriteService;
+import com.springmvc.domain.Community;
+import com.springmvc.service.CommunityService;
 
 @Controller
 @RequestMapping("/community")
 public class communityController 
 {
 	@Autowired
-	WriteService writeService;
+	CommunityService communityService;
+	
 	
 	@GetMapping
 	public ModelAndView communityPage(Model model)
 	{
 		ModelAndView modelandview = new ModelAndView();
-		List<Write> list = writeService.getAllWriteList();
-		modelandview.addObject("writeList", list);
+		List<Community> list = communityService.getAllCommunityList();
+		modelandview.addObject("communityList", list);
 		modelandview.setViewName("communityPage");
 		return modelandview;
 	}
@@ -41,25 +42,25 @@ public class communityController
 		return "communityItem";
 	}
 	
-	@GetMapping("/addWrite")
-	public String addWrite(@ModelAttribute("write") Write write)
+	@GetMapping("/addCommunity")
+	public String addCommunity(@ModelAttribute("community") Community community)
 	{
-		return "addWrite";
+		return "addCommunity";
 	}
 	
-	@PostMapping("/addWrite")
-	public String addNewWrite(@ModelAttribute("write") Write write, HttpSession session)
+	@PostMapping("/addCommunity")
+	public String addNewCommunity(@ModelAttribute("community") Community community, HttpSession session)
 	{
 		String writer = (String) session.getAttribute("memberNick");
 		Integer writerLevel = (Integer) session.getAttribute("memberLevel");
 		writerLevel = writerLevel + 1;
 		session.setAttribute("memberLevel", writerLevel);
-		write.setMemberId(writer);
-		write.setMemberLevel(writerLevel);
-		MultipartFile writeImage = write.getWriteImage();
+		community.setCommunityWriter(writer);
+		community.setCommunityWriterLevel(writerLevel);
+		MultipartFile writeImage = community.getCommunityImage();
 		String saveName = writeImage.getOriginalFilename();
 		File saveFile = new File("D:/JHM/jsp/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/iron_pillar/resources/img", saveName);
-		write.setWriteImageName(saveName);
+		community.setCommunityImageName(saveName);
 		if(writeImage != null && !writeImage.isEmpty())
 		{
 			try
@@ -71,7 +72,7 @@ public class communityController
 				throw new RuntimeException("게시글 이미지 업로드가 실패했습니다.", e);
 			}
 		}
-		writeService.setNewWrite(write);
+		communityService.setNewCommunity(community);
 		return "redirect:/community";
 	}
 }

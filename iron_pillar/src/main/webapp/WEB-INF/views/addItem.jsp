@@ -19,10 +19,22 @@
             <form:form modelAttribute="item" class="addItemForm" action="/admin/addItem?${_csrf.parameterName}=${_csrf.token}" enctype="multipart/form-data" method="POST">
                 <div class="addItemMain">
 	                <div class="addItemCategoryBox">
-	                	<form:radiobutton class="addItemCategory" path="itemCategory" value="one" label="텐트/침구류"/>
-		            	<form:radiobutton class="addItemCategory" path="itemCategory" value="two" label="취사도구"/>
-		            	<form:radiobutton class="addItemCategory" path="itemCategory" value="three" label="랜턴/조명"/>
-		            	<form:radiobutton class="addItemCategory" path="itemCategory" value="four" label="기타"/>
+	                	<div>
+	                	<form:radiobutton class="addItemCategory" id="1" path="itemCategory" value="one"/>
+	                	<label for="1" class="addItemCategory">텐트/침구류</label>
+	                	</div>
+	                	<div>
+		            	<form:radiobutton class="addItemCategory" id="2" path="itemCategory" value="two"/>
+		            	<label for="2" class="addItemCategory">취사도구</label>
+		     			</div>
+	                	<div>
+		            	<form:radiobutton class="addItemCategory" id="3" path="itemCategory" value="three"/>
+		            	<label for="3" class="addItemCategory">랜턴/조명</label>
+		            	</div>
+	                	<div>
+		            	<form:radiobutton class="addItemCategory" id="4" path="itemCategory" value="four"/>
+		            	<label for="4" class="addItemCategory">기타</label>
+		     			</div>
 		            </div>
                     <form:input path="itemTitle" placeholder="상품명" class="addItemMaininput addItemInput"/>
                     <form:input path="itemPrice" placeholder="가격" class="addItemMaininput addItemInput"/>

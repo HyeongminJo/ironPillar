@@ -13,10 +13,4 @@ public class homeController
 	{
 		return "mainPage";
 	}
-	
-	@GetMapping("/main")
-	public String mainPage()
-	{
-		return "mainPage";
-	}
 }

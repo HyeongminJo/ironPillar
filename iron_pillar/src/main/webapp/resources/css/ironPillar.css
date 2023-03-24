@@ -73,11 +73,11 @@ textarea:focus {
 }
 .addItemCategoryBox {
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 }
 .addItemCategory {
-	margin: 0 10px;
+	font-size: 15px;
 }
 .addItemMaininput {
     height: 40px;

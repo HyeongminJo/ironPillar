@@ -56,7 +56,7 @@ public class loginController
 		Boolean result = memberService.login(request, model, session);
 		if(result)
 		{
-			return "mainPage";
+			return "redirect:/";
 		}
 		return "loginPage";
 	}

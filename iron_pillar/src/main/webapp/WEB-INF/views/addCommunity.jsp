@@ -21,14 +21,14 @@
         <div class="writePageItem">
             <div class="writePageItemHeader">
             </div>
-            <form:form modelAttribute="write" action="/community/addWrite?${_csrf.parameterName}=${_csrf.token}" class="writePageForm" enctype="multipart/form-data" method="post">
+            <form:form modelAttribute="community" action="/community/addCommunity?${_csrf.parameterName}=${_csrf.token}" class="writePageForm" enctype="multipart/form-data" method="post">
                 <div class="writePageItemMain">
-                    <form:input path="writeTitle" placeholder="제목" class="writePageItemMaininput writePageAddItemInput"/>
+                    <form:input path="communityTitle" placeholder="제목" class="writePageItemMaininput writePageAddItemInput"/>
                     <div class="writePageItemMaininput writePageFileR">
-                        <form:input path="writeImage" type="file" class="writePageItemMainFile" id="file"/>
+                        <form:input path="communityImage" type="file" class="writePageItemMainFile" id="file"/>
                         <label for="file" class="writePageItemMainFileLabel">사진첨부</label>
                     </div>
-                    <form:textarea path="writeText" class="writePageItemMainText" placeholder="내용"/>
+                    <form:textarea path="communityText" class="writePageItemMainText" placeholder="내용"/>
                 </div>
                 <div class="writePageItemFooter">
                     <div class="writePageItemFooterContainer">

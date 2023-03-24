@@ -15,7 +15,7 @@
         <div class="videoSession">
             <div class="container">
                 <div class="videoBox">
-                    <video src="/resources/img/exam.mp4" muted autoplay loop class="homeVideo">왜 안됨</video>
+                    <video src="/resources/img/exam.mp4" muted autoplay loop class="homeVideo">메인비디오</video>
                     <div class="beHappyBox">
                         <img src="/resources/img/beHappy.png" alt="메인영상" class="beHappy">
                     </div>

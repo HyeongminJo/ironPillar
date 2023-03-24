@@ -17,20 +17,20 @@
 			COMMUNITY
 		</div>
 		<div class="communityPageWriteButtonBox">
-			<div class="communityPageWriteButton" onclick="location.href='/community/addWrite'">글쓰기</div>
+			<div class="communityPageWriteButton" onclick="location.href='/community/addCommunity'">글쓰기</div>
 		</div>
 	    <div class="communityPageContainer2">
-	    	<c:forEach items="${writeList}" var="write">
+	    	<c:forEach items="${communityList}" var="community">
 	    	<c:choose>
-	    	<c:when test="${write.writeImageName eq ''}">
+	    	<c:when test="${community.communityImageName eq ''}">
 	    	<div class="communityPageItem" onclick="location.href='/community/communityItem'">
                 <div class="communityPageItemHeader">
-                    <p class="communityPageHeaderNick ml20">${write.memberId}</p>
-                    <p class="communityPageHeaderLevel ml20"> Lv.${write.memberLevel}</p>
+                    <p class="communityPageHeaderNick ml20">${community.communityWriter}</p>
+                    <p class="communityPageHeaderLevel ml20"> Lv.${community.communityWriterLevel}</p>
                 </div>
                 <div class="communityPageItemMainT">
-                    <h3 class="communityPageItemNameC">${write.writeTitle}</h3>
-                    <p class="communityPageTextT">${write.writeText}</p>
+                    <h3 class="communityPageItemNameC">${community.communityTitle}</h3>
+                    <p class="communityPageTextT">${community.communityText}</p>
                 </div>
                 <div class="communityPageItemFooter">
                 </div>
@@ -39,15 +39,15 @@
             <c:otherwise>
             <div class="communityPageItem" onclick="location.href='/community/communityItem'">
                 <div class="communityPageItemHeader">
-                    <p class="communityPageHeaderNick ml20">${write.memberId}</p>
-                    <p class="communityPageHeaderLevel ml20"> Lv.${write.memberLevel}</p>
+                    <p class="communityPageHeaderNick ml20">${community.communityWriter}</p>
+                    <p class="communityPageHeaderLevel ml20"> Lv.${community.communityWriterLevel}</p>
                 </div>
                 <div class="communityPageItemImgBox">
-                    <img src="/resources/img/${write.writeImageName}" alt="itemImg" class="communityPageItemImg">
+                    <img src="/resources/img/${community.communityImageName}" alt="itemImg" class="communityPageItemImg">
                 </div>
                 <div class="communityPageItemMain">
-                    <h3 class="communityPageItemNameC">${write.writeTitle}</h3>
-                    <p class="communityPageText">${write.writeText}</p>
+                    <h3 class="communityPageItemNameC">${community.communityTitle}</h3>
+                    <p class="communityPageText">${community.communityText}</p>
                 </div>
             </div>
             </c:otherwise>

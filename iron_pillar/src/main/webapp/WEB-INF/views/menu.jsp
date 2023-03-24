@@ -4,6 +4,7 @@
 <%
 	String memberNick = (String) session.getAttribute("memberNick");
 	String memberId = (String) session.getAttribute("memberId");
+	Integer memberLevel = (Integer) session.getAttribute("memberLevel");
 %>
 <html lang="en">
 <head>
@@ -16,7 +17,7 @@
     <div class="menuBox">
         <div class="menuContainer">
         	<div class="menuLeft">
-	            <div class="menuLogoBox" onclick="location.href='/main'">
+	            <div class="menuLogoBox" onclick="location.href='/'">
 	                <img src="/resources/img/logo.png" alt="로고" class="menuLogoImg">
 	            </div>
             </div>
@@ -72,7 +73,7 @@
             		{
                 %>
                 <div class="menuItem2" onclick="location.href='/myPage'">
-                	<p><%=memberNick%>
+                	<p>Lv.<%=memberLevel%> <%=memberNick%>
                 </div>
                 <div class="menuItem" onclick="location.href='/login/logout'">
                 	<p>LOGOUT
