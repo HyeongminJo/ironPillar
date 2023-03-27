@@ -10,6 +10,7 @@ public class Item
 	private String itemText;
 	private String itemCategory;
 	private String itemImageName;
+	private int itemLove;
 	
 	public Item()
 	{
@@ -63,6 +64,13 @@ public class Item
 	public void setItemImageName(String itemImageName) {
 		this.itemImageName = itemImageName;
 	}
-	
+
+	public int getItemLove() {
+		return itemLove;
+	}
+
+	public void setItemLove(int itemLove) {
+		this.itemLove = itemLove;
+	}
 	
 }

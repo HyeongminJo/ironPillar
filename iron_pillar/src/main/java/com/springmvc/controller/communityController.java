@@ -54,6 +54,10 @@ public class communityController
 		String writer = (String) session.getAttribute("memberNick");
 		Integer writerLevel = (Integer) session.getAttribute("memberLevel");
 		writerLevel = writerLevel + 1;
+		if(writerLevel > 999)
+		{
+			writerLevel = 999;
+		}
 		session.setAttribute("memberLevel", writerLevel);
 		community.setCommunityWriter(writer);
 		community.setCommunityWriterLevel(writerLevel);

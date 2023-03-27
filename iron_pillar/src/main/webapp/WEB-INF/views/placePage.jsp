@@ -57,7 +57,7 @@
             </div>
             <div class="placePageSessions placePageSessionOne">
             	<c:forEach items="${placeList}" var="place">
-                <div class="placePageSItem" onclick="location.href='/place/placeItem'" id="${place.placeCategory}">
+                <div class="placePageSItem" onclick="location.href='/place/placeItem?placeTitle=${place.placeTitle}'" id="${place.placeCategory}">
                     <div class="placePageSitemHeader">
                         <div class="placePageSheaderImgBox placePageMl20">
                             <img src="resources/img/logo.png" alt="로고" class="placePageSheaderImg">

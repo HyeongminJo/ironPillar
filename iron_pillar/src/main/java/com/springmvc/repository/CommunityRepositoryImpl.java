@@ -28,7 +28,7 @@ public class CommunityRepositoryImpl implements CommunityRepository
 	@Override
 	public List<Community> getAllCommunityList() 
 	{
-		String SQL = "SELECT * FROM community";
+		String SQL = "select * from community order by communityNum desc";
 		List<Community> listOfCommunitys = template.query(SQL, new CommunityRowMapper());
 		this.communityList = listOfCommunitys;
 		return listOfCommunitys;

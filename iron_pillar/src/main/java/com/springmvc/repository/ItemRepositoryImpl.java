@@ -26,15 +26,34 @@ public class ItemRepositoryImpl implements ItemRepository
 	
 	public List<Item> getAllItemList()
 	{
-		String SQL = "SELECT * FROM item";
-		List<Item> listOfItems = template.query(SQL, new ItemRowMapper());
+		String sql = "select * from item";
+		List<Item> listOfItems = template.query(sql, new ItemRowMapper());
 		this.itemList = listOfItems;
 		return listOfItems;
 	}
 	
 	public void setNewItem(Item item)
 	{
-		String sql = "insert into item values(?, ?, ?, ?, ?)";
+		String sql = "insert into item (itemTitle, itemPrice, itemImage, itemText, itemCategory) values(?, ?, ?, ?, ?)";
 		template.update(sql, item.getItemTitle(), item.getItemPrice(), item.getItemImageName(), item.getItemText(), item.getItemCategory());
+	}
+	
+	public Item getItemByTitle(String itemTitle)
+	{
+		String sql = "select * from item where itemTitle=?";
+		Item item = template.queryForObject(sql, new ItemRowMapper(), itemTitle);
+		return item;
+	}
+	
+	public void itemLove(String itemTitle, String lover)
+	{
+		String selectSql = "select * from item where itemTitle=?";
+		Item item = template.queryForObject(selectSql, new ItemRowMapper(), itemTitle);
+		int loves = item.getItemLove();
+		loves = loves + 1;
+		String updateSql = "update item set itemLove=? where itemTitle=?";
+		template.update(updateSql, loves, itemTitle);
+		String insertSql = "insert into itemLove (itemTitle, itemPrice, itemImage, itemLover) values(?, ?, ?, ?)";
+		template.update(insertSql, item.getItemTitle(), item.getItemPrice(), item.getItemImageName(), lover);
 	}
 }

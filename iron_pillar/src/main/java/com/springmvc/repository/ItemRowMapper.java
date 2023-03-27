@@ -17,6 +17,7 @@ public class ItemRowMapper implements RowMapper<Item>
 		item.setItemImageName(rs.getString(3));
 		item.setItemText(rs.getString(4));
 		item.setItemCategory(rs.getString(5));
+		item.setItemLove(rs.getInt(6));
 		return item;
 	}
 }

@@ -7,5 +7,7 @@ import com.springmvc.domain.Item;
 public interface ItemRepository 
 {
 	List<Item> getAllItemList();
-	public void setNewItem(Item item);
+	void setNewItem(Item item);
+	Item getItemByTitle(String itemTitle);
+	void itemLove(String itemTitle, String lover);
 }

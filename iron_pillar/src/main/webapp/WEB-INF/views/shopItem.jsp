@@ -8,34 +8,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>상품 · ironPillar</title>
     <link href="/resources/css/ironPillar.css" rel="stylesheet">
+    <script>
+    	function itemLove()
+    	{
+    		if(${sessionScope.memberId == null})
+    		{
+    			alert("로그인 후 이용해주세요");
+    			location.href="/login";
+    		}
+    		else
+    		{
+    			alert("찜목록에 추가되었습니다");
+    			location.href="/shop/itemLove?loveItemTitle=${item.itemTitle}";
+   			}
+    	}
+    </script>
 </head>
 <body>
 <jsp:include page="menu.jsp"/>
-    <!-- body -->
     <div class="shopItemContainer">
         <div class="shopItemMainItem">
            <div class="shopItemProductImgBox">
-                <img src="/resources/img/텐트.jpg" alt="error" class="shopItemProductImgItem">
+                <img src="/resources/img/${item.itemImageName}" alt="error" class="shopItemProductImgItem">
            </div>
            <div class="shopItemProductItemBox">
                 <div class="shopItemProductItemBox1">
                     <div class="shopItemProductInBox">
                         <div class="shopItemInBoxItem1">
-                            <h3 class="shopItemInBoxFont1">초 고강도 내구성 휴대용 캠핑 의자</h3>
+                            <h3 class="shopItemInBoxFont1">${item.itemTitle}</h3>
                             <div class="shopItemInBoxFont2">별점부여</div>
-                            <h1 >50000원</h1>
+                            <h1>${item.itemPrice}원</h1>
                         </div>
                         <div class="shopItemInBoxItem2">
-                            <input type="button" value="찜 하기" class="shopItemInBoxButton">
+                            <input type="button" value="찜 하기" class="shopItemInBoxButton" onclick="itemLove()">
                         </div>
                     </div>
                 </div>
                 <div class="shopItemProductMainBox">
-                   <p class="shopItemP">이 의자는 철기둥이 좋아하는 휴대용 캠핑 의자로써 굉장히 애정하는 의자이다.
-                    이 의자는 철기둥이 좋아하는 휴대용 캠핑 의자로써 굉장히 애정하는 의자이다.
-                    이 의자는 철기둥이 좋아하는 휴대용 캠핑 의자로써 굉장히 애정하는 의자이다.
-                    이 의자는 철기둥이 좋아하는 휴대용 캠핑 의자로써 굉장히 애정하는 의자이다.
-                   </p>
+                   <p class="shopItemP">${item.itemText}</p>
                 </div>
                 <div class="shopItemProductItem">
                     <h2>수량</h2><input type="number" name="" id="" value="1" min="1" max="100" class="shopItemProductItemItem1">

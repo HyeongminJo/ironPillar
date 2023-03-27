@@ -358,7 +358,7 @@ textarea:focus {
 }
 .addPlaceMain {
     height: 100%;
-    padding: 80px;
+    padding: 40px 80px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1658,14 +1658,12 @@ footer
     box-shadow: 2px 2px 2px 2px #9E9E9E;
     border-radius: 30px;
     width: 1000px;
-    /* height: 800px; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
 .placeItemBox {
-    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1673,7 +1671,6 @@ footer
     margin: 20px 0 10px 0;
 }
 .placeItemImgBox {
-    border: 1px solid red;
 }
 .placeItemImg {
     width: 100%;

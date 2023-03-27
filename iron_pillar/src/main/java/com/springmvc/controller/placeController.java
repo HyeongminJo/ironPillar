@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.springmvc.domain.Place;
@@ -30,8 +31,10 @@ public class placeController
 	}
 	
 	@GetMapping("/placeItem")
-	public String placeItem()
+	public String placeItem(@RequestParam("placeTitle") String placeTitle, Model model)
 	{
+		Place place = placeService.getPlaceByTitle(placeTitle);
+		model.addAttribute("place", place);
 		return "placeItem";
 	}
 }

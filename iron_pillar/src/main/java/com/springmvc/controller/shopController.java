@@ -2,11 +2,14 @@ package com.springmvc.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.springmvc.domain.Item;
@@ -30,8 +33,20 @@ public class shopController
 	}
 	
 	@GetMapping("/shopItem")
-	public String shopItem()
+	public String shopItem(@RequestParam("itemTitle") String itemTitle, Model model)
 	{
+		Item item = itemService.getItemByTitle(itemTitle);
+		model.addAttribute("item", item);
+		return "shopItem";
+	}
+	
+	@GetMapping("/itemLove")
+	public String itemLove(@RequestParam("loveItemTitle") String itemTitle, Model model, HttpSession session)
+	{
+		String lover = (String) session.getAttribute("memberId");
+		itemService.itemLove(itemTitle, lover);
+		Item item = itemService.getItemByTitle(itemTitle);
+		model.addAttribute("item", item);
 		return "shopItem";
 	}
 }

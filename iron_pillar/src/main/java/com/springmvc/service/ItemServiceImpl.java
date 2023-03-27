@@ -23,4 +23,14 @@ public class ItemServiceImpl implements ItemService
 	{
 		itemRepository.setNewItem(item);
 	}
+	
+	public Item getItemByTitle(String itemTitle)
+	{
+		return itemRepository.getItemByTitle(itemTitle);
+	}
+	
+	public void itemLove(String itemTitle, String lover)
+	{
+		itemRepository.itemLove(itemTitle, lover);
+	}
 }

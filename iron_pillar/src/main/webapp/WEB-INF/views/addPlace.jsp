@@ -30,7 +30,9 @@
                 		<form:radiobutton class="addPlaceCategory" id="6" path="placeCategory" value="six"/>
                 		<label for="6" class="addPlaceCategory">제주도</label>
                 	</div>
-                    <form:input path="placeTitle" placeholder="제목" class="addPlaceMainInput addPlaceInput"/>
+                    <form:input path="placeTitle" placeholder="캠핑장이름" class="addPlaceMainInput addPlaceInput"/>
+                    <form:input path="placeAddress" placeholder="주소" class="addPlaceMainInput addPlaceInput"/>
+                    <form:input path="placePrice" placeholder="가격" class="addPlaceMainInput addPlaceInput"/>
                     <div class="addPlaceMainInput addPlaceFileR">
                         <form:input path="placeImage" type="file" class="addPlaceMainFile" id="file"/>
                         <label for="file" class="addPlaceMainFileLabel">사진첨부</label>

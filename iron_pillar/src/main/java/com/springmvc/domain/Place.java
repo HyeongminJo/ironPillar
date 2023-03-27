@@ -9,6 +9,9 @@ public class Place
 	private String placeText;
 	private String placeCategory;
 	private String placeImageName;
+	private String placeAddress;
+	private int placePrice;
+	private int placeLove;
 	
 	public Place()
 	{
@@ -55,4 +58,28 @@ public class Place
 		this.placeImageName = placeImageName;
 	}
 
+	public int getPlaceLove() {
+		return placeLove;
+	}
+
+	public void setPlaceLove(int placeLove) {
+		this.placeLove = placeLove;
+	}
+
+	public String getPlaceAddress() {
+		return placeAddress;
+	}
+
+	public void setPlaceAddress(String placeAddress) {
+		this.placeAddress = placeAddress;
+	}
+
+	public int getPlacePrice() {
+		return placePrice;
+	}
+
+	public void setPlacePrice(int placePrice) {
+		this.placePrice = placePrice;
+	}
+	
 }

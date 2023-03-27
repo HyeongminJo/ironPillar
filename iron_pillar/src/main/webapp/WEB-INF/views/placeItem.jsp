@@ -16,21 +16,21 @@
         <div class="placeItemMainItem">
             <div class="placeItemBox">
                 <div class="placeItemImgBox">
-                    <img src="/resources/img/캠핑1.png" alt="error" class="placeItemImg">
+                    <img src="/resources/img/${place.placeImageName}" alt="error" class="placeItemImg">
                 </div>
                 <div class="placeItemBox2">
                     <div class="placeItemBox3">
                         <div class="placeItemPbox">
-                            <h4>대장금 캠핑장</h4>
+                            <h4>${place.placeTitle}</h4>
                             <div>별점부여</div>
                         </div>
                         <div class="box">
-                            <h4>경기도 용인시 처인구 백암면 용천리 778-1</h4>
-                            <h4>가 격 : 100000 원</h4>
+                            <h4>${place.placeAddress}</h4>
+                            <h4>가 격 : ${place.placePrice}원</h4>
                         </div>
                     </div>
                     <div class="placeItemMainBox">
-                        <p class="placeItemPpp">캠핑장 설명 캠핑장 설명 캠핑장 설명 캠핑장 설명 캠핑장 설명 캠핑장 설명 캠핑장 설명 캠핑장 설명 캠핑장 설명 
+                        <p class="placeItemPpp">${place.placeText}</p> 
                     </div>
                 </div>
             </div>

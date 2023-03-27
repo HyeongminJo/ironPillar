@@ -7,5 +7,6 @@ import com.springmvc.domain.Place;
 public interface PlaceRepository 
 {
 	List<Place> getAllPlaceList();
-	public void setNewPlace(Place place);
+	void setNewPlace(Place place);
+	Place getPlaceByTitle(String placeTitle);
 }

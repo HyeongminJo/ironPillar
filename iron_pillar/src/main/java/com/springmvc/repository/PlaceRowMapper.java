@@ -16,6 +16,9 @@ public class PlaceRowMapper implements RowMapper<Place>
 		place.setPlaceImageName(rs.getString(2));
 		place.setPlaceText(rs.getString(3));
 		place.setPlaceCategory(rs.getString(4));
+		place.setPlaceAddress(rs.getString(5));
+		place.setPlacePrice(rs.getInt(6));
+		place.setPlaceLove(rs.getInt(7));
 		return place;
 	}
 }

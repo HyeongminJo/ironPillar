@@ -46,14 +46,14 @@
             <input type="radio" name="group" id="3" class="shopPageInput shopPageInput3">
             <input type="radio" name="group" id="4" class="shopPageInput shopPageInput4">
             <div class="shopPageSessionBox1">
-                <label for="1" class="shopPageSessionItem shopPageInputItem1" onclick="location.href='#'">텐트/침구류</label>
-                <label for="2" class="shopPageSessionItem shopPageInputItem2" onclick="location.href='#'">취사도구</label>
-                <label for="3" class="shopPageSessionItem shopPageInputItem3" onclick="location.href='#'">랜턴/조명</label>
-                <label for="4" class="shopPageSessionItem shopPageInputItem4" onclick="location.href='#'">기타 캠핑용품</label>
+                <label for="1" class="shopPageSessionItem shopPageInputItem1">텐트/침구류</label>
+                <label for="2" class="shopPageSessionItem shopPageInputItem2">취사도구</label>
+                <label for="3" class="shopPageSessionItem shopPageInputItem3">랜턴/조명</label>
+                <label for="4" class="shopPageSessionItem shopPageInputItem4">기타 캠핑용품</label>
             </div>
             <div class="shopPageSessions shopPageSessionOne">
             	<c:forEach items="${itemList}" var="item">
-                <div class="shopPageSItem" onclick="location.href='/shop/shopItem'" id="${item.itemCategory}">
+                <div class="shopPageSItem" onclick="location.href='/shop/shopItem?itemTitle=${item.itemTitle}'" id="${item.itemCategory}">
                     <div class="shopPageSitemHeader">
                         <div class="shopPageSheaderImgBox ml20">
                             <img src="resources/img/logo.png" alt="로고" class="shopPageSheaderImg">

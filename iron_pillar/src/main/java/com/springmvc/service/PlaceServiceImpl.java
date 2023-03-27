@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.springmvc.domain.Item;
 import com.springmvc.domain.Place;
 import com.springmvc.repository.PlaceRepository;
 
@@ -25,5 +26,10 @@ public class PlaceServiceImpl implements PlaceService
 	{
 		placeRepository.setNewPlace(place);
 	}
-
+	
+	@Override
+	public Place getPlaceByTitle(String placeTitle)
+	{
+		return placeRepository.getPlaceByTitle(placeTitle);
+	}
 }

@@ -8,4 +8,6 @@ public interface ItemService
 {
 	List<Item> getAllItemList();
 	void setNewItem(Item item);
+	Item getItemByTitle(String itemTitle);
+	void itemLove(String itemTitle, String lover);
 }
