@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <%
 	String memberNick = (String) session.getAttribute("memberNick");
@@ -32,6 +33,10 @@
                 checkbox.checked = selectAll.checked
             })
         }
+        function toCart()
+    	{
+   			alert("장바구니에 추가되었습니다");
+    	}
     </script>
     <link href="/resources/css/ironPillar.css" rel="stylesheet">
 </head>
@@ -55,6 +60,7 @@
                 <label for="5" class="myPageSessionItem myPageInputItem5" onclick="location.href='#'">PRIVACY</label>
             </div>
             <div class="myPageSessions myPageOrderSession">
+            	<c:forEach items="${orderList}" var="item">
                 <div class="myPageSessionBox2">
                     <div class="myPageOrderItem">
                         <div class="myPageOrderItemImgbox">
@@ -75,6 +81,7 @@
                         </div>
                     </div>
                 </div>
+                </c:forEach>
                 <div class="myPageSessionBox2">
                     <div class="myPageOrderItem">
                         <div class="myPageOrderItemImgbox">
@@ -146,91 +153,50 @@
                     <input type="checkbox" name="Allcheck" class="myPageCheckBoxItem1" onclick="selectAll(this)"><b>전체선택</b>
                     <input type="button" value="삭제" class="myPageButtonItem">
                 </div>
+                <c:forEach items="${wishList}" var="item">
                 <div class="myPageSessionBox2 myPageWishBox">
                     <div class="myPageCheckBoxItem">
                         <input type="checkbox" name="P1" class="myPageCheckBoxItem2">                    
                     </div>
                     <div class="myPageWishItem">
                         <div class="myPageOrderItemImgbox">
-                            <img class="myPageImgItem" src="resources/img/버너.png" alt="오류" onclick="location.href='#'">
+                            <img class="myPageImgItem" src="resources/img/${item.itemImageName}" alt="오류" onclick="location.href='#'">
                         </div>
                         <div class="myPageOrderItemBoxRight">
                             <div class="myPageOrderInItem1">
                                 <div class="myPageOrderItem3">
-                                    <div class="myPageOrderItemFont1 myPageFontItem1" >휴대용 요리킹 버너!</div>
-                                    <div class="myPageFontItem2">19,900 원</div>
+                                    <div class="myPageOrderItemFont1 myPageFontItem1" >${item.itemTitle}</div>
+                                    <div class="myPageFontItem2">${item.itemPrice}원</div>
                                 </div>
                             </div>
                             <div class="myPageOrderInItem2">
-                                <div class="myPageWishItemFont2 myPageButtonSize" onclick="location.href='#'">장바구니에 담기</div>
+                                <div class="myPageWishItemFont2 myPageButtonSize" onclick="location.href='/shop/toCart2?itemTitle=${item.itemTitle}',toCart()">장바구니에 담기</div>
                                 <div class="myPageWishItemFont2 myPageButtonSize" onclick="location.href='#'">삭제하기</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="myPageSessionBox2 myPageWishBox">
-                    <div class="myPageCheckBoxItem">
-                        <input type="checkbox" name="P2" class="myPageCheckBoxItem2">                    
-                    </div>                  
-                    <div class="myPageWishItem">
-                        <div class="myPageOrderItemImgbox">
-                            <img class="myPageImgItem" src="resources/img/랜턴.png" alt="오류" onclick="location.href='#'">
-                        </div>
-                        <div class="myPageOrderItemBoxRight">
-                            <div class="myPageOrderInItem1">
-                                <div class="myPageOrderItem3">
-                                    <div class="myPageOrderItemFont1 myPageFontItem1" >감성 캠핑 랜턴</div>
-                                    <div class="myPageFontItem2">29,900 원</div>
-                                </div>
-                            </div>
-                            <div class="myPageOrderInItem2">
-                                <div class="myPageWishItemFont2 myPageButtonSize" onclick="location.href='#'">장바구니에 담기</div>
-                                <div class="myPageWishItemFont2 myPageButtonSize" onclick="location.href='#'">삭제하기</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="myPageSessionBox2 myPageWishBox">
-                    <div class="myPageCheckBoxItem">
-                        <input type="checkbox" name="P3" class="myPageCheckBoxItem2">                    
-                    </div>                  
-                    <div class="myPageWishItem">
-                        <div class="myPageOrderItemImgbox">
-                            <img class="myPageImgItem" src="resources/img/의자.png" alt="오류" onclick="location.href='#'">
-                        </div>
-                        <div class="myPageOrderItemBoxRight">
-                            <div class="myPageOrderInItem1">
-                                <div class="myPageOrderItem3">
-                                    <div class="myPageOrderItemFont1 myPageFontItem1" >휴대용 캠핑 의자</div>
-                                    <div class="myPageFontItem2">39,900 원</div>
-                                </div>
-                            </div>
-                            <div class="myPageOrderInItem2">
-                                <div class="myPageWishItemFont2 myPageButtonSize" onclick="location.href='#'">장바구니에 담기</div>
-                                <div class="myPageWishItemFont2 myPageButtonSize" onclick="location.href='#'">삭제하기</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </c:forEach>
             </div>
             <div class="myPageSessions myPageCartSession">
                 <div class="myPageWishHeader">
                     <input type="checkbox" name="Allcheck" class="myPageCheckBoxItem1" onclick="selectAll(this)"><b>전체선택</b>
                     <input type="button" value="삭제" class="myPageButtonItem">
                 </div>
+                <c:forEach items="${cart}" var="item">
                 <div class="myPageSessionBox2 myPageWishBox">
                     <div class="myPageCheckBoxItem">
                         <input type="checkbox" name="P1" class="myPageCheckBoxItem2">                    
                     </div>
                     <div class="myPageWishItem">
                         <div class="myPageOrderItemImgbox">
-                            <img class="myPageImgItem" src="resources/img/버너.png" alt="오류" onclick="location.href='#'">
+                            <img class="myPageImgItem" src="resources/img/${item.itemImageName}" alt="오류" onclick="location.href='#'">
                         </div>
                         <div class="myPageOrderItemBoxRight">
                             <div class="myPageOrderInItem1">
                                 <div class="myPageOrderItem3">
-                                    <div class="myPageOrderItemFont1 myPageFontItem1" >휴대용 요리킹 버너!</div>
-                                    <div class="myPageFontItem2">19,900 원</div>
+                                    <div class="myPageOrderItemFont1 myPageFontItem1" >${item.itemTitle}</div>
+                                    <div class="myPageFontItem2">${item.itemPrice}원</div>
                                 </div>
                             </div>
                             <div class="myPageOrderInItem2">
@@ -240,50 +206,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="myPageSessionBox2 myPageWishBox">
-                    <div class="myPageCheckBoxItem">
-                        <input type="checkbox" name="P2" class="myPageCheckBoxItem2">                    
-                    </div>                  
-                    <div class="myPageWishItem">
-                        <div class="myPageOrderItemImgbox">
-                            <img class="myPageImgItem" src="resources/img/랜턴.png" alt="오류" onclick="location.href='#'">
-                        </div>
-                        <div class="myPageOrderItemBoxRight">
-                            <div class="myPageOrderInItem1">
-                                <div class="myPageOrderItem3">
-                                    <div class="myPageOrderItemFont1 myPageFontItem1" >감성 캠핑 랜턴</div>
-                                    <div class="myPageFontItem2">29,900 원</div>
-                                </div>
-                            </div>
-                            <div class="myPageOrderInItem2">
-                                <div class="myPageWishItemFont2 myPageButtonSize" onclick="location.href='#'">주문하기</div>
-                                <div class="myPageWishItemFont2 myPageButtonSize" onclick="location.href='#'">삭제하기</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="myPageSessionBox2 myPageWishBox">
-                    <div class="myPageCheckBoxItem">
-                        <input type="checkbox" name="P3" class="myPageCheckBoxItem2">                    
-                    </div>                  
-                    <div class="myPageWishItem">
-                        <div class="myPageOrderItemImgbox">
-                            <img class="myPageImgItem" src="resources/img/의자.png" alt="오류" onclick="location.href='#'">
-                        </div>
-                        <div class="myPageOrderItemBoxRight">
-                            <div class="myPageOrderInItem1">
-                                <div class="myPageOrderItem3">
-                                    <div class="myPageOrderItemFont1 myPageFontItem1" >휴대용 캠핑 의자</div>
-                                    <div class="myPageFontItem2">39,900 원</div>
-                                </div>
-                            </div>
-                            <div class="myPageOrderInItem2">
-                                <div class="myPageWishItemFont2 myPageButtonSize" onclick="location.href='#'">주문하기</div>
-                                <div class="myPageWishItemFont2 myPageButtonSize" onclick="location.href='#'">삭제하기</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </c:forEach>
             </div>
             <div class="myPageSessions myPagePrivacySession">
                 <div class="myPagePcontainer">

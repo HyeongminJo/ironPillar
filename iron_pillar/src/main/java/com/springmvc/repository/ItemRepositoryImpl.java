@@ -56,4 +56,43 @@ public class ItemRepositoryImpl implements ItemRepository
 		String insertSql = "insert into itemLove (itemTitle, itemPrice, itemImage, itemLover) values(?, ?, ?, ?)";
 		template.update(insertSql, item.getItemTitle(), item.getItemPrice(), item.getItemImageName(), lover);
 	}
+	
+	public List<Item> getWishList(String memberId)
+	{
+		String sql = "select distinct * from itemLove where itemLover=?";
+		List<Item> wishList = template.query(sql, new ItemWishRowMapper(), memberId);
+		return wishList;
+	}
+	
+	public void toCart(String itemTitle, String member)
+	{
+		String selectSql = "select * from item where itemTitle=?";
+		Item item = template.queryForObject(selectSql, new ItemRowMapper(), itemTitle);
+		String insertSql = "insert into cart (itemTitle, itemPrice, itemImage, memberId) values(?, ?, ?, ?)";
+		template.update(insertSql, item.getItemTitle(), item.getItemPrice(), item.getItemImageName(), member);
+	}
+	
+	public List<Item> getCart(String memberId)
+	{
+		String sql = "select distinct * from cart where memberId=?";
+		List<Item> cart = template.query(sql, new ItemCartRowMapper(), memberId);
+		return cart;
+	}
+	
+	public void orderItem(Item item, String orderer, String date)
+	{
+		String itemTitle = item.getItemTitle();
+		int itemPrice = item.getItemPrice();
+		int itemQuantity = item.getOrderQuantity();
+		String itemImage = item.getItemImageName();
+		String sql = "insert into orderList (itemTitle, itemPrice, itemImage, itemQuantity, orderer, orderDate) values(?, ?, ?, ?, ?, ?)";
+		template.update(sql, itemTitle, itemPrice, itemImage, itemQuantity, orderer, date);
+	}
+	
+	public List<Item> getOrderList(String memberId)
+	{
+		String sql = "select * from orderList where orderer=?";
+		List<Item> orderList = template.query(sql, new ItemOrderRowMapper(), memberId);
+		return orderList;
+	}
 }

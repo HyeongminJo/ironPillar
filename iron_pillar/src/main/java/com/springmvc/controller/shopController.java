@@ -1,5 +1,7 @@
 package com.springmvc.controller;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -8,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
@@ -47,6 +51,38 @@ public class shopController
 		itemService.itemLove(itemTitle, lover);
 		Item item = itemService.getItemByTitle(itemTitle);
 		model.addAttribute("item", item);
+		return "shopItem";
+	}
+	
+	@GetMapping("/toCart")
+	public String toCart(@RequestParam("itemTitle") String itemTitle, Model model, HttpSession session)
+	{
+		String member = (String) session.getAttribute("memberId");
+		itemService.toCart(itemTitle, member);
+		Item item = itemService.getItemByTitle(itemTitle);
+		model.addAttribute("item", item);
+		return "shopItem";
+	}
+	
+	@GetMapping("/toCart2")
+	public String toCart2(@RequestParam("itemTitle") String itemTitle, Model model, HttpSession session)
+	{
+		String member = (String) session.getAttribute("memberId");
+		itemService.toCart(itemTitle, member);
+		return "redirect:/myPage";
+	}
+	
+	@PostMapping("/orderItem")
+	public String orderItem(@ModelAttribute("item") Item item, Model model, HttpSession session)
+	{
+		Date date = new Date();
+		SimpleDateFormat f = new SimpleDateFormat("yyyy-mm-dd HH:mm:ss");
+		String today = f.format(date);
+		String orderer = (String) session.getAttribute("memberId");
+		itemService.orderItem(item, orderer, today);
+		String itemTitle = item.getItemTitle();
+		Item i = itemService.getItemByTitle(itemTitle);
+		model.addAttribute("item", i);
 		return "shopItem";
 	}
 }

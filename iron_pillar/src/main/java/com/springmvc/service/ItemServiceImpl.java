@@ -33,4 +33,29 @@ public class ItemServiceImpl implements ItemService
 	{
 		itemRepository.itemLove(itemTitle, lover);
 	}
+	
+	public List<Item> getWishList(String memberId)
+	{
+		return itemRepository.getWishList(memberId);
+	}
+	
+	public void toCart(String itemTitle, String member)
+	{
+		itemRepository.toCart(itemTitle, member);
+	}
+	
+	public List<Item> getCart(String memberId)
+	{
+		return itemRepository.getCart(memberId);
+	}
+	
+	public void orderItem(Item item, String orderer, String date)
+	{
+		itemRepository.orderItem(item, orderer, date);
+	}
+	
+	public List<Item> getOrderList(String memberId)
+	{
+		return itemRepository.getOrderList(memberId);
+	}
 }

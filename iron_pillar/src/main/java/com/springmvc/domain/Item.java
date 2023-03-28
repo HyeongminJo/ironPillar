@@ -11,6 +11,11 @@ public class Item
 	private String itemCategory;
 	private String itemImageName;
 	private int itemLove;
+	private String itemLover;
+	private String cartId;
+	private String orderDate;
+	private int orderQuantity;
+	private String orderer;
 	
 	public Item()
 	{
@@ -71,6 +76,46 @@ public class Item
 
 	public void setItemLove(int itemLove) {
 		this.itemLove = itemLove;
+	}
+
+	public String getItemLover() {
+		return itemLover;
+	}
+
+	public void setItemLover(String itemLover) {
+		this.itemLover = itemLover;
+	}
+
+	public String getCartId() {
+		return cartId;
+	}
+
+	public void setCartId(String cartId) {
+		this.cartId = cartId;
+	}
+
+	public String getOrderDate() {
+		return orderDate;
+	}
+
+	public void setOrderDate(String orderDate) {
+		this.orderDate = orderDate;
+	}
+
+	public int getOrderQuantity() {
+		return orderQuantity;
+	}
+
+	public void setOrderQuantity(int orderQuantity) {
+		this.orderQuantity = orderQuantity;
+	}
+
+	public String getOrderer() {
+		return orderer;
+	}
+
+	public void setOrderer(String orderer) {
+		this.orderer = orderer;
 	}
 	
 }

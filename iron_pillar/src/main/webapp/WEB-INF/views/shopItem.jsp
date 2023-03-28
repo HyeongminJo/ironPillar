@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,6 +22,31 @@
     			alert("찜목록에 추가되었습니다");
     			location.href="/shop/itemLove?loveItemTitle=${item.itemTitle}";
    			}
+    	}
+    	function toCart()
+    	{
+    		if(${sessionScope.memberId == null})
+    		{
+    			alert("로그인 후 이용해주세요");
+    			location.href="/login";
+    		}
+    		else
+    		{
+    			alert("장바구니에 추가되었습니다");
+    			location.href="/shop/toCart?itemTitle=${item.itemTitle}";
+    		}
+    	}
+    	function order()
+    	{
+    		if(${sessionScope.memberId == null})
+    		{
+    			alert("로그인 후 이용해주세요");
+    			location.href="/login";
+    		}
+    		else
+    		{
+    			alert("주문이 완료되었습니다");
+    		}
     	}
     </script>
 </head>
@@ -48,9 +74,14 @@
                    <p class="shopItemP">${item.itemText}</p>
                 </div>
                 <div class="shopItemProductItem">
-                    <h2>수량</h2><input type="number" name="" id="" value="1" min="1" max="100" class="shopItemProductItemItem1">
-                    <input type="button" value="장바구니 담기" class="shopItemProductItemItem2">
-                    <input type="button" value="바로구매" class="shopItemProductItemItem3">
+                <form:form modelAttribute="item" class="shopItemProductItemForm" action="/shop/orderItem">
+                	<form:input path="itemTitle" value="${item.itemTitle}" class="shopItemHidden"/>
+                	<form:input path="itemPrice" value="${item.itemPrice}" class="shopItemHidden"/>
+                	<form:input path="itemImageName" value="${item.itemImageName}" class="shopItemHidden"/>
+                    <h2>수량</h2><form:input path="orderQuantity" type="number" name="" id="" value="1" min="1" max="100" class="shopItemProductItemItem1"/>
+                    <input type="button" value="장바구니 담기" class="shopItemProductItemItem2" onclick="toCart()">
+                    <input type="submit" value="바로구매" class="shopItemProductItemItem3" onclick="order()">
+                </form:form>
                 </div>
            </div>
         </div>
