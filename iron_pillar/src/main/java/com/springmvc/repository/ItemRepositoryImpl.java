@@ -64,12 +64,12 @@ public class ItemRepositoryImpl implements ItemRepository
 		return wishList;
 	}
 	
-	public void toCart(String itemTitle, String member)
+	public void toCart(String itemTitle, int quantity, String member)
 	{
 		String selectSql = "select * from item where itemTitle=?";
 		Item item = template.queryForObject(selectSql, new ItemRowMapper(), itemTitle);
-		String insertSql = "insert into cart (itemTitle, itemPrice, itemImage, memberId) values(?, ?, ?, ?)";
-		template.update(insertSql, item.getItemTitle(), item.getItemPrice(), item.getItemImageName(), member);
+		String insertSql = "insert into cart (itemTitle, itemPrice, itemImage, memberId, itemQuantity) values(?, ?, ?, ?, ?) on duplicate key update itemTitle=?, itemPrice=?, itemImage=?, memberId=?, itemQuantity=itemQuantity+?";
+		template.update(insertSql, item.getItemTitle(), item.getItemPrice(), item.getItemImageName(), member, quantity, item.getItemTitle(), item.getItemPrice(), item.getItemImageName(), member, quantity);
 	}
 	
 	public List<Item> getCart(String memberId)
@@ -79,14 +79,12 @@ public class ItemRepositoryImpl implements ItemRepository
 		return cart;
 	}
 	
-	public void orderItem(Item item, String orderer, String date)
+	public void orderItem(String itemTitle, int quantity, String orderer, String date)
 	{
-		String itemTitle = item.getItemTitle();
-		int itemPrice = item.getItemPrice();
-		int itemQuantity = item.getOrderQuantity();
-		String itemImage = item.getItemImageName();
+		String selectSql = "select * from item where itemTitle=?";
+		Item item = template.queryForObject(selectSql, new ItemRowMapper(), itemTitle);
 		String sql = "insert into orderList (itemTitle, itemPrice, itemImage, itemQuantity, orderer, orderDate) values(?, ?, ?, ?, ?, ?)";
-		template.update(sql, itemTitle, itemPrice, itemImage, itemQuantity, orderer, date);
+		template.update(sql, itemTitle, item.getItemPrice(), item.getItemImageName(), quantity, orderer, date);
 	}
 	
 	public List<Item> getOrderList(String memberId)

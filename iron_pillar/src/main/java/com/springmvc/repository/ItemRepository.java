@@ -11,8 +11,8 @@ public interface ItemRepository
 	Item getItemByTitle(String itemTitle);
 	void itemLove(String itemTitle, String lover);
 	List<Item> getWishList(String memberId);
-	void toCart(String itemTitle, String member);
+	void toCart(String itemTitle, int quantity, String member);
 	List<Item> getCart(String memberId);
-	void orderItem(Item item, String orderer, String date);
+	void orderItem(String itemTitle, int quantity, String orderer, String date);
 	List<Item> getOrderList(String memberId);
 }

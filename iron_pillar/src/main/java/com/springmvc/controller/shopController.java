@@ -55,34 +55,34 @@ public class shopController
 	}
 	
 	@GetMapping("/toCart")
-	public String toCart(@RequestParam("itemTitle") String itemTitle, Model model, HttpSession session)
+	public String toCart(@RequestParam("itemTitle") String itemTitle, @RequestParam("quantity") int quantity, Model model, HttpSession session)
 	{
+		
 		String member = (String) session.getAttribute("memberId");
-		itemService.toCart(itemTitle, member);
+		itemService.toCart(itemTitle, quantity, member);
 		Item item = itemService.getItemByTitle(itemTitle);
 		model.addAttribute("item", item);
 		return "shopItem";
 	}
 	
 	@GetMapping("/toCart2")
-	public String toCart2(@RequestParam("itemTitle") String itemTitle, Model model, HttpSession session)
+	public String toCart2(@RequestParam("itemTitle") String itemTitle, @RequestParam("quantity") int quantity, Model model, HttpSession session)
 	{
 		String member = (String) session.getAttribute("memberId");
-		itemService.toCart(itemTitle, member);
+		itemService.toCart(itemTitle, quantity, member);
 		return "redirect:/myPage";
 	}
 	
-	@PostMapping("/orderItem")
-	public String orderItem(@ModelAttribute("item") Item item, Model model, HttpSession session)
+	@GetMapping("/orderItem")
+	public String orderItem(@RequestParam("itemTitle") String itemTitle, @RequestParam("quantity") int quantity, Model model, HttpSession session)
 	{
 		Date date = new Date();
 		SimpleDateFormat f = new SimpleDateFormat("yyyy-mm-dd HH:mm:ss");
 		String today = f.format(date);
 		String orderer = (String) session.getAttribute("memberId");
-		itemService.orderItem(item, orderer, today);
-		String itemTitle = item.getItemTitle();
-		Item i = itemService.getItemByTitle(itemTitle);
-		model.addAttribute("item", i);
+		itemService.orderItem(itemTitle, quantity, orderer, today);
+		Item item = itemService.getItemByTitle(itemTitle);
+		model.addAttribute("item", item);
 		return "shopItem";
 	}
 }

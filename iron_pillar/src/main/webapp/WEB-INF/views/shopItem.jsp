@@ -32,8 +32,10 @@
     		}
     		else
     		{
-    			alert("장바구니에 추가되었습니다");
-    			location.href="/shop/toCart?itemTitle=${item.itemTitle}";
+    			const quantity = document.getElementById('quantity');
+      	        const data = quantity.value;
+      	        alert("장바구니에 " + data + "개 추가되었습니다");
+      	        location.href = "/shop/toCart?itemTitle=${item.itemTitle}&quantity="+data;
     		}
     	}
     	function order()
@@ -45,7 +47,10 @@
     		}
     		else
     		{
+    			const quantity = document.getElementById('quantity');
+      	        const data = quantity.value;
     			alert("주문이 완료되었습니다");
+    			location.href = "/shop/orderItem?itemTitle=${item.itemTitle}&quantity="+data;
     		}
     	}
     </script>
@@ -74,14 +79,9 @@
                    <p class="shopItemP">${item.itemText}</p>
                 </div>
                 <div class="shopItemProductItem">
-                <form:form modelAttribute="item" class="shopItemProductItemForm" action="/shop/orderItem">
-                	<form:input path="itemTitle" value="${item.itemTitle}" class="shopItemHidden"/>
-                	<form:input path="itemPrice" value="${item.itemPrice}" class="shopItemHidden"/>
-                	<form:input path="itemImageName" value="${item.itemImageName}" class="shopItemHidden"/>
-                    <h2>수량</h2><form:input path="orderQuantity" type="number" name="" id="" value="1" min="1" max="100" class="shopItemProductItemItem1"/>
-                    <input type="button" value="장바구니 담기" class="shopItemProductItemItem2" onclick="toCart()">
-                    <input type="submit" value="바로구매" class="shopItemProductItemItem3" onclick="order()">
-                </form:form>
+                    <h2>수량</h2><input type="number" name="" id="quantity" value="1" min="1" max="100" class="shopItemProductItemItem1"/>
+                    <input type="button" value="장바구니 담기" class="shopItemProductItemItem2" id="toCart" onclick="toCart()">
+                    <input type="button" value="바로구매" class="shopItemProductItemItem3" onclick="order()">
                 </div>
            </div>
         </div>

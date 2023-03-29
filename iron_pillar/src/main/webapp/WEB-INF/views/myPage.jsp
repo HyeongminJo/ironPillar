@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <%
 	String memberNick = (String) session.getAttribute("memberNick");
@@ -35,7 +36,10 @@
         }
         function toCart()
     	{
+        	const quantity = document.getElementById('toCartQuantity');
+  	        const data = quantity.value;
    			alert("장바구니에 추가되었습니다");
+   			location.href="/shop/toCart2?itemTitle=${item.itemTitle}&quantity="+data;
     	}
     </script>
     <link href="/resources/css/ironPillar.css" rel="stylesheet">
@@ -64,14 +68,16 @@
                 <div class="myPageSessionBox2">
                     <div class="myPageOrderItem">
                         <div class="myPageOrderItemImgbox">
-                            <img class="myPageImgItem" src="resources/img/텐트.jpg" alt="오류" onclick="location.href='#'">
+                            <img class="myPageImgItem" src="resources/img/${item.itemImageName}" alt="오류" onclick="location.href='#'">
                         </div>
                         <div class="myPageOrderItemBoxRight">
                             <div class="myPageOrderInItem1">
-                                <div>주문 날짜 : 2023-03-02</div>
+                                <div>주문 날짜 : ${item.orderDate}</div>
                                 <div class="myPageOrderItem3">
-                                    <div class="myPageOrderItemFont1 myPageFontItem1" onclick="location.href='#'">4인 가족 대형 텐트</div>
-                                    <div class="myPageOrderItemFont1 myPageFontItem2" onclick="location.href='#'">1000000 원</div>
+                                    <div class="myPageOrderItemFont1 myPageFontItem1" onclick="location.href='#'">${item.itemTitle}</div>
+                                    <div>
+                                    <div class="myPageOrderItemFont1 myPageFontItem2" onclick="location.href='#'">${item.itemPrice}원 / 수량 : ${item.orderQuantity} / 합계 = ${item.itemPrice * item.orderQuantity}원</div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="myPageOrderInItem2">
@@ -82,46 +88,6 @@
                     </div>
                 </div>
                 </c:forEach>
-                <div class="myPageSessionBox2">
-                    <div class="myPageOrderItem">
-                        <div class="myPageOrderItemImgbox">
-                            <img class="myPageImgItem" src="resources/img/텐트.jpg" alt="오류" onclick="location.href='#'">
-                        </div>
-                        <div class="myPageOrderItemBoxRight">
-                            <div class="myPageOrderInItem1" onclick="location.href='#'">
-                                <div class="">주문 날짜 : 2023-03-02</div>
-                                <div class="myPageOrderItem3">
-                                    <div class="myPageOrderItemFont1 myPageFontItem1">4인 가족 대형 텐트</div>
-                                    <div class="myPageOrderItemFont1 myPageFontItem2">1000000 원</div>
-                                </div>
-                            </div>
-                            <div class="myPageOrderInItem2">
-                                <div class="myPageOrderItemFont2 myPageButtonSize" onclick="location.href='#'">리뷰 작성하기</div>
-                                <div class="myPageOrderItemFont2 myPageButtonSize" onclick="location.href='#'">교환/반품/환불</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="myPageSessionBox2">
-                    <div class="myPageOrderItem">
-                        <div class="myPageOrderItemImgbox">
-                            <img class="myPageImgItem" src="resources/img/텐트.jpg" alt="오류" onclick="location.href='#'">
-                        </div>
-                        <div class="myPageOrderItemBoxRight">
-                            <div class="myPageOrderInItem1" onclick="location.href='#'">
-                                <div class="">주문 날짜 : 2023-03-02</div>
-                                <div class="myPageOrderItem3">
-                                    <div class="myPageOrderItemFont1 myPageFontItem1">4인 가족 대형 텐트</div>
-                                    <div class="myPageOrderItemFont1 myPageFontItem2">1000000 원</div>
-                                </div>
-                            </div>
-                            <div class="myPageOrderInItem2">
-                                <div class="myPageOrderItemFont2 myPageButtonSize" onclick="location.href='#'">리뷰 작성하기</div>
-                                <div class="myPageOrderItemFont2 myPageButtonSize" onclick="location.href='#'">교환/반품/환불</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
             <div class="myPageSessions myPageReviewSession">
                 <div class="myPageSessionBox2">
@@ -135,7 +101,7 @@
                                 <div class="myPageReviewImgBox">
                                     <img src="resources/img/star.png" class="myPageReviewImgItem"><span>4.5</span>
                                 </div>
-                                <div class="myPageOrderItem3">
+                                <div class="myPageReviewItem3">
                                     <div class="myPageReviewItemFont1 myPageReviewFontItem1" onclick="location.href='#'">4인 가족 대형 텐트</div>
                                     <div class="myPageReviewFontItem2">4인 가족용으로 사용하기에 너무 안성맞춤이여서 좋아요 공간도 넓고, <br>튼튼해서 안심하고 사용합니다 ^^</div>
                                 </div>
@@ -164,13 +130,16 @@
                         </div>
                         <div class="myPageOrderItemBoxRight">
                             <div class="myPageOrderInItem1">
-                                <div class="myPageOrderItem3">
+                                <div class="myPageWishItem3">
                                     <div class="myPageOrderItemFont1 myPageFontItem1" >${item.itemTitle}</div>
                                     <div class="myPageFontItem2">${item.itemPrice}원</div>
+                                    <div class="myPageQuantityBox">
+                                    <p>수량 : </p><input type="number" name="" id="toCartQuantity" value="1" min="1" max="100" class="myPageQuantity">
+                                    </div>
                                 </div>
                             </div>
                             <div class="myPageOrderInItem2">
-                                <div class="myPageWishItemFont2 myPageButtonSize" onclick="location.href='/shop/toCart2?itemTitle=${item.itemTitle}',toCart()">장바구니에 담기</div>
+                                <div class="myPageWishItemFont2 myPageButtonSize" onclick="toCart()">장바구니에 담기</div>
                                 <div class="myPageWishItemFont2 myPageButtonSize" onclick="location.href='#'">삭제하기</div>
                             </div>
                         </div>
@@ -194,13 +163,18 @@
                         </div>
                         <div class="myPageOrderItemBoxRight">
                             <div class="myPageOrderInItem1">
-                                <div class="myPageOrderItem3">
+                                <div class="myPageWishItem3">
                                     <div class="myPageOrderItemFont1 myPageFontItem1" >${item.itemTitle}</div>
                                     <div class="myPageFontItem2">${item.itemPrice}원</div>
+                                    <div class="myPageQuantityBox">
+                                    <p>수량 : </p><input type="number" name="" id="" value="${item.cartQuantity}" min="1" max="100" class="myPageQuantity">
+                                    </div>
                                 </div>
                             </div>
                             <div class="myPageOrderInItem2">
-                                <div class="myPageWishItemFont2 myPageButtonSize" onclick="location.href='#'">주문하기</div>
+                            <form:form modelAttribute="item" class="" action="/shop/orderItem">
+                                <input type="submit" value="바로구매" class="myPageWishItemFont2 myPageWishItemInputSize" onclick="location.href='#'">
+                            </form:form>
                                 <div class="myPageWishItemFont2 myPageButtonSize" onclick="location.href='#'">삭제하기</div>
                             </div>
                         </div>

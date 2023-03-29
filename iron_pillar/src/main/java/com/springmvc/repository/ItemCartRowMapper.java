@@ -16,6 +16,7 @@ public class ItemCartRowMapper implements RowMapper<Item>
 		item.setItemPrice(rs.getInt(2));
 		item.setItemImageName(rs.getString(3));
 		item.setCartId(rs.getString(4));
+		item.setCartQuantity(rs.getInt(5));
 		return item;
 	}
 }

@@ -39,9 +39,9 @@ public class ItemServiceImpl implements ItemService
 		return itemRepository.getWishList(memberId);
 	}
 	
-	public void toCart(String itemTitle, String member)
+	public void toCart(String itemTitle, int quantity, String member)
 	{
-		itemRepository.toCart(itemTitle, member);
+		itemRepository.toCart(itemTitle, quantity, member);
 	}
 	
 	public List<Item> getCart(String memberId)
@@ -49,9 +49,9 @@ public class ItemServiceImpl implements ItemService
 		return itemRepository.getCart(memberId);
 	}
 	
-	public void orderItem(Item item, String orderer, String date)
+	public void orderItem(String itemTitle, int quantity, String orderer, String date)
 	{
-		itemRepository.orderItem(item, orderer, date);
+		itemRepository.orderItem(itemTitle, quantity, orderer, date);
 	}
 	
 	public List<Item> getOrderList(String memberId)

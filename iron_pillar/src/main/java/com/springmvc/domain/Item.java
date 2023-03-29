@@ -13,6 +13,7 @@ public class Item
 	private int itemLove;
 	private String itemLover;
 	private String cartId;
+	private int cartQuantity;
 	private String orderDate;
 	private int orderQuantity;
 	private String orderer;
@@ -92,6 +93,14 @@ public class Item
 
 	public void setCartId(String cartId) {
 		this.cartId = cartId;
+	}
+
+	public int getCartQuantity() {
+		return cartQuantity;
+	}
+
+	public void setCartQuantity(int cartQuantity) {
+		this.cartQuantity = cartQuantity;
 	}
 
 	public String getOrderDate() {
