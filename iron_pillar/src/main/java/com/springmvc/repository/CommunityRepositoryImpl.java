@@ -39,9 +39,16 @@ public class CommunityRepositoryImpl implements CommunityRepository
 	{
 		String memberSql = "update member set memberLevel=? where memberNick=?";
 		template.update(memberSql, community.getCommunityWriterLevel(), community.getCommunityWriter());
-		String communitySql = "insert into community (communityTitle, communityImage, communityText, communityWriter, communityWriterLevel) values(?, ?, ?, ?, ?)";
-		template.update(communitySql, community.getCommunityTitle(), community.getCommunityImageName(), community.getCommunityText(), community.getCommunityWriter(), community.getCommunityWriterLevel());
+		String communitySql = "insert into community (communityTitle, communityImage, communityText, communityWriter, communityWriterLevel, communityDate) values(?, ?, ?, ?, ?, ?)";
+		template.update(communitySql, community.getCommunityTitle(), community.getCommunityImageName(), community.getCommunityText(), community.getCommunityWriter(), community.getCommunityWriterLevel(), community.getCommunityDate());
 		String communityLevelSql = "update community set communityWriterLevel=? where communityWriter=?";
 		template.update(communityLevelSql, community.getCommunityWriterLevel(), community.getCommunityWriter());
+	}
+	
+	public Community getCommunityByNum(int communityNum)
+	{
+		String sql = "select * from community where communityNum=?";
+		Community community = template.queryForObject(sql, new CommunityRowMapper(), communityNum);
+		return community;
 	}
 }

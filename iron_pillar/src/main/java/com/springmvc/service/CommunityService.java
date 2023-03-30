@@ -9,4 +9,5 @@ public interface CommunityService
 {
 	List<Community> getAllCommunityList();
 	void setNewCommunity(Community community);
+	Community getCommunityByNum(int communityNum);
 }

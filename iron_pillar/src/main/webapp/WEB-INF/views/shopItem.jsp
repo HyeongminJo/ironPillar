@@ -49,7 +49,7 @@
     		{
     			const quantity = document.getElementById('quantity');
       	        const data = quantity.value;
-    			alert("주문이 완료되었습니다");
+    			alert(data + "개 주문이 완료되었습니다");
     			location.href = "/shop/orderItem?itemTitle=${item.itemTitle}&quantity="+data;
     		}
     	}

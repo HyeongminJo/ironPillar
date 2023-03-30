@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,18 +11,41 @@
     <link href="/resources/css/ironPillar.css" rel="stylesheet">
 </head>
 <body>
+<jsp:include page="menu.jsp"/>
     <div class="communityItemContainer">
+    	<c:choose>
+    	<c:when test="${community.communityImageName eq ''}">
         <div class="communityItem">
-            <div class="communityItemImgBox">
-                <img src="/resources/img/텐트.jpg" alt="error" class="communityItemImg">
-            </div>
             <div class="communityItemTitle">
-                제목
+                ${community.communityTitle}
+            </div>
+            <div class="communityItemWriterBox">
+            	<p class="communityItemWriter">Lv.${community.communityWriterLevel} ${community.communityWriter}</p>
+            	<p>${community.communityDate}</p>
             </div>
             <div class="communityItemText">
-                내용
+                ${community.communityText}
             </div>
         </div>
+        </c:when>
+        <c:otherwise>
+        	<div class="communityItem">
+            <div class="communityItemImgBox">
+                <img src="/resources/img/${community.communityImageName}" alt="error" class="communityItemImg">
+            </div>
+            <div class="communityItemTitle">
+                ${community.communityTitle}
+            </div>
+            <div class="communityItemWriterBox">
+            	<p class="communityItemWriter">Lv.${community.communityWriterLevel} ${community.communityWriter}</p>
+            	<p>${community.communityDate}</p>
+            </div>
+            <div class="communityItemText">
+                ${community.communityText}
+            </div>
+        </div>	
+        </c:otherwise>
+        </c:choose>
     </div>
 </body>
 </html>

@@ -57,7 +57,6 @@ public class shopController
 	@GetMapping("/toCart")
 	public String toCart(@RequestParam("itemTitle") String itemTitle, @RequestParam("quantity") int quantity, Model model, HttpSession session)
 	{
-		
 		String member = (String) session.getAttribute("memberId");
 		itemService.toCart(itemTitle, quantity, member);
 		Item item = itemService.getItemByTitle(itemTitle);
@@ -66,7 +65,7 @@ public class shopController
 	}
 	
 	@GetMapping("/toCart2")
-	public String toCart2(@RequestParam("itemTitle") String itemTitle, @RequestParam("quantity") int quantity, Model model, HttpSession session)
+	public String toCart2(@RequestParam("itemTitle") String itemTitle, @RequestParam("itemQuantity") int quantity, Model model, HttpSession session)
 	{
 		String member = (String) session.getAttribute("memberId");
 		itemService.toCart(itemTitle, quantity, member);
@@ -84,5 +83,16 @@ public class shopController
 		Item item = itemService.getItemByTitle(itemTitle);
 		model.addAttribute("item", item);
 		return "shopItem";
+	}
+	
+	@GetMapping("/orderItem2")
+	public String orderItem2(@RequestParam("itemTitle") String itemTitle, @RequestParam("itemQuantity") int quantity, Model model, HttpSession session)
+	{
+		Date date = new Date();
+		SimpleDateFormat f = new SimpleDateFormat("yyyy-mm-dd HH:mm:ss");
+		String today = f.format(date);
+		String orderer = (String) session.getAttribute("memberId");
+		itemService.orderItem(itemTitle, quantity, orderer, today);
+		return "redirect:/myPage";
 	}
 }

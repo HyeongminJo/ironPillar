@@ -4,16 +4,26 @@ import org.springframework.web.multipart.MultipartFile;
 
 public class Community 
 {
+	private int communityNum;
 	private String communityTitle;
 	private MultipartFile communityImage;
 	private String communityText;
 	private String communityImageName;
 	private String communityWriter;
 	private int communityWriterLevel;
+	private String communityDate;
 	
 	public Community()
 	{
 		super();
+	}
+
+	public int getCommunityNum() {
+		return communityNum;
+	}
+
+	public void setCommunityNum(int communityNum) {
+		this.communityNum = communityNum;
 	}
 
 	public String getCommunityTitle() {
@@ -62,6 +72,14 @@ public class Community
 
 	public void setCommunityWriterLevel(int communityWriterLevel) {
 		this.communityWriterLevel = communityWriterLevel;
+	}
+
+	public String getCommunityDate() {
+		return communityDate;
+	}
+
+	public void setCommunityDate(String communityDate) {
+		this.communityDate = communityDate;
 	}
 	
 }

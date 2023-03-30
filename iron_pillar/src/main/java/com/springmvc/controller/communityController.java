@@ -1,6 +1,8 @@
 package com.springmvc.controller;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -12,6 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -37,8 +40,10 @@ public class communityController
 	}
 	
 	@GetMapping("/communityItem")
-	public String communityItem()
+	public String communityItem(@RequestParam("communityNum") int communityNum, Model model)
 	{
+		Community community = communityService.getCommunityByNum(communityNum);
+		model.addAttribute("community", community);
 		return "communityItem";
 	}
 	
@@ -51,6 +56,9 @@ public class communityController
 	@PostMapping("/addCommunity")
 	public String addNewCommunity(@ModelAttribute("community") Community community, HttpSession session)
 	{
+		Date date = new Date();
+		SimpleDateFormat f = new SimpleDateFormat("yyyy-mm-dd HH:mm:ss");
+		String today = f.format(date);
 		String writer = (String) session.getAttribute("memberNick");
 		Integer writerLevel = (Integer) session.getAttribute("memberLevel");
 		writerLevel = writerLevel + 1;
@@ -61,6 +69,7 @@ public class communityController
 		session.setAttribute("memberLevel", writerLevel);
 		community.setCommunityWriter(writer);
 		community.setCommunityWriterLevel(writerLevel);
+		community.setCommunityDate(today);
 		MultipartFile writeImage = community.getCommunityImage();
 		String saveName = writeImage.getOriginalFilename();
 		File saveFile = new File("D:/JHM/jsp/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/iron_pillar/resources/img", saveName);

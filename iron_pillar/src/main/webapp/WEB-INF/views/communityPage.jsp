@@ -23,7 +23,7 @@
 	    	<c:forEach items="${communityList}" var="community">
 	    	<c:choose>
 	    	<c:when test="${community.communityImageName eq ''}">
-	    	<div class="communityPageItem" onclick="location.href='/community/communityItem'">
+	    	<div class="communityPageItem" onclick="location.href='/community/communityItem?communityNum=${community.communityNum}'">
                 <div class="communityPageItemHeader">
                     <p class="communityPageHeaderNick ml20">${community.communityWriter}</p>
                     <p class="communityPageHeaderLevel ml20"> Lv.${community.communityWriterLevel}</p>
@@ -37,7 +37,7 @@
             </div>
             </c:when>
             <c:otherwise>
-            <div class="communityPageItem" onclick="location.href='/community/communityItem'">
+            <div class="communityPageItem" onclick="location.href='/community/communityItem?communityNum=${community.communityNum}'">
                 <div class="communityPageItemHeader">
                     <p class="communityPageHeaderNick ml20">${community.communityWriter}</p>
                     <p class="communityPageHeaderLevel ml20"> Lv.${community.communityWriterLevel}</p>

@@ -25,5 +25,9 @@ public class CommunityServiceImpl implements CommunityService
 	{
 		communityRepository.setNewCommunity(community);
 	}
-
+	
+	public Community getCommunityByNum(int communityNum)
+	{
+		return communityRepository.getCommunityByNum(communityNum);
+	}
 }

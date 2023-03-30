@@ -36,11 +36,12 @@
         }
         function toCart()
     	{
-        	const quantity = document.getElementById('toCartQuantity');
-  	        const data = quantity.value;
    			alert("장바구니에 추가되었습니다");
-   			location.href="/shop/toCart2?itemTitle=${item.itemTitle}&quantity="+data;
     	}
+        function order()
+        {
+        	alert("주문이 완료되었습니다");
+        }
     </script>
     <link href="/resources/css/ironPillar.css" rel="stylesheet">
 </head>
@@ -57,11 +58,11 @@
             <input type="radio" name="group" id="4" class="myPageInput myPageInput4">
             <input type="radio" name="group" id="5" class="myPageInput myPageInput5">
             <div class="myPageSessionBox1">
-                <label for="1" class="myPageSessionItem myPageInputItem1" onclick="location.href='#'">ORDER LIST</label>
-                <label for="2" class="myPageSessionItem myPageInputItem2" onclick="location.href='#'">REVIEW</label>
-                <label for="3" class="myPageSessionItem myPageInputItem3" onclick="location.href='#'">WISH LIST</label>
-                <label for="4" class="myPageSessionItem myPageInputItem4" onclick="location.href='#'">CART</label>
-                <label for="5" class="myPageSessionItem myPageInputItem5" onclick="location.href='#'">PRIVACY</label>
+                <label for="1" class="myPageSessionItem myPageInputItem1">ORDER LIST</label>
+                <label for="2" class="myPageSessionItem myPageInputItem2">REVIEW</label>
+                <label for="3" class="myPageSessionItem myPageInputItem3">WISH LIST</label>
+                <label for="4" class="myPageSessionItem myPageInputItem4">CART</label>
+                <label for="5" class="myPageSessionItem myPageInputItem5">PRIVACY</label>
             </div>
             <div class="myPageSessions myPageOrderSession">
             	<c:forEach items="${orderList}" var="item">
@@ -129,19 +130,22 @@
                             <img class="myPageImgItem" src="resources/img/${item.itemImageName}" alt="오류" onclick="location.href='#'">
                         </div>
                         <div class="myPageOrderItemBoxRight">
+                        	<form class="myPageWishItemBox" action="/shop/toCart2">
                             <div class="myPageOrderInItem1">
                                 <div class="myPageWishItem3">
-                                    <div class="myPageOrderItemFont1 myPageFontItem1" >${item.itemTitle}</div>
+                                    <div class="myPageOrderItemFont1 myPageFontItem1">${item.itemTitle}</div>
                                     <div class="myPageFontItem2">${item.itemPrice}원</div>
                                     <div class="myPageQuantityBox">
-                                    <p>수량 : </p><input type="number" name="" id="toCartQuantity" value="1" min="1" max="100" class="myPageQuantity">
+                                    <p>수량 : </p><input type="number" name="itemQuantity" value="1" min="1" max="100" class="myPageQuantity">
+                                    <input type="text" value="${item.itemTitle}" name="itemTitle" class="shopItemHidden">
                                     </div>
                                 </div>
                             </div>
                             <div class="myPageOrderInItem2">
-                                <div class="myPageWishItemFont2 myPageButtonSize" onclick="toCart()">장바구니에 담기</div>
+                            	<input type="submit" class="myPageWishItemFont2 myPageWishItemInputSize" value="장바구니에 담기" onclick="toCart()">
                                 <div class="myPageWishItemFont2 myPageButtonSize" onclick="location.href='#'">삭제하기</div>
                             </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -155,28 +159,29 @@
                 <c:forEach items="${cart}" var="item">
                 <div class="myPageSessionBox2 myPageWishBox">
                     <div class="myPageCheckBoxItem">
-                        <input type="checkbox" name="P1" class="myPageCheckBoxItem2">                    
+                        <input type="checkbox" name="P1" class="myPageCheckBoxItem2">
                     </div>
                     <div class="myPageWishItem">
                         <div class="myPageOrderItemImgbox">
                             <img class="myPageImgItem" src="resources/img/${item.itemImageName}" alt="오류" onclick="location.href='#'">
                         </div>
                         <div class="myPageOrderItemBoxRight">
+                        	<form class="myPageWishItemBox" action="/shop/orderItem2">
                             <div class="myPageOrderInItem1">
                                 <div class="myPageWishItem3">
                                     <div class="myPageOrderItemFont1 myPageFontItem1" >${item.itemTitle}</div>
                                     <div class="myPageFontItem2">${item.itemPrice}원</div>
                                     <div class="myPageQuantityBox">
-                                    <p>수량 : </p><input type="number" name="" id="" value="${item.cartQuantity}" min="1" max="100" class="myPageQuantity">
+                                    <p>수량 : </p><input type="number" name="itemQuantity" value="${item.cartQuantity}" min="1" max="100" class="myPageQuantity">
+                                    <input type="text" value="${item.itemTitle}" name="itemTitle" class="shopItemHidden">
                                     </div>
                                 </div>
                             </div>
                             <div class="myPageOrderInItem2">
-                            <form:form modelAttribute="item" class="" action="/shop/orderItem">
-                                <input type="submit" value="바로구매" class="myPageWishItemFont2 myPageWishItemInputSize" onclick="location.href='#'">
-                            </form:form>
+                                <input type="submit" value="바로구매" class="myPageWishItemFont2 myPageWishItemInputSize" onclick="order()">
                                 <div class="myPageWishItemFont2 myPageButtonSize" onclick="location.href='#'">삭제하기</div>
                             </div>
+                            </form>
                         </div>
                     </div>
                 </div>

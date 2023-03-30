@@ -8,4 +8,5 @@ public interface CommunityRepository
 {
 	List<Community> getAllCommunityList();
 	public void setNewCommunity(Community community);
+	Community getCommunityByNum(int communityNum);
 }
