@@ -31,7 +31,7 @@
                 <div class="menuItem" onclick="location.href='/community'">
                     <p>COMMUNITY</p>
                 </div>
-                <div class="menuItem menuItemR" onclick="location.href='#'">
+                <div class="menuItemR">
                     <p>INFORMATION</p>
                     <div class="menuItemSub">
                         <div class="menuItemSubF">

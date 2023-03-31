@@ -1,8 +1,6 @@
 package com.springmvc.controller;
 
 import java.io.File;
-import java.io.FileOutputStream;
-import java.io.InputStream;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

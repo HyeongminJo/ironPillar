@@ -477,9 +477,11 @@ textarea:focus {
 .communityItemImgBox {
     width: 700px;
     height: 500px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
 }
 .communityItemImg {
-    width: 100%;
     height: 100%;
 }
 .communityItemTitle {
@@ -506,7 +508,6 @@ textarea:focus {
     min-height: 100px;
     display: flex;
     padding-top: 30px;
-    /* align-items: center; */
 }
 
 
@@ -1125,7 +1126,20 @@ footer
 }
 .menuItemR
 {
+	padding: 0 10px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #353535;
+    transition-duration: 300ms;
     position: relative;
+}
+.menuItemR:hover
+{
+    color: orange;
+    cursor: default;
 }
 .menuItemR:hover .menuItemSub
 {
@@ -1503,19 +1517,18 @@ footer
     font-weight: bold;
     text-align: center;
     font-size: 15px;
-    border: 1px solid #2478FF;
+    border: 1px solid black;
     border-radius: 5px;
     box-sizing: border-box;
 }
-.myPageQuantity:active {
-    border: 1px solid #2478FF;
+.myPageQuantity:focus {
+    border: 1px dashed black;
 }
 /* 내정보수정 */
 .myPagePcontainer {
     width: 800px;
     height: 600px;
     margin: 0 auto;
-    /* border: 1px solid red; */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -1531,7 +1544,6 @@ footer
 .myPageLoginRight {
     width: 50%;
     height: 450px;
-    /* border: 1px solid purple; */
     display: flex;
     justify-content: center;
 }
@@ -1539,11 +1551,8 @@ footer
     height: 450px; 
 }
 .myPageLoginBox {
-    /* background-color: white; */
-    /* border: 1px solid blue; */
     width: 90%;
     height: 100%;
-    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1725,9 +1734,14 @@ footer
     margin: 20px 0 10px 0;
 }
 .placeItemImgBox {
+	width: 100%;
+	height: 650px;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
 }
 .placeItemImg {
-    width: 100%;
+    height: 100%;
 }
 .placeItemBox2 {
     display: flex;
@@ -2353,6 +2367,63 @@ footer
     padding: 8px;
     width: 100%;
     font-size: 16px;
+}
+
+
+
+
+
+.addReviewItemHeader{
+	height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    align-items: center;
+    border-bottom: 1px dashed #9E9E9E;
+}
+.addReviewItemMain{
+	height: 100%;
+    padding: 60px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.starBox {
+    width: 190px;
+    height: 40px;
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 25px;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin-left: -3px;
+}
+
+.starBox input {
+    display: none;
+}
+
+.starBox label {
+    color: lightgray;
+    cursor: pointer;
+    padding-bottom: 8px;
+}
+
+.starBox :checked ~ label {
+    color: orange;
+}
+
+.starBox label:hover,
+.starBox label:hover ~ label {
+    color: gold;
+}
+.starText {
+    font-size: 15px;
+    color: gray;
+    padding-right: 15px;
 }
 
 

@@ -24,6 +24,10 @@
                 alert("비밀번호를 동일하게 입력해주세요.");
                 return false;
             }
+            else
+            {
+            	alert("정보가 수정 저장되었습니다.")
+            }
         }
         function selectAll(selectAll)  
         {
@@ -82,7 +86,7 @@
                                 </div>
                             </div>
                             <div class="myPageOrderInItem2">
-                                <div class="myPageOrderItemFont2 myPageButtonSize" onclick="location.href='#'">리뷰 작성하기</div>
+                                <div class="myPageOrderItemFont2 myPageButtonSize" onclick="location.href='/myPage/addReview?itemTitle=${item.itemTitle}'">리뷰 작성하기</div>
                                 <div class="myPageOrderItemFont2 myPageButtonSize" onclick="location.href='#'">교환/반품/환불</div>
                             </div>
                         </div>

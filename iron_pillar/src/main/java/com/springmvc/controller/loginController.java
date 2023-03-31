@@ -22,8 +22,10 @@ public class loginController
 	private MemberService memberService;
 	
 	@RequestMapping
-	public String loginPage()
+	public String loginPage(HttpServletRequest request)
 	{
+		HttpSession session = request.getSession();
+		session.invalidate();
 		return "loginPage";
 	}
 	

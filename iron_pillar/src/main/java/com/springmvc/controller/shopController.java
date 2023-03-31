@@ -76,7 +76,7 @@ public class shopController
 	public String orderItem(@RequestParam("itemTitle") String itemTitle, @RequestParam("quantity") int quantity, Model model, HttpSession session)
 	{
 		Date date = new Date();
-		SimpleDateFormat f = new SimpleDateFormat("yyyy-mm-dd HH:mm:ss");
+		SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		String today = f.format(date);
 		String orderer = (String) session.getAttribute("memberId");
 		itemService.orderItem(itemTitle, quantity, orderer, today);
@@ -89,7 +89,7 @@ public class shopController
 	public String orderItem2(@RequestParam("itemTitle") String itemTitle, @RequestParam("itemQuantity") int quantity, Model model, HttpSession session)
 	{
 		Date date = new Date();
-		SimpleDateFormat f = new SimpleDateFormat("yyyy-mm-dd HH:mm:ss");
+		SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		String today = f.format(date);
 		String orderer = (String) session.getAttribute("memberId");
 		itemService.orderItem(itemTitle, quantity, orderer, today);

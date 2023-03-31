@@ -85,6 +85,8 @@ public class ItemRepositoryImpl implements ItemRepository
 		Item item = template.queryForObject(selectSql, new ItemRowMapper(), itemTitle);
 		String sql = "insert into orderList (itemTitle, itemPrice, itemImage, itemQuantity, orderer, orderDate) values(?, ?, ?, ?, ?, ?)";
 		template.update(sql, itemTitle, item.getItemPrice(), item.getItemImageName(), quantity, orderer, date);
+		String deleteSql = "delete from cart where itemTitle=?";
+		template.update(deleteSql, itemTitle);
 	}
 	
 	public List<Item> getOrderList(String memberId)

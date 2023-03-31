@@ -57,7 +57,7 @@ public class communityController
 	public String addNewCommunity(@ModelAttribute("community") Community community, HttpSession session)
 	{
 		Date date = new Date();
-		SimpleDateFormat f = new SimpleDateFormat("yyyy-mm-dd HH:mm:ss");
+		SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		String today = f.format(date);
 		String writer = (String) session.getAttribute("memberNick");
 		Integer writerLevel = (Integer) session.getAttribute("memberLevel");
