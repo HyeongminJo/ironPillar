@@ -10,6 +10,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.springmvc.domain.Item;
+import com.springmvc.domain.Review;
 
 @Repository
 public class ItemRepositoryImpl implements ItemRepository 
@@ -94,5 +95,18 @@ public class ItemRepositoryImpl implements ItemRepository
 		String sql = "select * from orderList where orderer=?";
 		List<Item> orderList = template.query(sql, new ItemOrderRowMapper(), memberId);
 		return orderList;
+	}
+	
+	public void addReview(Review review)
+	{
+		String sql = "insert into review (reviewItemTitle, reviewStar, reviewText, reviewImage, reviewWriter, reviewWriterLevel, reviewDate) value(?, ?, ?, ?, ?, ?, ?)";
+		template.update(sql, review.getReviewItemTitle(), review.getReviewStar(), review.getReviewText(), review.getReviewImageName(), review.getReviewWriter(), review.getReviewWriterLevel(), review.getReviewDate());
+	}
+	
+	public List<Review> getReviewList(String memberId)
+	{
+		String sql = "select * from review where reviewWriter=?";
+		List<Review> reviewList = template.query(sql, new ReviewRowMapper(), memberId);
+		return reviewList;
 	}
 }

@@ -1,16 +1,21 @@
 package com.springmvc.controller;
 
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.springmvc.domain.Item;
@@ -32,22 +37,52 @@ public class myPageController
 		List<Item> wishList = itemService.getWishList(memberId);
 		List<Item> cart = itemService.getCart(memberId);
 		List<Item> orderList = itemService.getOrderList(memberId);
+		List<Review> reviewList = itemService.getReviewList(memberId);
 		modelandview.addObject("wishList", wishList);
 		modelandview.addObject("cart", cart);
 		modelandview.addObject("orderList", orderList);
+		modelandview.addObject("reviewList", reviewList);
 		modelandview.setViewName("myPage");
 		return modelandview;
 	}
 	
 	@GetMapping("/addReview")
-	public String addReview(@ModelAttribute("review") Review review, @RequestParam("itemTitle") String itemTitle)
+	public String addReview(@ModelAttribute("review") Review review, @RequestParam("itemTitle") String itemTitle, Model model)
 	{
+		System.out.println(itemTitle);
+		model.addAttribute("itemTitle", itemTitle);
+		//request.setAttribute("itemTitle", itemTitle);
 		return "addReview";
 	}
 	
 	@PostMapping("/addReview")
-	public String addNewReview(@ModelAttribute("review") Review review)
+	public String addNewReview(@ModelAttribute("review") Review review, @RequestParam("itemTitle") String itemTitle, HttpSession session)
 	{
+		Date date = new Date();
+		SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		String today = f.format(date);
+		MultipartFile reviewImage = review.getReviewImage();
+		String saveName = reviewImage.getOriginalFilename();
+		File saveFile = new File("D:/JHM/jsp/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/iron_pillar/resources/img", saveName);
+		review.setReviewImageName(saveName);
+		if(reviewImage != null && !reviewImage.isEmpty())
+		{
+			try
+			{
+				reviewImage.transferTo(saveFile);
+			}
+			catch(Exception e)
+			{
+				throw new RuntimeException("이미지 업로드가 실패했습니다.", e);
+			}
+		}
+		String member = (String) session.getAttribute("memberId");
+		Integer memberLevel = (Integer) session.getAttribute("memberLevel");
+		review.setReviewItemTitle(itemTitle);
+		review.setReviewWriterLevel(memberLevel);
+		review.setReviewWriter(member);
+		review.setReviewDate(today);
+		itemService.addReview(review);
 		return "redirect:/myPage";
 	}
 }

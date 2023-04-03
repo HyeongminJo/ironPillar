@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.springmvc.domain.Item;
+import com.springmvc.domain.Review;
 import com.springmvc.repository.ItemRepository;
 
 @Service
@@ -57,5 +58,15 @@ public class ItemServiceImpl implements ItemService
 	public List<Item> getOrderList(String memberId)
 	{
 		return itemRepository.getOrderList(memberId);
+	}
+	
+	public void addReview(Review review)
+	{
+		itemRepository.addReview(review);
+	}
+	
+	public List<Review> getReviewList(String memberId)
+	{
+		return itemRepository.getReviewList(memberId);
 	}
 }

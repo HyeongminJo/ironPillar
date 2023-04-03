@@ -61,7 +61,6 @@ public class adminController
 	@PostMapping("/addPlace")
 	public String addNewPlace(@ModelAttribute("place") Place place)
 	{
-		System.out.println(place.getPlaceTitle());
 		MultipartFile placeImage = place.getPlaceImage();
 		String saveName = placeImage.getOriginalFilename();
 		File saveFile = new File("D:/JHM/jsp/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/iron_pillar/resources/img", saveName);

@@ -1,12 +1,14 @@
 package com.springmvc.domain;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class Review 
 {
 	private String reviewItemTitle;
-	private String reviewTitle;
 	private int reviewStar;
 	private String reviewText;
-	private String reviewImage;
+	private MultipartFile reviewImage;
+	private String reviewImageName;
 	private String reviewWriter;
 	private int reviewWriterLevel;
 	private String reviewDate;
@@ -22,14 +24,6 @@ public class Review
 
 	public void setReviewItemTitle(String reviewItemTitle) {
 		this.reviewItemTitle = reviewItemTitle;
-	}
-
-	public String getReviewTitle() {
-		return reviewTitle;
-	}
-
-	public void setReviewTitle(String reviewTitle) {
-		this.reviewTitle = reviewTitle;
 	}
 
 	public int getReviewStar() {
@@ -48,12 +42,20 @@ public class Review
 		this.reviewText = reviewText;
 	}
 
-	public String getReviewImage() {
+	public MultipartFile getReviewImage() {
 		return reviewImage;
 	}
 
-	public void setReviewImage(String reviewImage) {
+	public void setReviewImage(MultipartFile reviewImage) {
 		this.reviewImage = reviewImage;
+	}
+
+	public String getReviewImageName() {
+		return reviewImageName;
+	}
+
+	public void setReviewImageName(String reviewImageName) {
+		this.reviewImageName = reviewImageName;
 	}
 
 	public String getReviewWriter() {

@@ -16,9 +16,8 @@
             <div class="addReviewItemHeader">
             	REVIEW
             </div>
-            <form:form modelAttribute="review" action="/myPage/addReview?${_csrf.parameterName}=${_csrf.token}" class="writePageForm" enctype="multipart/form-data" method="post">
+            <form:form modelAttribute="review" action="/myPage/addReview?itemTitle=${itemTitle}" class="writePageForm" enctype="multipart/form-data" method="post">
                 <div class="addReviewItemMain">
-                    <form:input path="reviewTitle" placeholder="제목" class="writePageItemMaininput writePageAddItemInput"/>
                     <div class="writePageItemMaininput writePageFileR">
                         <form:input path="reviewImage" type="file" class="writePageItemMainFile" id="file"/>
                         <label for="file" class="writePageItemMainFileLabel">사진첨부</label>

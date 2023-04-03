@@ -3,6 +3,7 @@ package com.springmvc.service;
 import java.util.List;
 
 import com.springmvc.domain.Item;
+import com.springmvc.domain.Review;
 
 public interface ItemService 
 {
@@ -15,4 +16,6 @@ public interface ItemService
 	List<Item> getCart(String memberId);
 	void orderItem(String itemTitle, int quantity, String orderer, String date);
 	List<Item> getOrderList(String memberId);
+	void addReview(Review review);
+	List<Review> getReviewList(String memberId);
 }

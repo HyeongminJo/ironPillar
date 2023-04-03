@@ -95,20 +95,28 @@
                 </c:forEach>
             </div>
             <div class="myPageSessions myPageReviewSession">
+            	<c:forEach items="${reviewList}" var="item">
                 <div class="myPageSessionBox2">
                     <div class="myPageOrderItem">
                         <div class="myPageReviewItemImgbox">
-                            <img class="myPageImgItem" src="resources/img/텐트.jpg" alt="오류" onclick="location.href='#'">
+                    		<c:choose>
+	    					<c:when test="${item.reviewImageName eq ''}">
+	    					</c:when>
+	    					<c:otherwise>
+                            <img class="myPageImgItem" src="resources/img/${item.reviewImageName}" alt="오류" onclick="location.href='#'">
+                            </c:otherwise>
+                        	</c:choose>
                         </div>
+                        
                         <div class="myPageOrderItemBoxRight">
                             <div class="myPageOrderInItem1">
-                                <div>2023-03-02</div>
+                                <div>작성일 : ${item.reviewDate}</div>
                                 <div class="myPageReviewImgBox">
-                                    <img src="resources/img/star.png" class="myPageReviewImgItem"><span>4.5</span>
+                                	<div class="myPageReviewItemFont1 myPageReviewFontItem1" onclick="location.href='#'">${item.reviewItemTitle}</div>
+                                    <img src="resources/img/star.png" class="myPageReviewImgItem"><span>${item.reviewStar}</span>
                                 </div>
                                 <div class="myPageReviewItem3">
-                                    <div class="myPageReviewItemFont1 myPageReviewFontItem1" onclick="location.href='#'">4인 가족 대형 텐트</div>
-                                    <div class="myPageReviewFontItem2">4인 가족용으로 사용하기에 너무 안성맞춤이여서 좋아요 공간도 넓고, <br>튼튼해서 안심하고 사용합니다 ^^</div>
+                                    <div class="myPageReviewFontItem2">${item.reviewText}</div>
                                 </div>
                             </div>
                             <div class="myPageOrderInItem2">
@@ -118,6 +126,7 @@
                         </div>
                     </div>
                 </div>
+                </c:forEach>
             </div>
             <div class="myPageSessions myPageWishSession">
                 <div class="myPageWishHeader">
