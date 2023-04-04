@@ -12,6 +12,7 @@ public class Review
 	private String reviewWriter;
 	private int reviewWriterLevel;
 	private String reviewDate;
+	private String reviewStarAvg;
 	
 	public Review()
 	{
@@ -80,5 +81,13 @@ public class Review
 
 	public void setReviewDate(String reviewDate) {
 		this.reviewDate = reviewDate;
+	}
+
+	public String getReviewStarAvg() {
+		return reviewStarAvg;
+	}
+
+	public void setReviewStarAvg(String reviewStarAvg) {
+		this.reviewStarAvg = reviewStarAvg;
 	}
 }

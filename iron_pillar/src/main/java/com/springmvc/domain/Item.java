@@ -17,6 +17,7 @@ public class Item
 	private String orderDate;
 	private int orderQuantity;
 	private String orderer;
+	private String itemStar;
 	
 	public Item()
 	{
@@ -125,6 +126,14 @@ public class Item
 
 	public void setOrderer(String orderer) {
 		this.orderer = orderer;
+	}
+
+	public String getItemStar() {
+		return itemStar;
+	}
+
+	public void setItemStar(String itemStar) {
+		this.itemStar = itemStar;
 	}
 	
 }

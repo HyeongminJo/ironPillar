@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,87 +47,45 @@
     	<div class="noticePageTitle">
     		NOTICE
     	</div>
-        <div class="noticePageMainItem">
-            <table cellspacing="0" class="noticePageTable noticePageTableBox">
-                <thead>
-                    <tr  class="table_top">
-                        <th class="th_num noticePageTh">번호</th>
-                        <th class="th_title noticePageTh">제목</th>
-                        <th class="th_writer noticePageTh">글쓴이</th>
-                        <th class="th_date noticePageTh">날짜</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="noticePageTd">1</td>
-                        <td class="noticePageTextitem noticePageTd"><a href="#" class="noticePagefontColor">공지</a></td>
-                        <td class="noticePageTd">관리자</td>
-                        <td class="text-center noticePageTd">2022.03.14</td>
-                    </tr>
-                    <tr>
-                        <td class="noticePageTd">2</td>
-                        <td class="noticePageTextitem noticePageTd"><a href="#" class="noticePagefontColor">공지</a></td>
-                        <td class="noticePageTd">관리자</td>
-                        <td class="text-center noticePageTd">2022.03.14</td>
-                    </tr>
-                    <tr>
-                        <td class="noticePageTd">3</td>
-                        <td class="noticePageTextitem noticePageTd"><a href="#" class="noticePagefontColor">공지</a></td>
-                        <td class="noticePageTd">관리자</td>
-                        <td class="text-center noticePageTd">2022.03.14</td>
-                    </tr>
-                    <tr>
-                        <td class="noticePageTd">4</td>
-                        <td class="noticePageTextitem noticePageTd"><a href="#" class="noticePagefontColor">공지</a></td>
-                        <td class="noticePageTd">관리자</td>
-                        <td class="text-center noticePageTd">2022.03.14</td>
-                    </tr>
-                    <tr>
-                        <td class="noticePageTd">5</td>
-                        <td class="noticePageTextitem noticePageTd"><a href="#" class="noticePagefontColor">공지</a></td>
-                        <td class="noticePageTd">관리자</td>
-                        <td class="text-center noticePageTd">2022.03.14</td>
-                    </tr>
-                    <tr>
-                        <td class="noticePageTd">6</td>
-                        <td class="noticePageTextitem noticePageTd"><a href="#" class="noticePagefontColor">공지</a></td>
-                        <td class="noticePageTd">관리자</td>
-                        <td class="text-center noticePageTd">2022.03.14</td>
-                    </tr>
-                    <tr>
-                        <td class="noticePageTd">7</td>
-                        <td class="noticePageTextitem noticePageTd"><a href="#" class="noticePagefontColor">공지</a></td>
-                        <td class="noticePageTd">관리자</td>
-                        <td class="text-center noticePageTd">2022.03.14</td>
-                    </tr>
-                    <tr>
-                        <td class="noticePageTd">8</td>
-                        <td class="noticePageTextitem noticePageTd"><a href="#" class="noticePagefontColor">공지</a></td>
-                        <td class="noticePageTd">관리자</td>
-                        <td class="text-center noticePageTd">2022.03.14</td>
-                    </tr>
-                    <tr>
-                        <td class="noticePageTd">9</td>
-                        <td class="noticePageTextitem noticePageTd"><a href="#" class="noticePagefontColor">공지</a></td>
-                        <td class="noticePageTd">관리자</td>
-                        <td class="text-center noticePageTd">2022.03.14</td>
-                    </tr>
-                    <tr>
-                        <td class="noticePageTd">10</td>
-                        <td class="noticePageTextitem noticePageTd"><a href="#" class="noticePagefontColor">공지</a></td>
-                        <td class="noticePageTd">관리자</td>
-                        <td class="text-center noticePageTd">2022.03.14</td>
-                    </tr>
-                </tbody>
-            </table>
-            <footer class="noticePageFooter">
-                <a href="#" class="noticePagefontColor">1</a>
-                <a href="#" class="noticePagefontColor">2</a>
-                <a href="#" class="noticePagefontColor">3</a>
-                <a href="#" class="noticePagefontColor">4</a>
-                <a href="#" class="noticePagefontColor">5</a>
-            </footer>
-        </div>
+        <div class="contactPageItem">
+			<div class="contactPageWriteButtonBox">
+				<div class="contactPageWriteButton" onclick="location.href='/notice/addNotice'">글쓰기</div>
+			</div>
+			<table cellspacing="0" class="tableBox">
+				<thead>
+					<tr class="table_top">
+						<th class="th_num">번호</th>
+						<th class="th_title">제목</th>
+						<th class="th_writer">글쓴이</th>
+						<th class="th_date">날짜</th>
+					</tr>
+				</thead>
+				<tbody>
+					<c:forEach items="${list}" var="write">
+						<tr>
+							<td>${write.wNum}</td>
+							<td class="contactPageTextitem"><a href="/notice/noticeItem/${write.wNum}"
+								class="contactPageFontColor">${write.wTitle}</a></td>
+							<td>관리자</td>
+							<td class="text-center">${write.wDate}</td>
+						</tr>
+					</c:forEach>
+				</tbody>
+			</table>
+			<ul class="contactPageFooter">
+				<!-- 이전페이지 버튼 -->
+                <c:if test="${page.prev}">
+                    <li class="pageInfo_btn previous"><a href="/contact/${page.startPage-1}">이전</a></li>
+                </c:if>
+				<c:forEach begin="${page.startPage}" end="${page.endPage}" var="num">
+					<li><span><a href='<c:url value="/contact/${num}"/>'>${num}</a></span></li>
+				</c:forEach>
+				<!-- 다음페이지 버튼 -->
+                <c:if test="${page.next}">
+                    <li class="pageInfo_btn next"><a href="/contact/${page.endPage + 1 }">다음</a></li>
+                </c:if>
+			</ul>
+		</div>
     </div>
 </body>
 </html>

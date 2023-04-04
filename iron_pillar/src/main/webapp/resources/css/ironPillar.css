@@ -1374,7 +1374,6 @@ footer
     color: orange;
 }
 .myPageSessionBox2 {
-    /* border: 1px solid green; */
     width: 100%;
 }
 .myPageReviewItem {
@@ -1390,6 +1389,7 @@ footer
 .myPageReviewImgBox {
     display: flex;
     align-items: center;
+    height: 21px;
 }
 .myPageReviewItemImgbox {
     width: 25%;
@@ -1400,12 +1400,11 @@ footer
     cursor: pointer;
 }
 .myPageReviewImgItem{
-    width: 17px;
-    height: 17px;
+    height: 100%;
     margin-right: 5px;
 }
 .myPageReviewItem3 {
-    height: 80%;
+    height: 70%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -2431,140 +2430,175 @@ footer
 
 /* writePage */
 .writePageContainer {
-    width: 40%;
-    height: 100vh;
-    margin: 0 auto;
-    padding-right: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+   width: 40%;
+   height: 100vh;
+   margin: 0 auto;
+   padding-right: 15px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
 }
+
 .writePageItem {
-    background-color: white;
-    border-radius: 30px;
-    width: 550px;
-    height: 900px;
-    margin-top: 70px;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition-duration: 400ms;
-    box-shadow: 30px 30px 30px 30px #9E9E9E;
+   background-color: white;
+   border-radius: 30px;
+   width: 550px;
+   height: 900px;
+   margin-top: 70px;
+   margin-bottom: 20px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   transition-duration: 400ms;
+   box-shadow: 30px 30px 30px 30px #9E9E9E;
 }
+
 .writePageItem:hover {
-    box-shadow: 5px 5px 5px 5px #9E9E9E;
+   box-shadow: 5px 5px 5px 5px #9E9E9E;
 }
+
 .writePageAddItemInput:focus {
-    border: 1px dashed black;
-    outline: none;
+   border: 1px dashed black;
+   outline: none;
 }
+
 .writePageTextarea {
-    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-decoration: none;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+      sans-serif;
+   text-decoration: none;
 }
+
 .writePageTextarea:focus {
-    border: 1px dashed black;
-    outline: none;
+   border: 1px dashed black;
+   outline: none;
 }
+
 .writePageItemHeader {
-    height: 100px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px dashed #9E9E9E;
+   height: 100px;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-bottom: 1px dashed #9E9E9E;
 }
+
 .writePageForm {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
 }
+
 .writePageItemMain {
-    height: 100%;
-    padding: 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+   height: 100%;
+   padding: 80px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
 }
+
 .writePageItemMaininput {
-    height: 40px;
-    background-color: #F6F6F6;
-    border: 1px solid #D8D8D8;
-    border-radius: 6px;
-    padding: 0 20px;
-    font-size: 15px;
-    display: flex;
-    align-items: center;
+   height: 40px;
+   background-color: #F6F6F6;
+   border: 1px solid #D8D8D8;
+   border-radius: 6px;
+   padding: 0 20px;
+   font-size: 15px;
+   display: flex;
+   align-items: center;
 }
+
 .writePageFileR {
-    position: relative;
+   position: relative;
 }
+
 .writePageItemMainFileLabel {
-    width: 80px;
-    height: 30px;
-    border: 1px solid gray;
-    border-radius: 6px;
-    position: absolute;
-    background-color: black;
-    color: white;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition-duration: 400ms;
+   width: 80px;
+   height: 30px;
+   border: 1px solid gray;
+   border-radius: 6px;
+   position: absolute;
+   background-color: black;
+   color: white;
+   cursor: pointer;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition-duration: 400ms;
 }
+
 .writePageItemMainFileLabel:hover {
-    border: 1px dashed white;
-    font-size: 15px;
-    font-weight: bold;
-    border-radius: 17.5px;
+   border: 1px dashed white;
+   font-size: 15px;
+   font-weight: bold;
+   border-radius: 17.5px;
 }
+
 .writePageItemMainFile {
-    margin: 0 6px;
-    cursor: pointer;
+   margin: 0 6px;
+   cursor: pointer;
 }
+
 .writePageItemMainText {
-    height: 410px;
-    background-color: #F6F6F6;
-    border: 1px solid #D8D8D8;
-    border-radius: 6px;
-    padding: 20px;
-    font-size: 15px;
-    resize: none;
+   height: 410px;
+   background-color: #F6F6F6;
+   border: 1px solid #D8D8D8;
+   border-radius: 6px;
+   padding: 20px;
+   font-size: 15px;
+   resize: none;
 }
+
 .writePageItemFooter {
-    border-top: 1px dashed #9E9E9E;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+   border-top: 1px dashed #9E9E9E;
+   height: 100px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
+
 .writePageItemFooterContainer {
-    width: 60%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   width: 60%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
+
 .writePageItemFooterButton {
-    background-color: black;
-    color: white;
-    width: 150px;
-    height: 35px;
-    font-size: 15px;
-    transition-duration: 300ms;
-    border: 1px solid gray;
-    border-radius: 5px;
-    cursor: pointer;
+   background-color: black;
+   color: white;
+   width: 150px;
+   height: 35px;
+   font-size: 15px;
+   transition-duration: 300ms;
+   border: 1px solid gray;
+   border-radius: 5px;
+   cursor: pointer;
 }
+
 .writePageItemFooterButton:hover {
-    border: 2px dashed white;
-    font-size: 15px;
-    font-weight: bold;
-    border-radius: 17.5px;
+   border: 2px dashed white;
+   font-size: 15px;
+   font-weight: bold;
+   border-radius: 17.5px;
 }
 
+.NwritePageItemMain {
+   height: 100%;
+   padding: 40px 80px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
 
+.NwritePageItemMainText {
+   height: 550px;
+   background-color: #F6F6F6;
+   border: 1px solid #D8D8D8;
+   border-radius: 6px;
+   padding: 20px;
+   font-size: 15px;
+   resize: none;
+}

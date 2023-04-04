@@ -18,6 +18,7 @@ public class ItemRowMapper implements RowMapper<Item>
 		item.setItemText(rs.getString(4));
 		item.setItemCategory(rs.getString(5));
 		item.setItemLove(rs.getInt(6));
+		item.setItemStar(rs.getString(7));
 		return item;
 	}
 }

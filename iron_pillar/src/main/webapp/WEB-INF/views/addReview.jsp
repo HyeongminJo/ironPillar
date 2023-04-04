@@ -18,13 +18,14 @@
             </div>
             <form:form modelAttribute="review" action="/myPage/addReview?itemTitle=${itemTitle}" class="writePageForm" enctype="multipart/form-data" method="post">
                 <div class="addReviewItemMain">
+                	<p>상품명 : ${itemTitle}</p>
                     <div class="writePageItemMaininput writePageFileR">
                         <form:input path="reviewImage" type="file" class="writePageItemMainFile" id="file"/>
                         <label for="file" class="writePageItemMainFileLabel">사진첨부</label>
                     </div>
                     <div class="writePageItemMaininput writePageAddItemInput">
 	                    <div class="starBox">
-					        <form:radiobutton path="reviewStar" id="star5" name="reviewStar" value="5"/>
+					        <form:radiobutton path="reviewStar" id="star5" name="reviewStar" value="5" checked="checked"/>
 					        <label for="star5" class="star">&#9733;</label>
 					        <form:radiobutton path="reviewStar" id="star4" name="reviewStar" value="4"/>
 					        <label for="star4" class="star">&#9733;</label>

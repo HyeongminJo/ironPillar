@@ -67,7 +67,10 @@
                     <div class="shopItemProductInBox">
                         <div class="shopItemInBoxItem1">
                             <h3 class="shopItemInBoxFont1">${item.itemTitle}</h3>
-                            <div class="shopItemInBoxFont2">별점부여</div>
+                            <div class="myPageReviewImgBox">
+                            	<img src="/resources/img/star1.png" alt="★" class="myPageReviewImgItem">
+                            	<div class="shopItemInBoxFont2">${item.itemStar}</div>
+                            </div>
                             <h1>${item.itemPrice}원</h1>
                         </div>
                         <div class="shopItemInBoxItem2">

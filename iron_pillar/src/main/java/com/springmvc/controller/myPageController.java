@@ -49,7 +49,6 @@ public class myPageController
 	@GetMapping("/addReview")
 	public String addReview(@ModelAttribute("review") Review review, @RequestParam("itemTitle") String itemTitle, Model model)
 	{
-		System.out.println(itemTitle);
 		model.addAttribute("itemTitle", itemTitle);
 		//request.setAttribute("itemTitle", itemTitle);
 		return "addReview";

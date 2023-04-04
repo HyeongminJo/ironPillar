@@ -111,9 +111,25 @@
                         <div class="myPageOrderItemBoxRight">
                             <div class="myPageOrderInItem1">
                                 <div>작성일 : ${item.reviewDate}</div>
+                                <div class="myPageReviewItemFont1 myPageReviewFontItem1" onclick="location.href='#'">${item.reviewItemTitle}</div>
                                 <div class="myPageReviewImgBox">
-                                	<div class="myPageReviewItemFont1 myPageReviewFontItem1" onclick="location.href='#'">${item.reviewItemTitle}</div>
-                                    <img src="resources/img/star.png" class="myPageReviewImgItem"><span>${item.reviewStar}</span>
+                                	<c:choose>
+                                	<c:when test="${item.reviewStar eq 5}">
+                                    <img src="resources/img/star5.png" alt="★★★★★" class="myPageReviewImgItem">
+                                    </c:when>
+                                    <c:when test="${item.reviewStar eq 4}">
+                                    <img src="resources/img/star4.png" alt="★★★★" class="myPageReviewImgItem">
+                                    </c:when>
+                                    <c:when test="${item.reviewStar eq 3}">
+                                    <img src="resources/img/star3.png" alt="★★★" class="myPageReviewImgItem">
+                                    </c:when>
+                                    <c:when test="${item.reviewStar eq 2}">
+                                    <img src="resources/img/star2.png" alt="★★" class="myPageReviewImgItem">
+                                    </c:when>
+                                    <c:otherwise>
+                                    <img src="resources/img/star1.png" alt="★" class="myPageReviewImgItem">
+                                    </c:otherwise>
+                                    </c:choose>
                                 </div>
                                 <div class="myPageReviewItem3">
                                     <div class="myPageReviewFontItem2">${item.reviewText}</div>

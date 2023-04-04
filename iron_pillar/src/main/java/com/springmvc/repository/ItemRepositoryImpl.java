@@ -86,8 +86,8 @@ public class ItemRepositoryImpl implements ItemRepository
 		Item item = template.queryForObject(selectSql, new ItemRowMapper(), itemTitle);
 		String sql = "insert into orderList (itemTitle, itemPrice, itemImage, itemQuantity, orderer, orderDate) values(?, ?, ?, ?, ?, ?)";
 		template.update(sql, itemTitle, item.getItemPrice(), item.getItemImageName(), quantity, orderer, date);
-		String deleteSql = "delete from cart where itemTitle=?";
-		template.update(deleteSql, itemTitle);
+		String deleteSql = "delete from cart where itemTitle=? and memberId=?";
+		template.update(deleteSql, itemTitle, orderer);
 	}
 	
 	public List<Item> getOrderList(String memberId)
@@ -99,8 +99,12 @@ public class ItemRepositoryImpl implements ItemRepository
 	
 	public void addReview(Review review)
 	{
-		String sql = "insert into review (reviewItemTitle, reviewStar, reviewText, reviewImage, reviewWriter, reviewWriterLevel, reviewDate) value(?, ?, ?, ?, ?, ?, ?)";
-		template.update(sql, review.getReviewItemTitle(), review.getReviewStar(), review.getReviewText(), review.getReviewImageName(), review.getReviewWriter(), review.getReviewWriterLevel(), review.getReviewDate());
+		String insertSql = "insert into review (reviewItemTitle, reviewStar, reviewText, reviewImage, reviewWriter, reviewWriterLevel, reviewDate) value(?, ?, ?, ?, ?, ?, ?)";
+		template.update(insertSql, review.getReviewItemTitle(), review.getReviewStar(), review.getReviewText(), review.getReviewImageName(), review.getReviewWriter(), review.getReviewWriterLevel(), review.getReviewDate());
+		String selectSql = "select reviewItemTitle, round(avg(reviewStar),1) from review where reviewItemTitle=? group by reviewItemTitle";
+		Review reviewForUpdate = template.queryForObject(selectSql, new ReviewStarRowMapper(), review.getReviewItemTitle());
+		String updateSql = "update item set itemStar=? where itemTitle=?";
+		template.update(updateSql, reviewForUpdate.getReviewStarAvg(), reviewForUpdate.getReviewItemTitle());
 	}
 	
 	public List<Review> getReviewList(String memberId)
