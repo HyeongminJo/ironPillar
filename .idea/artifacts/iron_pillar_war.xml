@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="iron_pillar:war">
+    <output-path>$PROJECT_DIR$/iron_pillar/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>iron_pillar</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="iron_pillar-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="iron_pillar:war exploded" />
+    </root>
+  </artifact>
+</component>

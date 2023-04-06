@@ -2,6 +2,10 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
+<%
+	String memberNick = (String) session.getAttribute("memberNick");
+	String memberId = (String) session.getAttribute("memberId");
+%>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -48,9 +52,19 @@
     		NOTICE
     	</div>
         <div class="contactPageItem">
+        	<%
+        		if(memberId == null)
+        		{
+        		}
+        		else if(memberId.equals("admin"))
+            	{
+            %>
 			<div class="contactPageWriteButtonBox">
 				<div class="contactPageWriteButton" onclick="location.href='/notice/addNotice'">글쓰기</div>
 			</div>
+			<%
+            	}
+			%>
 			<table cellspacing="0" class="tableBox">
 				<thead>
 					<tr class="table_top">
@@ -75,14 +89,14 @@
 			<ul class="contactPageFooter">
 				<!-- 이전페이지 버튼 -->
                 <c:if test="${page.prev}">
-                    <li class="pageInfo_btn previous"><a href="/contact/${page.startPage-1}">이전</a></li>
+                    <li class="pageInfo_btn previous"><a href="/notice/${page.startPage-1}">이전</a></li>
                 </c:if>
 				<c:forEach begin="${page.startPage}" end="${page.endPage}" var="num">
-					<li><span><a href='<c:url value="/contact/${num}"/>'>${num}</a></span></li>
+					<li><span><a href='<c:url value="/notice/${num}"/>'>${num}</a></span></li>
 				</c:forEach>
 				<!-- 다음페이지 버튼 -->
                 <c:if test="${page.next}">
-                    <li class="pageInfo_btn next"><a href="/contact/${page.endPage + 1 }">다음</a></li>
+                    <li class="pageInfo_btn next"><a href="/notice/${page.endPage + 1 }">다음</a></li>
                 </c:if>
 			</ul>
 		</div>

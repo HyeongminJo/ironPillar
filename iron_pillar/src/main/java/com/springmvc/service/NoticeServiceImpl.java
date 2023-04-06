@@ -17,21 +17,21 @@ public class NoticeServiceImpl implements NoticeService {
 	private NoticeRepository noticeRepository;
 	
 	@Override
-	public List<Notice> getAllWriteList() 
+	public List<Notice> getAllNoticeList() 
 	{
-		return noticeRepository.getAllWriteList();
+		return noticeRepository.getAllNoticeList();
 	}
 
 	@Override
-	public void setNewWrite(Notice write) 
+	public void setNewNotice(Notice notice) 
 	{
-		noticeRepository.setNewWrite(write);
+		noticeRepository.setNewNotice(notice);
 	}
 
 	@Override
-	public Notice getWriteBywNum(int wNum) 
+	public Notice getNoticeBywNum(int wNum) 
 	{
-		return noticeRepository.getWriteBywNum(wNum);
+		return noticeRepository.getNoticeBywNum(wNum);
 	}
 
 	@Override

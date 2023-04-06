@@ -1,5 +1,7 @@
 package com.springmvc.controller;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -58,25 +60,30 @@ public class noticeController
 		model.addAttribute("list", list);
 		model.addAttribute("page", pagemake);
 
-		return "noictePage";
+		return "noticePage";
 	}
 	
 	@GetMapping("/addNotice") // 글쓰기 클릭시 매핑
-	public String writePage(@ModelAttribute("write") Notice write) {
+	public String writePage(@ModelAttribute("notice") Notice notice) {
 		return "addNotice";
 	}
 	
 	@PostMapping("/addNotice")
-	public String Newwrite(@ModelAttribute("write") Notice write) {
-		noticeService.setNewWrite(write);
+	public String Newwrite(@ModelAttribute("notice") Notice notice) {
+		notice.setWriter("관리자");
+		Date date = new Date();
+		SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		String today = f.format(date);
+		notice.setwDate(today);
+		noticeService.setNewNotice(notice);
 		return "redirect:/notice";
 	}
 	
 	@GetMapping("/noticeItem/{wNum}")
 	public String noitceWriteItem(@PathVariable int wNum, Model model)
 	{
-		Notice write = noticeService.getWriteBywNum(wNum);
-		model.addAttribute("write", write);
-		return "noitceItem";
+		Notice notice = noticeService.getNoticeBywNum(wNum);
+		model.addAttribute("notice", notice);
+		return "noticeItem";
 	}
 }

@@ -8,9 +8,9 @@ import com.springmvc.domain.Notice;
 
 public interface NoticeService 
 {
-	List<Notice> getAllWriteList();
-	public void setNewWrite(Notice write);
-	Notice getWriteBywNum(int wNum);
+	List<Notice> getAllNoticeList();
+	public void setNewNotice(Notice notice);
+	Notice getNoticeBywNum(int wNum);
 	public List<Map<String, Object>> noticeList(Criteria cri) throws Exception;
 	public int noticeListCnt() throws Exception;
 }

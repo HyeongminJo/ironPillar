@@ -4,16 +4,25 @@ import java.util.Date;
 
 public class Notice 
 {
+	private String writer;
 	private int wNum;
 	private String wTitle;
 	private String wDescription;
-	private Date wDate;
+	private String wDate;
 	
 	public Notice() 
 	{
 		super();
 	}
-	
+
+	public String getWriter() {
+		return writer;
+	}
+
+	public void setWriter(String writer) {
+		this.writer = writer;
+	}
+
 	public int getwNum()
 	{
 		return wNum;
@@ -39,11 +48,11 @@ public class Notice
 		this.wDescription = wDescription;
 	}
 
-	public Date getwDate() {
+	public String getwDate() {
 		return wDate;
 	}
 
-	public void setwDate(Date wDate) {
+	public void setwDate(String wDate) {
 		this.wDate = wDate;
 	}
 }

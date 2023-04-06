@@ -26,25 +26,25 @@ public class NoticeRepositoryImpl implements NoticeRepository
 	}
 
 	@Override
-	public List<Notice> getAllWriteList() {
-		String SQL = "SELECT * FROM NoticeWrite order by wNum desc";
-		List<Notice> listOfWrites = template.query(SQL, new NoticeRowMapper());
-		this.noticeList = listOfWrites;
-		return listOfWrites;
+	public List<Notice> getAllNoticeList() {
+		String SQL = "SELECT * FROM Notice order by wNum desc";
+		List<Notice> listOfNotices = template.query(SQL, new NoticeRowMapper());
+		this.noticeList = listOfNotices;
+		return listOfNotices;
 	}
 
 	@Override
-	public void setNewWrite(Notice write) {
-		String sql = "insert into NoticeWrite (wTitle, wDescription)" + "values(?,?)";
-		template.update(sql, write.getwTitle(), write.getwDescription());
+	public void setNewNotice(Notice notice) {
+		String sql = "insert into Notice (writer, wTitle, wDescription, wDate) values(?,?,?,?)";
+		template.update(sql, notice.getWriter(), notice.getwTitle(), notice.getwDescription(), notice.getwDate());
 	}
 
 	@Override
-	public Notice getWriteBywNum(int wNum) {
-		List<Notice> writes = getAllWriteList();
-		for (Notice write : writes) {
-			if (write.getwNum() == wNum) {
-				return write;
+	public Notice getNoticeBywNum(int wNum) {
+		List<Notice> notices = getAllNoticeList();
+		for (Notice notice : notices) {
+			if (notice.getwNum() == wNum) {
+				return notice;
 			}
 		}
 		return null;
@@ -54,14 +54,14 @@ public class NoticeRepositoryImpl implements NoticeRepository
 	public List<Map<String, Object>> noticeList(Criteria cri) throws Exception {
 		int pageStart = (cri.getPage() - 1) * cri.getPerPageNum();
 		int perPageNum = cri.getPerPageNum();
-		String sql = "SELECT * FROM NoticeWrite ORDER BY wNum DESC LIMIT ?,?";
+		String sql = "SELECT * FROM Notice ORDER BY wNum DESC LIMIT ?,?";
 		List<Map<String, Object>> list = template.queryForList(sql, new Object[] { pageStart, perPageNum });
 		return list;
 	}
 
 	@Override
 	public int noticeListCnt() throws Exception {
-		String sql = "SELECT COUNT(*) FROM NoticeWrite";
+		String sql = "SELECT COUNT(*) FROM Notice";
 		int cnt = template.queryForObject(sql, Integer.class);
 		return cnt;
 	}

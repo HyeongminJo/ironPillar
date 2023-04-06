@@ -111,25 +111,25 @@
           <div class="contactWriteItem">
             <div class="contactWriteBox">
                 <div class="contactWriteTitle">
-                    <h2>${write.wTitle}</h2>
+                    <h2>${notice.wTitle}</h2>
                 </div>
                 <div class="contactWriteTitleItem">
-                    <h4>�ۼ���: </h4>
-                    <p>����</p>
-                    <h4>��¥: </h4>
-                    <p>${write.wDate }</p>
+                    <h4>작성자 : </h4>
+                    <p>${notice.writer} / </p>
+                    <h4>작성일 : </h4>
+                    <p>${notice.wDate}</p>
                 </div>
                 <hr>
                 <div class="contactWriteMainBox">
                     <div>
                         <p>
-                            ${write.wDescription}
+                            ${notice.wDescription}
                         </p>
                     </div>
                 </div>
             </div>
             <div class="contactWriteItemButtonBox">
-                <div class="contactWriteItemButton" onclick="location.href='/notice'">�۸��</div>
+                <div class="contactWriteItemButton" onclick="location.href='/notice'">목록으로</div>
             </div>
         </div>
     </div>

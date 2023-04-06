@@ -15,7 +15,7 @@
             <div class="writePageItemHeader">
             	<h1>Notice</h1>
             </div>
-            <form:form modelAttribute="write" action="/notice/addNotice?${_csrf.parameterName}=${_csrf.token}" class="writePageForm" method="post">
+            <form:form modelAttribute="notice" action="/notice/addNotice?${_csrf.parameterName}=${_csrf.token}" class="writePageForm" method="post">
                 <div class="NwritePageItemMain">
                     <form:input path="wTitle" placeholder="제목" class="writePageItemMaininput writePageAddItemInput"/>
                     <form:textarea path="wDescription" class="NwritePageItemMainText" placeholder="내용" />
