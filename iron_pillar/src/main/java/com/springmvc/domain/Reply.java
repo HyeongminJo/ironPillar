@@ -7,8 +7,9 @@ public class Reply
 	private int rno;
 	private int wNum;
 	private String memberNick;
+	private int memberLevel;
 	private String content;
-	private Date rDate;
+	private String rDate;
 	
 	public Reply() {
 		super();
@@ -38,6 +39,14 @@ public class Reply
 		this.memberNick = memberNick;
 	}
 
+	public int getMemberLevel() {
+		return memberLevel;
+	}
+
+	public void setMemberLevel(int memberLevel) {
+		this.memberLevel = memberLevel;
+	}
+
 	public String getContent() {
 		return content;
 	}
@@ -45,15 +54,15 @@ public class Reply
 	public void setContent(String content) {
 		this.content = content;
 	}
-
-	public Date getrDate() {
+	
+	public String getrDate() {
 		return rDate;
 	}
 
-	public void setrDate(Date rDate) {
+	public void setrDate(String rDate) {
 		this.rDate = rDate;
 	}
-	
+
 	@Override
 	public String toString() {
 	    return "Reply [rno=" + rno + ", wNum=" + wNum + ", memberNick="

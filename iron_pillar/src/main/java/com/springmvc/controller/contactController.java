@@ -1,8 +1,12 @@
 package com.springmvc.controller;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
+
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -68,27 +72,32 @@ public class contactController
 	}
 
 	@GetMapping("/addContact") // 게시글 작성 폼
-	public String writePage(@ModelAttribute("write") Contact write) {
+	public String contactPage(@ModelAttribute("contact") Contact contact) {
 		return "addContact";
 	}
 
 	@PostMapping("/addContact") // 게시글 작성 처리
-	public String Newwrite(@ModelAttribute("write") Contact write) {
-
-		MultipartFile writeImage = write.getwImage();
-		String saveName = writeImage.getOriginalFilename();
+	public String NewContact(@ModelAttribute("contact") Contact contact, HttpSession session) {
+		contact.setMemberId((String) session.getAttribute("memberNick"));
+		contact.setMemberLevel((Integer) session.getAttribute("memberLevel"));
+		Date date = new Date();
+		SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		String today = f.format(date);
+		contact.setwDate(today);
+		MultipartFile contactImage = contact.getwImage();
+		String saveName = contactImage.getOriginalFilename();
 		File saveFile = new File(
 				"D:/JHM/jsp/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/iron_pillar/resources/img",
 				saveName);
-		write.setwImageName(saveName);
-		if (writeImage != null && !writeImage.isEmpty()) {
+		contact.setwImageName(saveName);
+		if (contactImage != null && !contactImage.isEmpty()) {
 			try {
-				writeImage.transferTo(saveFile);
+				contactImage.transferTo(saveFile);
 			} catch (Exception e) {
 				throw new RuntimeException("상품 이미지 업로드가 실패했습니다.", e);
 			}
 		}
-		contactService.setNewWrite(write);
+		contactService.setNewContact(contact);
 		return "redirect:/contact";
 	}
 
@@ -96,23 +105,26 @@ public class contactController
 	public String contactWriteItem(@PathVariable int wNum, Model model)
 	// 매개변수값을 담고, 모델객체를 들고오는 함수
 	{
-		Contact write = contactService.getWriteBywNum(wNum);
+		Contact contact = contactService.getContactBywNum(wNum);
 		List<Reply> replyList = replyService.getReplyListBywNum(wNum);
 		// Write 도메인 참조변수 write에 서비스안의 매개변수가 담긴 함수를 대입
-		model.addAttribute("write", write);
+		model.addAttribute("contact", contact);
 		model.addAttribute("replyList", replyList); // 댓글 목록 모델에 추가하기
 		// model에 키, 값을 주어 뷰 데이터에 전달
-		return "contactWriteItem";
+		return "contactItem";
 		// 해당 페이지에 리턴한다.
 	}
 	
-	@PostMapping("/contactWriteItem/{wNum}/reply")
-	public String addReply(@PathVariable int wNum, @ModelAttribute("reply") Reply reply) {
-	    System.out.println(wNum);
+	@PostMapping("/contactItem/{wNum}/reply")
+	public String addReply(@PathVariable int wNum, @ModelAttribute("reply") Reply reply, HttpSession session) {
+		reply.setMemberNick((String) session.getAttribute("memberNick"));
+		reply.setMemberLevel((Integer) session.getAttribute("memberLevel"));
+		Date date = new Date();
+		SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		String today = f.format(date);
+		reply.setrDate(today);
 	    reply.setwNum(wNum);
-	    reply.setContent(reply.getContent()); // 댓글 내용을 설정합니다.
-	    System.out.println("리플내용: "+reply.getContent());
 	    replyService.setNewReply(reply);
-	    return "redirect:/contact/contactWriteItem/" + wNum;
+	    return "redirect:/contact/contactItem/" + wNum;
 	}
 }

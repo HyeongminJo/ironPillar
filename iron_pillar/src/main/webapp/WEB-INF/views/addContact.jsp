@@ -22,7 +22,7 @@
             <div class="writePageItemHeader">
             	<h1>Contact</h1>
             </div>
-            <form:form modelAttribute="write" action="/contact/addContact?${_csrf.parameterName}=${_csrf.token}" class="writePageForm" enctype="multipart/form-data" method="POST">
+            <form:form modelAttribute="contact" action="/contact/addContact?${_csrf.parameterName}=${_csrf.token}" class="writePageForm" enctype="multipart/form-data" method="POST">
                 <div class="writePageItemMain">
                     <form:input path="wTitle" placeholder="제목" class="writePageItemMaininput writePageAddItemInput"/>
                     <div class="writePageItemMaininput writePageFileR">

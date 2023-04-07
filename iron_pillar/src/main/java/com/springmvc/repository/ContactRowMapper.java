@@ -11,12 +11,14 @@ public class ContactRowMapper implements RowMapper<Contact>
 {
 	public Contact mapRow(ResultSet rs, int rowNum) throws SQLException
 	{
-		Contact write = new Contact();
-		write.setwNum(rs.getInt(1));
-		write.setwTitle(rs.getString(2));
-		write.setwImageName(rs.getString(3));
-		write.setwDescription(rs.getString(4));
-		write.setwDate(rs.getDate(5));
-		return write;
+		Contact contact = new Contact();
+		contact.setwNum(rs.getInt(1));
+		contact.setMemberId(rs.getString(2));
+		contact.setMemberLevel(rs.getInt(3));
+		contact.setwTitle(rs.getString(4));
+		contact.setwImageName(rs.getString(5));
+		contact.setwDescription(rs.getString(6));
+		contact.setwDate(rs.getString(7));
+		return contact;
 	}
 }

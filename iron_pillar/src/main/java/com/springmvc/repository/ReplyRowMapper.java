@@ -11,12 +11,13 @@ public class ReplyRowMapper implements RowMapper<Reply>
 {
 	public Reply mapRow(ResultSet rs, int rowNum) throws SQLException
 	{
-		System.out.println("문제3");
 		Reply reply = new Reply();
-		reply.setRno(rs.getInt(1));
-		reply.setwNum(rs.getInt(2));
-		reply.setContent(rs.getString(3));
-		reply.setrDate(rs.getDate(4));
+		reply.setMemberNick(rs.getString(1));
+		reply.setMemberLevel(rs.getInt(2));
+		reply.setRno(rs.getInt(3));
+		reply.setwNum(rs.getInt(4));
+		reply.setContent(rs.getString(5));
+		reply.setrDate(rs.getString(6));
 		return reply;
 	}
 }

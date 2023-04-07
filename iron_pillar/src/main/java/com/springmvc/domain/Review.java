@@ -4,6 +4,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 public class Review 
 {
+	private int reviewNum;
 	private String reviewItemTitle;
 	private int reviewStar;
 	private String reviewText;
@@ -17,6 +18,14 @@ public class Review
 	public Review()
 	{
 		super();
+	}
+
+	public int getReviewNum() {
+		return reviewNum;
+	}
+
+	public void setReviewNum(int reviewNum) {
+		this.reviewNum = reviewNum;
 	}
 
 	public String getReviewItemTitle() {

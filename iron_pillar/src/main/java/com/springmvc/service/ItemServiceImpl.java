@@ -69,4 +69,9 @@ public class ItemServiceImpl implements ItemService
 	{
 		return itemRepository.getReviewList(memberId);
 	}
+	
+	public void deleteReview(int reviewNum)
+	{
+		itemRepository.deleteReview(reviewNum);
+	}
 }

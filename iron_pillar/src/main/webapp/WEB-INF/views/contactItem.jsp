@@ -196,24 +196,24 @@
 		<div class="contactWriteItem">
 			<div class="contactWriteBox">
 				<div class="contactWriteTitle">
-					<h2>${write.wTitle }</h2>
+					<h2>${contact.wTitle }</h2>
 				</div>
 				<div class="contactWriteTitleItem">
 					<h4>작성자:</h4>
-					<p>민재</p>
+					<p>Lv.${contact.memberLevel} ${contact.memberId} / </p>
 					<h4>날짜:</h4>
-					<p>${write.wDate }</p>
+					<p>${contact.wDate}</p>
 				</div>
 				<hr>
 				<div class="contactWriteMainBox">
-					<c:if test="${not empty write.wImageName}">
+					<c:if test="${not empty contact.wImageName}">
 						<div class="contactWriteImgBox ">
-							<img src="/resources/img/${write.wImageName}" alt="error"
+							<img src="/resources/img/${contact.wImageName}" alt="error"
 								class="contactWriteImg">
 						</div>
 					</c:if>
 					<div>
-						<p>${write.wDescription}</p>
+						<p>${contact.wDescription}</p>
 					</div>
 				</div>
 			</div>
@@ -228,7 +228,7 @@
 							<li>
 								<div class="replyMainBox">
 									<div class="replyMainItem">
-										<div>작성자&nbsp;&nbsp;&nbsp;</div>
+										<div>Lv.${reply.memberLevel} ${reply.memberNick}&nbsp;&nbsp;&nbsp;</div>
 										<div>${reply.rDate}</div>
 									</div>
 									<div class="replyMainItem_2">${reply.content}</div>
@@ -240,8 +240,7 @@
 					</ul>
 					<!-- 댓글 입력 부분 -->
 					<div class="replyFooterBox">
-						<form action="/contact/contactItem/${wNum}/reply"
-							method="post">
+						<form action="/contact/contactItem/${wNum}/reply" method="post">
 							<div class="replyFooterIn">
 								<div>
 									<textarea class="replyFooterInItem" placeholder="댓글내용"

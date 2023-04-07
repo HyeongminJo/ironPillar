@@ -18,4 +18,5 @@ public interface ItemService
 	List<Item> getOrderList(String memberId);
 	void addReview(Review review);
 	List<Review> getReviewList(String memberId);
+	void deleteReview(int reviewNum);
 }

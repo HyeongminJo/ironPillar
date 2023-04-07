@@ -92,7 +92,7 @@
                     <li class="pageInfo_btn previous"><a href="/notice/${page.startPage-1}">이전</a></li>
                 </c:if>
 				<c:forEach begin="${page.startPage}" end="${page.endPage}" var="num">
-					<li><span><a href='<c:url value="/notice/${num}"/>'>${num}</a></span></li>
+					<li><span><a class="noticeA" href='<c:url value="/notice/${num}"/>'>${num}</a></span></li>
 				</c:forEach>
 				<!-- 다음페이지 버튼 -->
                 <c:if test="${page.next}">

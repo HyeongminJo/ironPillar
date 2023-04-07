@@ -26,26 +26,26 @@ public class ContactRepositoryImpl implements ContactRepository
 		this.template = new JdbcTemplate(dataSource);
 	}
 	
-	public List<Contact> getAllWriteList()
+	public List<Contact> getAllContactList()
 	{
-		String SQL = "SELECT * FROM ContactWrite order by wNum desc";
+		String SQL = "SELECT * FROM Contact order by wNum desc";
 		List<Contact> listOfWrites = template.query(SQL, new ContactRowMapper());
 		this.contactList = listOfWrites;
 		return listOfWrites;
 	}
 	
-	public void setNewWrite(Contact write)
+	public void setNewContact(Contact contact)
 	{	
-		String sql = "insert into ContactWrite (wTitle, wImageName, wDescription)" +  "values(?, ?, ?)";
-		template.update(sql, write.getwTitle(), write.getwImageName(), write.getwDescription());
+		String sql = "insert into Contact (memberId, memberLevel, wTitle, wImageName, wDescription, wDate)" +  "values(?, ?, ?, ?, ?, ?)";
+		template.update(sql, contact.getMemberId(), contact.getMemberLevel(), contact.getwTitle(), contact.getwImageName(), contact.getwDescription(), contact.getwDate());
 	}
 
 	@Override
-    public Contact getWriteBywNum(int wNum) {
-        List<Contact> writes = getAllWriteList();
-        for (Contact write : writes) {
-            if (write.getwNum() == wNum) {
-                return write;
+    public Contact getContactBywNum(int wNum) {
+        List<Contact> contacts = getAllContactList();
+        for (Contact contact : contacts) {
+            if (contact.getwNum() == wNum) {
+                return contact;
             }
         }
         return null;
@@ -53,12 +53,12 @@ public class ContactRepositoryImpl implements ContactRepository
 	public List<Map<String, Object>> contactList(Criteria cri) throws Exception {
 	    int pageStart = (cri.getPage() - 1) * cri.getPerPageNum();
 	    int perPageNum = cri.getPerPageNum();
-	    String sql = "SELECT * FROM ContactWrite ORDER BY wNum DESC LIMIT ?,?";
+	    String sql = "SELECT * FROM Contact ORDER BY wNum DESC LIMIT ?,?";
 	    List<Map<String, Object>> list = template.queryForList(sql, new Object[]{pageStart, perPageNum});
 	    return list;
 	}
 	public int contactListCnt() throws Exception {
-	    String sql = "SELECT COUNT(*) FROM ContactWrite";
+	    String sql = "SELECT COUNT(*) FROM Contact";
 	    int cnt = template.queryForObject(sql, Integer.class);
 	    return cnt;
 	}

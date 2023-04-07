@@ -34,8 +34,8 @@ public class ReplyRepositoryImpl implements ReplyRepository
 
 	@Override
 	public void setNewReply(Reply reply) {
-		String sql = "INSERT INTO Reply (wNum, content)" + "VALUES (?, ?)";
-	    template.update(sql, reply.getwNum(), reply.getContent());
+		String sql = "INSERT INTO Reply (memberId, memberLevel, wNum, content, rDate)" + "VALUES (?, ?, ?, ?, ?)";
+	    template.update(sql, reply.getMemberNick(), reply.getMemberLevel(), reply.getwNum(), reply.getContent(), reply.getrDate());
 	}
 
 	@Override

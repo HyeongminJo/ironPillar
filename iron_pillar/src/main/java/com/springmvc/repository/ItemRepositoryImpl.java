@@ -113,4 +113,10 @@ public class ItemRepositoryImpl implements ItemRepository
 		List<Review> reviewList = template.query(sql, new ReviewRowMapper(), memberId);
 		return reviewList;
 	}
+	
+	public void deleteReview(int reviewNum)
+	{
+		String sql = "delete from review where reviewNum=?";
+		template.update(sql, reviewNum);
+	}
 }

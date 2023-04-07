@@ -7,11 +7,13 @@ import org.springframework.web.multipart.MultipartFile;
 public class Contact 
 {
 	private int wNum;
+	private String memberId;
+	private int memberLevel;
 	private String wTitle;
 	private MultipartFile wImage;
 	private String wDescription;
 	private String wImageName;
-	private Date wDate;
+	private String wDate;
 	
 	public Contact()
 	{
@@ -24,6 +26,22 @@ public class Contact
 	public void setwNum(int wNum) {
 		this.wNum = wNum;
 	}
+	public String getMemberId() {
+		return memberId;
+	}
+
+	public void setMemberId(String memberId) {
+		this.memberId = memberId;
+	}
+
+	public int getMemberLevel() {
+		return memberLevel;
+	}
+
+	public void setMemberLevel(int memberLevel) {
+		this.memberLevel = memberLevel;
+	}
+
 	public String getwTitle() {
 		return wTitle;
 	}
@@ -54,11 +72,11 @@ public class Contact
 		this.wImageName = wImageName;
 	}
 
-	public Date getwDate() {
+	public String getwDate() {
 		return wDate;
 	}
 
-	public void setwDate(Date wDate) {
+	public void setwDate(String wDate) {
 		this.wDate = wDate;
 	}
 }

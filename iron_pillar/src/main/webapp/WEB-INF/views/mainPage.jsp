@@ -106,7 +106,7 @@
             	<c:forEach items="${newCommunityList}" var="community" varStatus="status">
             	<c:choose>
 	    		<c:when test="${community.communityImageName eq ''}">
-                <div class="CItem" onclick="location.href='/community/communityItem'">
+                <div class="CItem" onclick="location.href='/community/communityItem?communityNum=${community.communityNum}'">
                     <div class="CitemHeader">
                         <p class="CheaderNick ml20">${community.communityWriter}</p>
                         <p class="CheaderLevel ml20">Lv.${community.communityWriterLevel}</p>
@@ -120,7 +120,7 @@
                 </div>
                 </c:when>
             	<c:otherwise>
-                <div class="CItem" onclick="location.href='/community/communityItem'">
+                <div class="CItem" onclick="location.href='/community/communityItem?communityNum=${community.communityNum}'">
                     <div class="CitemHeader">
                         <p class="CheaderNick ml20">${community.communityWriter}</p>
                         <p class="CheaderLevel ml20">Lv.${community.communityWriterLevel}</p>

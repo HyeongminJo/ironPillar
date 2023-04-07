@@ -137,7 +137,7 @@
                             </div>
                             <div class="myPageOrderInItem2">
                                 <div class="myPageOrderItemFont2 myPageButtonSize" onclick="location.href='#'">수정하기</div>
-                                <div class="myPageOrderItemFont2 myPageButtonSize" onclick="location.href='#'">삭제하기</div>
+                                <div class="myPageOrderItemFont2 myPageButtonSize" onclick="location.href='/myPage/deleteReview?reviewNum=${item.reviewNum}'">삭제하기</div>
                             </div>
                         </div>
                     </div>

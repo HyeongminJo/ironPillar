@@ -67,12 +67,12 @@
 					</tr>
 				</thead>
 				<tbody>
-					<c:forEach items="${list}" var="write">
+					<c:forEach items="${list}" var="contact">
 						<tr>
-							<td>${write.wNum}</td>
-							<td class="contactPageTextitem"><a href="/contact/contactItem/${write.wNum}" class="contactPageFontColor">${write.wTitle }</a></td>
-							<td>조형민</td>
-							<td class="text-center">${write.wDate }</td>
+							<td>${contact.wNum}</td>
+							<td class="contactPageTextitem"><a href="/contact/contactItem/${contact.wNum}" class="contactPageFontColor">${contact.wTitle}</a></td>
+							<td>Lv.${contact.memberLevel} ${contact.memberId}</td>
+							<td class="text-center">${contact.wDate}</td>
 						</tr>
 					</c:forEach>
 				</tbody>

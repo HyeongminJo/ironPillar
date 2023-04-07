@@ -17,20 +17,20 @@ public class ContactServiceImpl implements ContactService
 	private ContactRepository contactRepository;
 	
 	@Override
-	public List<Contact> getAllWriteList() 
+	public List<Contact> getAllContactList() 
 	{
-		return contactRepository.getAllWriteList();
+		return contactRepository.getAllContactList();
 	}
 
 	@Override
-	public void setNewWrite(Contact write) 
+	public void setNewContact(Contact contact) 
 	{
-		contactRepository.setNewWrite(write);
+		contactRepository.setNewContact(contact);
 	}
 
 	@Override
-    public Contact getWriteBywNum(int wNum) {
-        return contactRepository.getWriteBywNum(wNum);
+    public Contact getContactBywNum(int wNum) {
+        return contactRepository.getContactBywNum(wNum);
     }
 	@Override
 	public List<Map<String, Object>> contactList(Criteria cri) throws Exception {

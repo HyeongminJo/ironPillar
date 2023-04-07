@@ -84,4 +84,11 @@ public class myPageController
 		itemService.addReview(review);
 		return "redirect:/myPage";
 	}
+	
+	@GetMapping("/deleteReview")
+	public String deleteReview(@RequestParam("reviewNum") int reviewNum)
+	{
+		itemService.deleteReview(reviewNum);
+		return "redirect:/myPage";
+	}
 }

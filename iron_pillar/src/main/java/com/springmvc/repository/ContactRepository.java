@@ -8,9 +8,9 @@ import com.springmvc.domain.Criteria;
 
 public interface ContactRepository 
 {
-	List<Contact> getAllWriteList();
-	public void setNewWrite(Contact write);
-	Contact getWriteBywNum(int wNum);
+	List<Contact> getAllContactList();
+	public void setNewContact(Contact contact);
+	Contact getContactBywNum(int wNum);
 	public List<Map<String, Object>> contactList(Criteria cri) throws Exception;
 	public int contactListCnt() throws Exception;
 }
