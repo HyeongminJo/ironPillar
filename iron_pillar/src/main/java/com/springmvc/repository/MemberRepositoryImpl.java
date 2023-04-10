@@ -52,6 +52,7 @@ public class MemberRepositoryImpl implements MemberRepository
 			session.setAttribute("memberPhone", member.getMemberPhone1());
 			session.setAttribute("memberAddress", member.getMemberAddress());
 			session.setAttribute("memberLevel", member.getMemberLevel());
+			session.setMaxInactiveInterval(86400);
 			
 			return true; //로그인 성공
 		}

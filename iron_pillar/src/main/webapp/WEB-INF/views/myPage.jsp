@@ -73,20 +73,20 @@
                 <div class="myPageSessionBox2">
                     <div class="myPageOrderItem">
                         <div class="myPageOrderItemImgbox">
-                            <img class="myPageImgItem" src="resources/img/${item.itemImageName}" alt="오류" onclick="location.href='#'">
+                            <img class="myPageImgItem" src="resources/img/${item.itemImageName}" alt="오류" onclick="location.href='/shop/shopItem?itemTitle=${item.itemTitle}'">
                         </div>
                         <div class="myPageOrderItemBoxRight">
                             <div class="myPageOrderInItem1">
                                 <div>주문 날짜 : ${item.orderDate}</div>
                                 <div class="myPageOrderItem3">
-                                    <div class="myPageOrderItemFont1 myPageFontItem1" onclick="location.href='#'">${item.itemTitle}</div>
+                                    <div class="myPageOrderItemFont1 myPageFontItem1" onclick="location.href='/shop/shopItem?itemTitle=${item.itemTitle}'">${item.itemTitle}</div>
                                     <div>
-                                    <div class="myPageOrderItemFont1 myPageFontItem2" onclick="location.href='#'">${item.itemPrice}원 / 수량 : ${item.orderQuantity} / 합계 = ${item.itemPrice * item.orderQuantity}원</div>
+                                    <div class="myPageOrderItemFont1 myPageFontItem2" onclick="location.href='/shop/shopItem?itemTitle=${item.itemTitle}'">${item.itemPrice}원 / 수량 : ${item.orderQuantity} / 합계 = ${item.itemPrice * item.orderQuantity}원</div>
                                     </div>
                                 </div>
                             </div>
                             <div class="myPageOrderInItem2">
-                                <div class="myPageOrderItemFont2 myPageButtonSize" onclick="location.href='/myPage/addReview?itemTitle=${item.itemTitle}'">리뷰 작성하기</div>
+                                <div class="myPageOrderItemFont2 myPageButtonSize" onclick="location.href='/myPage/addReview?itemTitle=${item.itemTitle}&orderDate=${item.orderDate}'">리뷰 작성하기</div>
                                 <div class="myPageOrderItemFont2 myPageButtonSize" onclick="location.href='#'">교환/반품/환불</div>
                             </div>
                         </div>
@@ -103,7 +103,7 @@
 	    					<c:when test="${item.reviewImageName eq ''}">
 	    					</c:when>
 	    					<c:otherwise>
-                            <img class="myPageImgItem" src="resources/img/${item.reviewImageName}" alt="오류" onclick="location.href='#'">
+                            <img class="myPageImgItem" src="resources/img/${item.reviewImageName}" alt="오류">
                             </c:otherwise>
                         	</c:choose>
                         </div>
@@ -111,7 +111,7 @@
                         <div class="myPageOrderItemBoxRight">
                             <div class="myPageOrderInItem1">
                                 <div>작성일 : ${item.reviewDate}</div>
-                                <div class="myPageReviewItemFont1 myPageReviewFontItem1" onclick="location.href='#'">${item.reviewItemTitle}</div>
+                                <div class="myPageReviewItemFont1 myPageReviewFontItem1" onclick="location.href='/shop/shopItem?itemTitle=${item.reviewItemTitle}'">${item.reviewItemTitle}</div>
                                 <div class="myPageReviewImgBox">
                                 	<c:choose>
                                 	<c:when test="${item.reviewStar eq 5}">
@@ -156,14 +156,14 @@
                     </div>
                     <div class="myPageWishItem">
                         <div class="myPageOrderItemImgbox">
-                            <img class="myPageImgItem" src="resources/img/${item.itemImageName}" alt="오류" onclick="location.href='#'">
+                            <img class="myPageImgItem" src="resources/img/${item.itemImageName}" alt="오류" onclick="location.href='/shop/shopItem?itemTitle=${item.itemTitle}'">
                         </div>
                         <div class="myPageOrderItemBoxRight">
                         	<form class="myPageWishItemBox" action="/shop/toCart2">
                             <div class="myPageOrderInItem1">
                                 <div class="myPageWishItem3">
-                                    <div class="myPageOrderItemFont1 myPageFontItem1">${item.itemTitle}</div>
-                                    <div class="myPageFontItem2">${item.itemPrice}원</div>
+                                    <div class="myPageOrderItemFont1 myPageFontItem1" onclick="location.href='/shop/shopItem?itemTitle=${item.itemTitle}'">${item.itemTitle}</div>
+                                    <div class="myPageFontItem2" onclick="location.href='/shop/shopItem?itemTitle=${item.itemTitle}'">${item.itemPrice}원</div>
                                     <div class="myPageQuantityBox">
                                     <p>수량 : </p><input type="number" name="itemQuantity" value="1" min="1" max="100" class="myPageQuantity">
                                     <input type="text" value="${item.itemTitle}" name="itemTitle" class="shopItemHidden">
@@ -192,14 +192,14 @@
                     </div>
                     <div class="myPageWishItem">
                         <div class="myPageOrderItemImgbox">
-                            <img class="myPageImgItem" src="resources/img/${item.itemImageName}" alt="오류" onclick="location.href='#'">
+                            <img class="myPageImgItem" src="resources/img/${item.itemImageName}" alt="오류" onclick="location.href='/shop/shopItem?itemTitle=${item.itemTitle}'">
                         </div>
                         <div class="myPageOrderItemBoxRight">
                         	<form class="myPageWishItemBox" action="/shop/orderItem2">
                             <div class="myPageOrderInItem1">
                                 <div class="myPageWishItem3">
-                                    <div class="myPageOrderItemFont1 myPageFontItem1" >${item.itemTitle}</div>
-                                    <div class="myPageFontItem2">${item.itemPrice}원</div>
+                                    <div class="myPageOrderItemFont1 myPageFontItem1" onclick="location.href='/shop/shopItem?itemTitle=${item.itemTitle}'">${item.itemTitle}</div>
+                                    <div class="myPageFontItem2" onclick="location.href='/shop/shopItem?itemTitle=${item.itemTitle}'">${item.itemPrice}원</div>
                                     <div class="myPageQuantityBox">
                                     <p>수량 : </p><input type="number" name="itemQuantity" value="${item.cartQuantity}" min="1" max="100" class="myPageQuantity">
                                     <input type="text" value="${item.itemTitle}" name="itemTitle" class="shopItemHidden">

@@ -105,6 +105,8 @@ public class ItemRepositoryImpl implements ItemRepository
 		Review reviewForUpdate = template.queryForObject(selectSql, new ReviewStarRowMapper(), review.getReviewItemTitle());
 		String updateSql = "update item set itemStar=? where itemTitle=?";
 		template.update(updateSql, reviewForUpdate.getReviewStarAvg(), reviewForUpdate.getReviewItemTitle());
+		String deleteSql = "delete from orderList where itemTitle=? and orderer=? and orderDate=?";
+		template.update(deleteSql, review.getReviewItemTitle(), review.getReviewWriter(), review.getOrderDate());
 	}
 	
 	public List<Review> getReviewList(String memberId)

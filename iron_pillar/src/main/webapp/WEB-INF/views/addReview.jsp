@@ -16,7 +16,7 @@
             <div class="addReviewItemHeader">
             	REVIEW
             </div>
-            <form:form modelAttribute="review" action="/myPage/addReview?itemTitle=${itemTitle}" class="writePageForm" enctype="multipart/form-data" method="post">
+            <form:form modelAttribute="review" action="/myPage/addReview?itemTitle=${itemTitle}&orderDate=${orderDate}" class="writePageForm" enctype="multipart/form-data" method="post">
                 <div class="addReviewItemMain">
                 	<p>상품명 : ${itemTitle}</p>
                     <div class="writePageItemMaininput writePageFileR">

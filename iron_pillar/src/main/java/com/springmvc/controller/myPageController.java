@@ -47,15 +47,15 @@ public class myPageController
 	}
 	
 	@GetMapping("/addReview")
-	public String addReview(@ModelAttribute("review") Review review, @RequestParam("itemTitle") String itemTitle, Model model)
+	public String addReview(@ModelAttribute("review") Review review, @RequestParam("itemTitle") String itemTitle, @RequestParam("orderDate") String orderDate, Model model)
 	{
 		model.addAttribute("itemTitle", itemTitle);
-		//request.setAttribute("itemTitle", itemTitle);
+		model.addAttribute("orderDate", orderDate);
 		return "addReview";
 	}
 	
 	@PostMapping("/addReview")
-	public String addNewReview(@ModelAttribute("review") Review review, @RequestParam("itemTitle") String itemTitle, HttpSession session)
+	public String addNewReview(@ModelAttribute("review") Review review, @RequestParam("itemTitle") String itemTitle, @RequestParam("orderDate") String orderDate, HttpSession session)
 	{
 		Date date = new Date();
 		SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -81,6 +81,7 @@ public class myPageController
 		review.setReviewWriterLevel(memberLevel);
 		review.setReviewWriter(member);
 		review.setReviewDate(today);
+		review.setOrderDate(orderDate);
 		itemService.addReview(review);
 		return "redirect:/myPage";
 	}
