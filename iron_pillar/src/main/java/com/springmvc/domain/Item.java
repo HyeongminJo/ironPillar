@@ -4,6 +4,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 public class Item 
 {
+	private int cartNum;
+	private int wishNum;
 	private String itemTitle;
 	private int itemPrice;
 	private MultipartFile itemImage;
@@ -22,6 +24,22 @@ public class Item
 	public Item()
 	{
 		super();
+	}
+
+	public int getCartNum() {
+		return cartNum;
+	}
+
+	public void setCartNum(int cartNum) {
+		this.cartNum = cartNum;
+	}
+
+	public int getWishNum() {
+		return wishNum;
+	}
+
+	public void setWishNum(int wishNum) {
+		this.wishNum = wishNum;
 	}
 
 	public String getItemTitle() {

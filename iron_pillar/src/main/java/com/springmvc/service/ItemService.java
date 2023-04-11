@@ -19,4 +19,6 @@ public interface ItemService
 	void addReview(Review review);
 	List<Review> getReviewList(String memberId);
 	void deleteReview(int reviewNum);
+	void deleteWish(int wishNum);
+	void deleteCart(int cartNum);
 }

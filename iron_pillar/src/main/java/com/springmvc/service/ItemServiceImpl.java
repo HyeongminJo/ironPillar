@@ -74,4 +74,14 @@ public class ItemServiceImpl implements ItemService
 	{
 		itemRepository.deleteReview(reviewNum);
 	}
+	
+	public void deleteWish(int wishNum)
+	{
+		itemRepository.deleteWish(wishNum);
+	}
+	
+	public void deleteCart(int cartNum)
+	{
+		itemRepository.deleteCart(cartNum);
+	}
 }

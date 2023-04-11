@@ -12,11 +12,12 @@ public class ItemCartRowMapper implements RowMapper<Item>
 	public Item mapRow(ResultSet rs, int rowNum) throws SQLException
 	{
 		Item item = new Item();
-		item.setItemTitle(rs.getString(1));
-		item.setItemPrice(rs.getInt(2));
-		item.setItemImageName(rs.getString(3));
-		item.setCartId(rs.getString(4));
-		item.setCartQuantity(rs.getInt(5));
+		item.setCartNum(rs.getInt(1));
+		item.setItemTitle(rs.getString(2));
+		item.setItemPrice(rs.getInt(3));
+		item.setItemImageName(rs.getString(4));
+		item.setCartId(rs.getString(5));
+		item.setCartQuantity(rs.getInt(6));
 		return item;
 	}
 }

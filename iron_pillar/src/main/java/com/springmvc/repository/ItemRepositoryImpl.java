@@ -54,13 +54,13 @@ public class ItemRepositoryImpl implements ItemRepository
 		loves = loves + 1;
 		String updateSql = "update item set itemLove=? where itemTitle=?";
 		template.update(updateSql, loves, itemTitle);
-		String insertSql = "insert into itemLove (itemTitle, itemPrice, itemImage, itemLover) values(?, ?, ?, ?)";
+		String insertSql = "insert into wish (itemTitle, itemPrice, itemImage, itemLover) values(?, ?, ?, ?)";
 		template.update(insertSql, item.getItemTitle(), item.getItemPrice(), item.getItemImageName(), lover);
 	}
 	
 	public List<Item> getWishList(String memberId)
 	{
-		String sql = "select distinct * from itemLove where itemLover=?";
+		String sql = "select distinct * from wish where itemLover=?";
 		List<Item> wishList = template.query(sql, new ItemWishRowMapper(), memberId);
 		return wishList;
 	}
@@ -120,5 +120,17 @@ public class ItemRepositoryImpl implements ItemRepository
 	{
 		String sql = "delete from review where reviewNum=?";
 		template.update(sql, reviewNum);
+	}
+	
+	public void deleteWish(int wishNum)
+	{
+		String sql = "delete from wish where wishNum=?";
+		template.update(sql, wishNum);
+	}
+	
+	public void deleteCart(int cartNum)
+	{
+		String sql = "delete from cart where cartNum=?";
+		template.update(sql, cartNum);
 	}
 }

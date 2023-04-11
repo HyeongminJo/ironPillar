@@ -9,6 +9,7 @@ import javax.servlet.http.HttpSession;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import org.springframework.ui.Model;
@@ -43,22 +44,31 @@ public class MemberRepositoryImpl implements MemberRepository
 		String checkMemberPw = (String) request.getParameter("memberPw");
 		String error = "아이디 또는 비밀번호를 잘못 입력했습니다.";
 		String sql = "select * from member where memberId=?";
-		Member member = template.queryForObject(sql, new MemberRowMapper(), checkMemberId);
-		if((member.getMemberId() != null) && (checkMemberId.equals(member.getMemberId())) && (checkMemberPw.equals(member.getMemberPw())))
+		try
 		{
-			session.setAttribute("memberId", member.getMemberId());
-			session.setAttribute("memberPw", member.getMemberPw());
-			session.setAttribute("memberNick", member.getMemberNick());
-			session.setAttribute("memberPhone", member.getMemberPhone1());
-			session.setAttribute("memberAddress", member.getMemberAddress());
-			session.setAttribute("memberLevel", member.getMemberLevel());
-			session.setMaxInactiveInterval(86400);
+			Member member = template.queryForObject(sql, new MemberRowMapper(), checkMemberId);
+			if((member.getMemberId() != null) && (checkMemberId.equals(member.getMemberId())) && (checkMemberPw.equals(member.getMemberPw())))
+			{
+				session.setAttribute("memberId", member.getMemberId());
+				session.setAttribute("memberPw", member.getMemberPw());
+				session.setAttribute("memberNick", member.getMemberNick());
+				session.setAttribute("memberPhone", member.getMemberPhone1());
+				session.setAttribute("memberAddress", member.getMemberAddress());
+				session.setAttribute("memberLevel", member.getMemberLevel());
+				session.setMaxInactiveInterval(86400);
+				
+				return true; //로그인 성공
+			}
+			model.addAttribute("error", error);
+			model.addAttribute("memberId", checkMemberId);
 			
-			return true; //로그인 성공
+			return false;
 		}
-		model.addAttribute("error", error);
-		model.addAttribute("memberId", checkMemberId);
-		
-		return false; //비밀번호 불일치
+		catch(EmptyResultDataAccessException e)
+		{
+			model.addAttribute("error", error);
+			
+			return false;
+		}
 	}
 }

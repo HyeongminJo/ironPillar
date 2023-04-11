@@ -92,4 +92,18 @@ public class myPageController
 		itemService.deleteReview(reviewNum);
 		return "redirect:/myPage";
 	}
+	
+	@GetMapping("/deleteWish")
+	public String deleteWish(@RequestParam("wishNum") int wishNum)
+	{
+		itemService.deleteWish(wishNum);
+		return "redirect:/myPage";
+	}
+	
+	@GetMapping("/deleteCart")
+	public String deleteCart(@RequestParam("cartNum") int cartNum)
+	{
+		itemService.deleteCart(cartNum);
+		return "redirect:/myPage";
+	}
 }

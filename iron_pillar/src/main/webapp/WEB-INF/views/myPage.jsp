@@ -172,7 +172,7 @@
                             </div>
                             <div class="myPageOrderInItem2">
                             	<input type="submit" class="myPageWishItemFont2 myPageWishItemInputSize" value="장바구니에 담기" onclick="toCart()">
-                                <div class="myPageWishItemFont2 myPageButtonSize" onclick="location.href='#'">삭제하기</div>
+                                <div class="myPageWishItemFont2 myPageButtonSize" onclick="location.href='/myPage/deleteWish?wishNum=${item.wishNum}'">삭제하기</div>
                             </div>
                             </form>
                         </div>
@@ -208,7 +208,7 @@
                             </div>
                             <div class="myPageOrderInItem2">
                                 <input type="submit" value="바로구매" class="myPageWishItemFont2 myPageWishItemInputSize" onclick="order()">
-                                <div class="myPageWishItemFont2 myPageButtonSize" onclick="location.href='#'">삭제하기</div>
+                                <div class="myPageWishItemFont2 myPageButtonSize" onclick="location.href='/myPage/deleteCart?cartNum=${item.cartNum}'">삭제하기</div>
                             </div>
                             </form>
                         </div>
