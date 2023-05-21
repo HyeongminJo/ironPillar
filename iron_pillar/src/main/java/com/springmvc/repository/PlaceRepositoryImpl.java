@@ -37,8 +37,8 @@ public class PlaceRepositoryImpl implements PlaceRepository
 	@Override
 	public void setNewPlace(Place place) 
 	{
-		String sql = "insert into place (placetitle, placeImageName, placeText, placeCategory) values(?, ?, ?, ?)";
-		template.update(sql, place.getPlaceTitle(), place.getPlaceImageName(), place.getPlaceText(), place.getPlaceCategory());
+		String sql = "insert into place (placeTitle, placeImage, placeText, placeCategory, placeAddress, placePrice) values(?, ?, ?, ?, ?, ?)";
+		template.update(sql, place.getPlaceTitle(), place.getPlaceImageName(), place.getPlaceText(), place.getPlaceCategory(), place.getPlaceAddress(), place.getPlacePrice());
 	}
 	
 	@Override

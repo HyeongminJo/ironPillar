@@ -62,7 +62,7 @@ public class myPageController
 		String today = f.format(date);
 		MultipartFile reviewImage = review.getReviewImage();
 		String saveName = reviewImage.getOriginalFilename();
-		File saveFile = new File("D:/JHM/jsp/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/iron_pillar/resources/img", saveName);
+		File saveFile = new File("C:/jsp/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/iron_pillar/resources/img", saveName);
 		review.setReviewImageName(saveName);
 		if(reviewImage != null && !reviewImage.isEmpty())
 		{

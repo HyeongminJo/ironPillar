@@ -35,7 +35,7 @@ public class adminController
 	{
 		MultipartFile itemImage = item.getItemImage();
 		String saveName = itemImage.getOriginalFilename();
-		File saveFile = new File("D:/JHM/jsp/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/iron_pillar/resources/img", saveName);
+		File saveFile = new File("C:/Users/형민/Documents/GitHub/ironPillar/iron_pillar/src/main/webapp/resources/img", saveName);
 		item.setItemImageName(saveName);
 		if(itemImage != null && !itemImage.isEmpty())
 		{
@@ -63,7 +63,7 @@ public class adminController
 	{
 		MultipartFile placeImage = place.getPlaceImage();
 		String saveName = placeImage.getOriginalFilename();
-		File saveFile = new File("D:/JHM/jsp/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/iron_pillar/resources/img", saveName);
+		File saveFile = new File("C:/Users/형민/Documents/GitHub/ironPillar/iron_pillar/src/main/webapp/resources/img", saveName);
 		place.setPlaceImageName(saveName);
 		if(placeImage != null && !placeImage.isEmpty())
 		{
